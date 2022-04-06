@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Header fixed */
+#header{
+	position:fixed;
+	top: 0px;
+    width: 100%;
+}
+
+#fondo-playa{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.btn-scrolltop{
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    padding: 10px 18px;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    border: 1px solid white;
+    border-radius: 100%;
+    cursor: pointer;
+    transform: scale(0);
+    transition: 0,3s;
+}
+.btn-scrolltop-on{
+    transform: scale(1) translateY(0) ;
+}
+
+.h2-tip{
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 2px;
+}
+.card-img-top{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+}
+.card{
+    position: inherit !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ESTILOS FOOTER */
+
+#back-footer{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+footer{
+	width: 100%;
+    color: rgba(255,255,255,0.6);
+    background-image: url(/Pruebas/images/back-footer.jpg);    
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 60px;
+}
+#footer-content2 ul li{
+	display: flex;
+	color: #fff;
+}
+
+#footer-content2 ul li span {
+    margin-right: 15px;
+    font-size: 22px;
+    /* align-self: center; */
+    /* align-items: center; */
+    margin-top: 4px;
+}
+footer-content1 ul li a{
+	list-style: none;
+	text-decoration: none;
+	margin-left: 0;
+	padding-left: 0px;
+	font-weight: 500;
+}
+#img-footer{
+    margin-bottom: 20px;
+    display: block;
+    height: 50px;
+}
+footer a{
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+}
+footer a:hover{
+    color: #fff;
+}
+
+div.footer-buttons {
+    position: fixed;
+    bottom: 0;
+    background: #98392e;
+    background: linear-gradient(to right, #76cfcd 0%, #76cfcd 50%, #54909a 50%, #54909a 100%);
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+div.footer-buttons a, div.footer-buttons a i {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hidden-down-buttons{
+	display:none;
+}
+.show-down-buttons{
+	display:block;
+}
+
+
+
+
