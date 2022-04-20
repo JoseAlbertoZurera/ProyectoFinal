@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nombre', 20);
             $table->string('apellidos', 30)->nullable();
             $table->date('fecha_nacimiento')->nullable();
-            $table->string('dni', 9)->unique();
+            $table->string('dni', 9)->unique()->nullable();
             $table->string('email', 50)->unique();
             $table->string('password', 20);
             $table->integer('telefono')->nullable();

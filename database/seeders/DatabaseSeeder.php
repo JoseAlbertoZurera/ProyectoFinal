@@ -20,12 +20,11 @@ class DatabaseSeeder extends Seeder
         $usuario->nombre = 'admin';
         $usuario->apellidos = NULL;
         $usuario->fecha_nacimiento = NULL;
-        $usuario->dni = '123456789';
+        $usuario->dni = NULL;
         $usuario->email = 'admin@admin.com';
         $usuario->password = 'admin';
         $usuario->telefono = NULL;
         $usuario->rol = 'Administrador';
-
 
         $usuario->save();
     }
