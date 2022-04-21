@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f7f7;
+}
+
+.formulario-login h3 {
+    margin-top: 15%;
+}
+
+.formulario-login {
+    width: 500px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.formulario-login form {
+    font-size: 16px;
+}
+
+.formulario-login form .form-group {
+    margin-bottom: 12px;
+}
+
+.formulario-login form input[type="submit"] {
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+/*efecto hover sobre boton*/
+.formulario-login form input[type="submit"]:hover {
+    background: #FEDC66;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #64B6E7;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #56CCF2 0%, #2F80ED 51%, #56CCF2 100%)
+}
+
+.btn-grad {
+    margin: 10px;
+    padding: 10px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    border: none;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}

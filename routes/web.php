@@ -15,3 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', HomeController::class)->name('home');
+Route::get('/iniciar', function () {
+    return view('signin');
+});
+
+Route::get('/registrar', function () {
+    return view('signup');
+});
+

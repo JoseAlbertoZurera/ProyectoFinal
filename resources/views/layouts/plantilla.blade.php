@@ -14,6 +14,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
 
+    @yield('styles')
+
+    <!--  yield = campo a rellenar -->
     <title>@yield('titulo')</title>
 </head>
 
