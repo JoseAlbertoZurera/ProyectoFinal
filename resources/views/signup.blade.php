@@ -9,7 +9,7 @@
     />
 <link href="{{ asset('css/signup.css') }}" rel="stylesheet">
 @endsection
-@section('titulo', 'Leasing |Registrate')
+@section('titulo', 'Leasing | Registrate')
 
 @section('contenido')
 <div class="formulario-login m-5">
