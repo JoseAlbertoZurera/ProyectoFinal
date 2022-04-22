@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\SignUpController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,11 +17,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', HomeController::class)->name('home');
-Route::get('/iniciar', function () {
-    return view('signin');
-});
-
-Route::get('/registrar', function () {
-    return view('signup');
-});
-
+Route::get('/login', LoginController::class)->name('login');
+Route::get('/signup', SignUpController::class)->name('signup');

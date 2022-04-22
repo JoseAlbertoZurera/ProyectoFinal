@@ -13,12 +13,12 @@
 
 @section('contenido')
 <div class="formulario-login">
-      <h3 class="text-center">Login</h3>
+      <h3 class="text-center">Iniciar Sesión</h3>
 
       <form class="p-5">
         <div class="form-group was-validated">
           <label class="form-label" for="email"
-            >Cliente ID o correo electronico
+            >Correo electronico
           </label>
           <input class="form-control" type="email" id="email" required />
           <div class="invalid-feedback">
@@ -46,7 +46,7 @@
         <button class="btn btn-warning w-100 mt-3">
           <div class="row align-items-center">
             <div class="col-12">
-              <span class="span-btn"> LOGIN </span>
+              <span class="span-btn"> Iniciar Sesión </span>
             </div>
           </div>
         </button>
@@ -55,7 +55,7 @@
             <a
               class="text-link"
               href="/forgot-password?login_challenge=cb54ab34724d4f24a017cd3fff9f1658"
-              >Olvido su contraseña?</a
+              >¿Olvido su contraseña?</a
             >
             <hr />
           </div>
@@ -68,7 +68,7 @@
               href="https://www.traum-ferienwohnungen.de/registrieren/"
             >
               <i class="fa fa-home"></i>
-              Registrate como propietario
+              Registrate
             </a>
           </div>
         </div>
