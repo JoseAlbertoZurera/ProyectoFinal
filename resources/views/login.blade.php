@@ -12,6 +12,10 @@
 @section('titulo', 'Leasing | Iniciar sesión')
 
 @section('contenido')
+<br>
+<br>
+<br>
+<br>
 <div class="formulario-login">
       <h3 class="text-center">Iniciar Sesión</h3>
 
@@ -47,6 +51,16 @@
           <div class="row align-items-center">
             <div class="col-12">
               <span class="span-btn"> Iniciar Sesión </span>
+            </div>
+          </div>
+        </button>
+        <button class="btn btn-dark p-2 w-100 mt-3">
+          <div class="row align-items-center">
+            <div class="col-2">
+              <img src="{{ asset('images/google.png') }}" width="25" alt="google" />
+            </div>
+            <div class="col-10">
+              <span> Continúa con Google</span>
             </div>
           </div>
         </button>

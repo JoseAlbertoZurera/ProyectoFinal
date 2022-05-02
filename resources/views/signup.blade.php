@@ -12,6 +12,10 @@
 @section('titulo', 'Leasing | Registrate')
 
 @section('contenido')
+<br>
+<br>
+<br>
+<br>
 <div class="formulario-login m-5">
       <h4 class="text-center">Crea una nueva cuenta</h4>
 
