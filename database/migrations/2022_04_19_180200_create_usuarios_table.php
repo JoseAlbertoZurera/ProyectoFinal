@@ -20,7 +20,7 @@ return new class extends Migration
             $table->date('fecha_nacimiento')->nullable();
             $table->string('dni', 9)->unique()->nullable();
             $table->string('email', 50)->unique();
-            $table->string('password', 20);
+            $table->string('password', 200);
             $table->integer('telefono')->nullable();
             $table->string('rol', 20);
             $table->timestamps();
