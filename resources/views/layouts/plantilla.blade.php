@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- Favicon  -->
     <link rel="icon" type="image/png" href={{ asset('images/logo.png') }}>
 
     <!-- Scripts -->
@@ -17,7 +22,7 @@
 
     @yield('styles')
 
-    <!--  yield = campo a rellenar -->
+    <!--  yield = Campo títolo a rellenar -->
     <title>@yield('titulo')</title>
 </head>
 
@@ -27,7 +32,7 @@
     <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{route('home')}}">
+                <a class="navbar-brand" href="{{ route('home') }}">
                     <img src="{{ asset('images/logo.png') }}" width="120px" height="50px"
                         class="d-inline-block align-top" alt="" />
                 </a>
@@ -53,22 +58,48 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
-                        <li class="nav-item mx-2">
-                            <a class="btn btn-outline-danger" href="{{route('signup')}}" role="button">Publica tu alojamiento</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="btn btn-outline-primary" href="{{route('signup')}}" role="button">Crear cuenta</a>
-                        </li>
-                        <li class="nav-item mx-2">
-                            <a class="btn btn-outline-primary" href="{{route('login')}}" role="button">Iniciar sesión</a>
-                        </li>
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->nombre }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('dashboard') }}">{{ __('Mi cuenta') }}</a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Cerrar sesión') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                        class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main>@yield('contenido')</main>
+
+    <main class="py-xl-5">@yield('contenido')</main>
 
     <!--SCRIPT JAVASCRIPT-->
     <script src="{{ asset('js/home.js') }}"></script>
