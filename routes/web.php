@@ -1,8 +1,9 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\SignUpController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,12 +16,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes(['verify' => true]);
 
 Route::get('/', HomeController::class)->name('home');
 
-Route::get('/login', LoginController::class)->name('login');
-Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
+Route::get('/dashboard', DashboardController::class)->name('dashboard')->middleware('verified');
 
-
-Route::get('/signup', SignUpController::class)->name('signup');
-Route::post('/signup', [LoginController::class, 'store'])->name('login.store');

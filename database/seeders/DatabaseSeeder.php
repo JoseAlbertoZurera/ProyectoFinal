@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Usuario;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,14 +15,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $usuario = new Usuario();
+        $usuario = new User();
 
         $usuario->nombre = 'admin';
         $usuario->apellidos = NULL;
         $usuario->fecha_nacimiento = NULL;
         $usuario->dni = NULL;
         $usuario->email = 'admin@admin.com';
-        $usuario->password = 'admin';
+        $usuario->password = 'password';
         $usuario->telefono = NULL;
         $usuario->rol = 'Administrador';
 
