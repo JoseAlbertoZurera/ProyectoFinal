@@ -22,7 +22,7 @@
 
     @yield('styles')
 
-    <!--  yield = Campo títolo a rellenar -->
+    <!--  yield = Campo título a rellenar -->
     <title>@yield('titulo')</title>
 </head>
 

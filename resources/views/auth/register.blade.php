@@ -18,8 +18,12 @@
 
                 <div class="form-group was-validated">
                     <label class="form-label" for="name">Nombre </label>
-                    <input class="form-control" type="text" id="name" name="nombre" required />
-                    <div class="invalid-feedback">Por favor introduzca su nombre.</div>
+                    <input class="form-control" type="text" id="name" name="name" @error('name') is-invalid @enderror" value="{{ old('name') }}" required autocomplete="name" autofocus />
+                    @error('name')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
 
                 <div class="form-group was-validated">
@@ -55,29 +59,29 @@
 
                 <div class="form-group was-validated">
                     <label class="form-label" for="email"> Correo electronico </label>
-                    <input class="form-control" type="email" id="email" name="email" required />
-                    <div class="invalid-feedback">
-                        Por favor introduzca su direccion de correo.
-                    </div>
+                    <input class="form-control" type="email" id="email" name="email" @error('email') is-invalid @enderror
+                        value="{{ old('email') }}" required autocomplete="email" />
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
                 <div class="form-group was-validated">
                     <label class="form-label" for="password">Contraseña</label>
                     <input class="form-control" type="password" id="password" name="password" pattern=".{8,}"
-                        title="Debe introducir minimo 8 caracteres" required autocomplete="new-password" />
-                    <div class="invalid-feedback">
-                        Por favor introduzca su contraseña.
-                    </div>
-                </div>
-
-                <div class="form-group was-validated">
-                    <label for="password-confirm" class="form-label">{{ __('Confirmar Contraseña') }}</label>
-                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
-                        @error('password') is-invalid @enderror name="password" required autocomplete="new-password">
+                        @error('password') is-invalid @enderror required autocomplete="new-password" />
                     @error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
+                </div>
+
+                <div class="form-group was-validated">
+                    <label for="password-confirm" class="form-label">{{ __('Confirmar Contraseña') }}</label>
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
+                        required autocomplete="new-password">
                 </div>
 
                 <div class="form-group form-check">
@@ -87,7 +91,7 @@
                         declaración de protección de datos.</label>
                 </div>
                 <hr />
-                <button class="btn btn-outline-dark w-100 mt-3">
+                <button class="btn btn-outline-dark w-100 mt-3" type="submit">
                     <div class="row align-items-center">
                         <div class="col-2">
                             <i class="fa fa-user-circle"></i>
@@ -98,7 +102,7 @@
                     </div>
                 </button>
 
-                <button class="btn btn-outline-dark w-100 mt-3" type="submit">
+                <button class="btn btn-outline-dark w-100 mt-3">
                     <div class="row align-items-center">
                         <div class="col-2">
                             <img src="{{ asset('images/google.png') }}" width="25" alt="google" />
