@@ -9,14 +9,13 @@
         style="background-image: url({{ asset('images/playa.PNG') }}); height: 250px;">
         <h3>HOTELES, RESORTS, HOSTALES Y MUCHO MÁS</h3>
         <p>
-            Consulta los precios de más de 2 millones de alojamientos en todo el
-            mundo
+            Consulta los precios de más de 2 millones de alojamientos en toda España
         </p>
     </div>
     <!--CONTAINER PRINCIPAL-->
     <div class="container mt-5">
         <div class="row">
-            <h2 class="h2-tip">Hoteles favoritos en todo el mundo</h2>
+            <h2 class="h2-tip">Hoteles favoritos en todo en España</h2>
             <div class="col-sm-3">
                 <div style="margin: 2rem auto; width: 20rem ml-3">
                     <div class="card">
@@ -180,29 +179,29 @@
                     <div class="col-md-4" id="footer-content1">
                         <ul class="footer-links list-unstyled">
                             <p class="mb-10">
-                                <a href="comprar-enlaces/">Alquilar Alojamiento</a>
+                                <a href="comprar-enlaces/">Hoteles</a>
                             </p>
-                            <p class="mb-10"><a href="linkbuilding/">Alquilar Alojamiento</a></p>
+                            <p class="mb-10"><a href="linkbuilding/">Casas</a></p>
                             <p class="mb-10">
-                                <a href="agencia-de-linkbuilding/">Alquilar Alojamiento</a>
+                                <a href="agencia-de-linkbuilding/">Apartamentos</a>
                             </p>
-                            <p class="mb-10"><a href="medios/">Alquilar Alojamiento</a></p>
-                            <p class="mb-10"><a href="agencias/">Alquilar Alojamiento</a></p>
-                            <p class="mb-10"><a href="backlinks/">Alquilar Alojamiento</a></p>
+                            <p class="mb-10"><a href="medios/">Hostales y pensiones</a></p>
+                            <p class="mb-10"><a href="agencias/">Albergues</a></p>
+                            <p class="mb-10"><a href="backlinks/">Resorts</a></p>
                         </ul>
                     </div>
                     <div class="col-md-4" id="footer-content1">
                         <ul class="footer-links list-unstyled">
                             <p class="mb-10">
-                                <a href="comprar-enlaces/">Alquilar Alojamiento</a>
+                                <a href="comprar-enlaces/">Alquiler de coches</a>
                             </p>
-                            <p class="mb-10"><a href="linkbuilding/">Alquilar Alojamiento</a></p>
+                            <p class="mb-10"><a href="linkbuilding/">Contacto</a></p>
                             <p class="mb-10">
-                                <a href="agencia-de-linkbuilding/">Alquilar Alojamiento</a>
+                                <a href="agencia-de-linkbuilding/">Quienes somos</a>
                             </p>
-                            <p class="mb-10"><a href="medios/">Alquilar Alojamiento</a></p>
-                            <p class="mb-10"><a href="agencias/">Alquilar Alojamiento</a></p>
-                            <p class="mb-10"><a href="backlinks/">Alquilar Alojamiento</a></p>
+                            <p class="mb-10"><a href="medios/">Política de privacidad y cookies</a></p>
+                            <p class="mb-10"><a href="agencias/">Atención al cliente</a></p>
+                            <p class="mb-10"><a href="backlinks/">Términos y condiciones</a></p>
                         </ul>
                     </div>
                 </div>

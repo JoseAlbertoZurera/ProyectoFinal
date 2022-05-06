@@ -18,7 +18,8 @@
 
                 <div class="form-group was-validated">
                     <label class="form-label" for="name">Nombre </label>
-                    <input class="form-control" type="text" id="name" name="name" @error('name') is-invalid @enderror" value="{{ old('name') }}" required autocomplete="name" autofocus />
+                    <input class="form-control" type="text" id="name" name="name" @error('name') is-invalid @enderror
+                        value="{{ old('name') }}" required autocomplete="name" autofocus />
                     @error('name')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -28,33 +29,44 @@
 
                 <div class="form-group was-validated">
                     <label class="form-label" for="name">Apellidos </label>
-                    <input class="form-control" type="text" id="Apellidos" name="apellidos" required />
-                    <div class="invalid-feedback">
-                        Por favor introduzca sus Apellidos.
-                    </div>
+                    <input class="form-control" type="text" id="Apellidos" name="apellidos"
+                        @error('apellidos') is-invalid @enderror required />
+                    @error('apellidos')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>Por favor, introduzca sus apellidos</strong>
+                        </span>
+                    @enderror
                 </div>
 
                 <div class="form-group was-validated">
                     <label class="form-label" for="name">Fecha de nacimiento </label>
-                    <input class="form-control" type="date" id="fecha-nacimiento" name="fecha_nacimiento" required />
-                    <div class="invalid-feedback">
-                        Por favor introduzca su fecha de nacimiento.
-                    </div>
+                    <input class="form-control" type="date" id="fecha-nacimiento" name="fecha_nacimiento" @error('fecha_nacimiento') is-invalid @enderror required />
+                    @error('fecha_nacimiento')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>Por favor, introduzca una fecha de nacimiento valida</strong>
+                        </span>
+                    @enderror
                 </div>
 
                 <div class="form-group was-validated">
                     <label class="form-label" for="name">DNI </label>
                     <input class="form-control" type="text" id="dni" name="dni" placeholder=""
-                        pattern="[0-9]{8}[A-Za-z]{1}" title="Debe poner 8 números y una letra" required />
-                    <div class="invalid-feedback">Por favor introduzca su DNI.</div>
+                        pattern="[0-9]{8}[A-Za-z]{1}" title="Debe poner 8 números y una letra" @error('dni') is-invalid @enderror required />
+                    @error('dni')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>Por favor, introduzca un DNI valido</strong>
+                        </span>
+                    @enderror
                 </div>
 
                 <div class="form-group was-validated">
                     <label class="form-label" for="name">Telefono </label>
-                    <input class="form-control" type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required />
-                    <div class="invalid-feedback">
-                        Por favor introduzca su numero de telefono.
-                    </div>
+                    <input class="form-control" type="tel" id="telefono" name="telefono" pattern="[0-9]{9}"  @error('telefono') is-invalid @enderror required />
+                    @error('telefono')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>Por favor, introduzca un número de teléfono valido</strong>
+                        </span>
+                    @enderror
                 </div>
 
                 <div class="form-group was-validated">
