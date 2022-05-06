@@ -48,13 +48,13 @@
                             <a class="nav-link mx-2 text-dark" href="#">Alojamientos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2 text-dark" href="#">Vuelos</a>
+                            <a class="nav-link mx-2 text-dark" href="#">Alquiler de coches</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2 text-dark" href="#">Apartamentos</a>
+                            <a class="nav-link mx-2 text-dark" href="#">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2 text-dark" href="#">Vuelo + Hotel</a>
+                            <a class="nav-link mx-2 text-dark" href="#">Quienes somos</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
