@@ -4,7 +4,7 @@
 
 @section('contenido')
 <div class="container">
-    <div class="row d-flex justify-content-center align-items-center" style=" min-height: 70vh;">
+    <div class="row d-flex justify-content-center align-items-center" style=" min-height: 50vh;">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Restablecer la contraseña') }}</div>

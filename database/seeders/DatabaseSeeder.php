@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Alojamiento;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -25,7 +26,11 @@ class DatabaseSeeder extends Seeder
         $usuario->password = 'password';
         $usuario->telefono = NULL;
         $usuario->rol = 'Administrador';
+        $usuario->email_verified_at = now();
 
         $usuario->save();
+
+        User::factory(50)->create();
+        Alojamiento::factory(50)->create();
     }
 }
