@@ -4,13 +4,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="{{ asset('css/signup.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/register.css') }}" rel="stylesheet">
 @endsection
 @section('titulo', 'Leasing | Registrate')
 
 @section('contenido')
     <div class="container">
-        <div class="formulario-login m-5">
+        <div class="formulario-login">
             <h4 class="text-center">Crea una nueva cuenta</h4>
 
             <form class="p-1 mt-1" method="POST" action="{{ route('register') }}">

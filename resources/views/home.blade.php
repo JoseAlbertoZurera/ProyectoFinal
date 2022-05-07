@@ -1,5 +1,10 @@
 @extends('layouts.plantilla')
 
+@section('styles')
+    <script src="{{ asset('js/home.js') }}" defer></script>
+    <link href="{{ asset('css/home.css') }}" rel="stylesheet">
+@endsection
+
 @section('titulo', 'Leasing | Página Principal')
 
 @section('contenido')
