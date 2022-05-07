@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
@@ -21,4 +20,3 @@ Auth::routes(['verify' => true]);
 Route::get('/', HomeController::class)->name('home');
 
 Route::get('/dashboard', DashboardController::class)->name('dashboard')->middleware('verified');
-

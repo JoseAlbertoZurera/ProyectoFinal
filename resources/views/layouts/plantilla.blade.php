@@ -14,11 +14,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/home.js') }}" defer></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/home.css') }}" rel="stylesheet">
 
     @yield('styles')
 
@@ -48,7 +46,7 @@
                             <a class="nav-link mx-2 text-dark" href="#">Alojamientos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2 text-dark" href="#">Alquiler de coches</a>
+                            <a class="nav-link mx-2 text-dark" href="#">Publica tu alojamiento</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-2 text-dark" href="#">Contacto</a>
@@ -100,9 +98,6 @@
 
 
     <main class="py-xl-5">@yield('contenido')</main>
-
-    <!--SCRIPT JAVASCRIPT-->
-    <script src="{{ asset('js/home.js') }}"></script>
 
 </body>
 
