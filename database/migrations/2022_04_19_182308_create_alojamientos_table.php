@@ -17,7 +17,7 @@ return new class extends Migration
             $table->increments('id');
             $table->string('ciudad', 50);
             $table->integer('codigo_postal');
-            $table->string('direccion', 40);
+            $table->string('direccion', 80);
             $table->string('tipo_alojamiento', 20);
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
