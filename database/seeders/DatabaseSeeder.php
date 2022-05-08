@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Alojamiento;
+use App\Models\ReservaRealizada;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -32,5 +33,6 @@ class DatabaseSeeder extends Seeder
 
         User::factory(50)->create();
         Alojamiento::factory(50)->create();
+        ReservaRealizada::factory(20)->create();
     }
 }

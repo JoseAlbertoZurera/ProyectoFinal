@@ -11,7 +11,7 @@ class ReservaRealizada extends Model
     protected $table = 'reservas_realizadas';
 
     protected $fillable = [
-        'id_solicitante',
+        'id_usuario',
         'id_alojamiento',
         'fecha_entrada',
         'fecha_salida',
