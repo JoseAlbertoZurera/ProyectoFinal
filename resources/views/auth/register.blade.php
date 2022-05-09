@@ -17,9 +17,9 @@
                 @csrf
 
                 <div class="form-group was-validated">
-                    <label class="form-label" for="name">Nombre </label>
+                    <label class="form-label" for="name">Nombre</label>
                     <input class="form-control" type="text" id="name" name="name" @error('name') is-invalid @enderror
-                        value="{{ old('name') }}" required autocomplete="name" autofocus />
+                        value="{{ old('name') }}" required autofocus />
                     @error('name')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -28,51 +28,53 @@
                 </div>
 
                 <div class="form-group was-validated">
-                    <label class="form-label" for="name">Apellidos </label>
-                    <input class="form-control" type="text" id="Apellidos" name="apellidos"
-                        @error('apellidos') is-invalid @enderror required />
+                    <label class="form-label" for="apellidos">Apellidos</label>
+                    <input class="form-control" type="text" id="apellidos" name="apellidos"
+                        @error('apellidos') is-invalid @enderror value="{{ old('apellidos') }}" required />
                     @error('apellidos')
                         <span class="invalid-feedback" role="alert">
-                            <strong>Por favor, introduzca sus apellidos</strong>
+                            <strong>{{ $message }}</strong>
                         </span>
                     @enderror
                 </div>
 
                 <div class="form-group was-validated">
-                    <label class="form-label" for="name">Fecha de nacimiento </label>
-                    <input class="form-control" type="date" id="fecha-nacimiento" name="fecha_nacimiento" @error('fecha_nacimiento') is-invalid @enderror required />
+                    <label class="form-label" for="name">Fecha de nacimiento</label>
+                    <input class="form-control" type="date" id="fecha-nacimiento" name="fecha_nacimiento"
+                        @error('fecha_nacimiento') is-invalid @enderror value="{{ old('fecha_nacimiento') }}" required />
                     @error('fecha_nacimiento')
                         <span class="invalid-feedback" role="alert">
-                            <strong>Por favor, introduzca una fecha de nacimiento valida</strong>
+                            <strong>{{ $message }}</strong>
                         </span>
                     @enderror
                 </div>
 
                 <div class="form-group was-validated">
-                    <label class="form-label" for="name">DNI </label>
-                    <input class="form-control" type="text" id="dni" name="dni" placeholder=""
-                        pattern="[0-9]{8}[A-Za-z]{1}" title="Debe poner 8 números y una letra" @error('dni') is-invalid @enderror required />
+                    <label class="form-label" for="dni">Dni</label>
+                    <input class="form-control" type="text" id="dni" name="dni" pattern="[0-9]{8}[A-Za-z]{1}"
+                        title="Debe poner 8 números y una letra" @error('dni') is-invalid @enderror required />
                     @error('dni')
                         <span class="invalid-feedback" role="alert">
-                            <strong>Por favor, introduzca un DNI valido</strong>
+                            <strong>{{ $message }}</strong>
                         </span>
                     @enderror
                 </div>
 
                 <div class="form-group was-validated">
-                    <label class="form-label" for="name">Telefono </label>
-                    <input class="form-control" type="tel" id="telefono" name="telefono" pattern="[0-9]{9}"  @error('telefono') is-invalid @enderror required />
+                    <label class="form-label" for="telefono">Teléfono</label>
+                    <input class="form-control" type="tel" id="telefono" name="telefono" pattern="[0-9]{9}"
+                        @error('telefono') is-invalid @enderror value="{{ old('telefono') }}" required />
                     @error('telefono')
                         <span class="invalid-feedback" role="alert">
-                            <strong>Por favor, introduzca un número de teléfono valido</strong>
+                            <strong>{{ $message }}</strong>
                         </span>
                     @enderror
                 </div>
 
                 <div class="form-group was-validated">
-                    <label class="form-label" for="email"> Correo electronico </label>
+                    <label class="form-label" for="email"> Correo electrónico</label>
                     <input class="form-control" type="email" id="email" name="email" @error('email') is-invalid @enderror
-                        value="{{ old('email') }}" required autocomplete="email" />
+                        required />
                     @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -82,7 +84,7 @@
                 <div class="form-group was-validated">
                     <label class="form-label" for="password">Contraseña</label>
                     <input class="form-control" type="password" id="password" name="password" pattern=".{8,}"
-                        @error('password') is-invalid @enderror required autocomplete="new-password" />
+                        @error('password') is-invalid @enderror required />
                     @error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -93,7 +95,12 @@
                 <div class="form-group was-validated">
                     <label for="password-confirm" class="form-label">{{ __('Confirmar Contraseña') }}</label>
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
-                        required autocomplete="new-password">
+                        pattern=".{8,}" @error('password-confirm') is-invalid @enderror required />
+                    @error('password-confirm')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                 </div>
 
                 <div class="form-group form-check">
