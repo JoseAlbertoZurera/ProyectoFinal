@@ -96,8 +96,7 @@
         </nav>
     </header>
 
-
-    <main class="py-xl-5">@yield('contenido')</main>
+    <main>@yield('contenido')</main>
 
 </body>
 

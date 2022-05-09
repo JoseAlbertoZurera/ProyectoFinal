@@ -8,17 +8,18 @@
 @section('titulo', 'Leasing | Iniciar sesión')
 
 @section('contenido')
-    <div class="container">
+    <div class="container py-5">
         <div class="formulario-login">
             <h3 class="text-center">Iniciar Sesión</h3>
 
-            <form class="p-5" method="POST" action="{{ route('login') }}">
+            <form class="p-4" method="POST" action="{{ route('login') }}">
                 @csrf
 
                 <div class="form-group was-validated">
                     <label class="form-label" for="email">Correo electrónico</label>
-                    <input class="form-control" type="email" id="email" name="email" @error('email') is-invalid @enderror
-                        required autocomplete="email" autofocus />
+                    <input class="form-control" type="email" id="email" name="email"
+                        title="Introduce tu dirección de correo electrónico" @error('email') is-invalid @enderror required
+                        autocomplete="email" autofocus />
                     @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -29,7 +30,8 @@
                 <div class="form-group was-validated">
                     <label class="form-label" for="password">Contraseña</label>
                     <input class="form-control" type="password" id="password" pattern=".{8,}" name="password"
-                        @error('password') is-invalid @enderror required autocomplete="current-password" />
+                        title="Introduce tu contraseña" @error('password') is-invalid @enderror required
+                        autocomplete="current-password" />
                     @error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
@@ -47,20 +49,20 @@
                 </div>
 
                 <button class="btn btn-warning w-100 mt-3" type="submit">
-                    <div class="row align-items-center">
+                    <div class="row">
                         <div class="col-12">
                             <span class="span-btn"> Iniciar Sesión </span>
                         </div>
                     </div>
                 </button>
 
-                <button class="btn btn-dark p-2 w-100 mt-3">
+                <button class="btn btn-dark w-100 mt-3">
                     <div class="row align-items-center">
                         <div class="col-2">
                             <img src="{{ asset('images/google.png') }}" width="25" alt="google" />
                         </div>
                         <div class="col-10">
-                            <span> Continúa con Google</span>
+                            <span class="span-btn">Continúa con Google</span>
                         </div>
                     </div>
                 </button>
@@ -75,7 +77,7 @@
                     <div class="p-account text-center">
                         <h5>No tienes cuenta?</h5>
                     </div>
-                    <div class="box-body text-center mt-4">
+                    <div class="box-body text-center mt-2">
                         <a class="text-link" href="{{ route('register') }}">
                             <i class="fa fa-home"></i>
                             Registrate
