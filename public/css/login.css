@@ -5,18 +5,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f7f7f7;
 }
 
 
 .formulario-login {
-    width: 500px;
+    width: 38%;
     height: min-content;
-    padding: 20px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-radius: 10px;
     background: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-
 }
 
 .formulario-login form {
@@ -28,7 +28,7 @@
 }
 
 .formulario-login form input[type="submit"] {
-    font-size: 18px;
+    font-size: 17px;
     margin-top: 15px;
 }
 
@@ -44,5 +44,5 @@ a {
 }
 
 .span-btn {
-    font-size: 18px;
+    font-size: 17px;
 }

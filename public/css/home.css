@@ -30,7 +30,6 @@ html{
     border: 1px solid white;
     border-radius: 100%;
     cursor: pointer;
-    transform: scale(0);
     transition: 0,3s;
 }
 .btn-scrolltop-on{
@@ -54,31 +53,6 @@ html{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ESTILOS FOOTER */
 
 #back-footer{
@@ -93,7 +67,6 @@ footer{
     background-size: cover;
     font-size: 14px;
     display: block;
-    margin-bottom: 60px;
 }
 #footer-content2 ul li{
 	display: flex;
