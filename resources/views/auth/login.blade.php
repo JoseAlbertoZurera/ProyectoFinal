@@ -16,8 +16,7 @@
                 @csrf
 
                 <div class="form-group was-validated">
-                    <label class="form-label" for="email">Correo electronico
-                    </label>
+                    <label class="form-label" for="email">Correo electrónico</label>
                     <input class="form-control" type="email" id="email" name="email" @error('email') is-invalid @enderror
                         required autocomplete="email" autofocus />
                     @error('email')
@@ -29,9 +28,8 @@
 
                 <div class="form-group was-validated">
                     <label class="form-label" for="password">Contraseña</label>
-                    <input class="form-control" type="password" id="password" pattern=".{8,}"
-                        title="Debe introducir minimo 6 caracteres" name="password" @error('password') is-invalid @enderror
-                        required autocomplete="current-password" />
+                    <input class="form-control" type="password" id="password" pattern=".{8,}" name="password"
+                        @error('password') is-invalid @enderror required autocomplete="current-password" />
                     @error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

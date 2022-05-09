@@ -20,7 +20,7 @@
     <!--CONTAINER PRINCIPAL-->
     <div class="container mt-5">
         <div class="row">
-            <h2 class="h2-tip">Hoteles favoritos en todo en España</h2>
+            <h2 class="h2-tip">Últimos alojamientos</h2>
             <div class="col-sm-3">
                 <div style="margin: 2rem auto; width: 20rem ml-3">
                     <div class="card">
@@ -80,7 +80,7 @@
     <!--PAISES MAS POPULARES-->
     <div class="container mt-5">
         <div class="row">
-            <h2 class="h2-tip">Países más populares de vacaciones</h2>
+            <h2 class="h2-tip">Alojamientos recomendados</h2>
             <div class="col-sm-4">
                 <div style="margin: 2rem auto; width: 20rem ml-3">
                     <div class="card">
@@ -172,7 +172,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="{{ asset('images/logo.png') }}" height="200px" width="150px" id="img-footer" />
+                        <img src="{{ asset('images/logo.png') }}" height="160px" width="190px" />
                         <p class="mt-4" id="p-footer">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
                             ducimus ea doloribus, nam dolores reiciendis eius numquam quia
@@ -198,7 +198,7 @@
                     <div class="col-md-4" id="footer-content1">
                         <ul class="footer-links list-unstyled">
                             <p class="mb-10">
-                                <a href="comprar-enlaces/">Alquiler de coches</a>
+                                <a href="comprar-enlaces/">Alquilar alojamiento</a>
                             </p>
                             <p class="mb-10"><a href="linkbuilding/">Contacto</a></p>
                             <p class="mb-10">
