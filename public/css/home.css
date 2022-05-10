@@ -23,17 +23,9 @@ html{
 .btn-scrolltop{
     position: fixed;
     bottom: 10px;
-    right: 20px;
+    right: 15px;
     padding: 10px 18px;
-    background-color: rgba(0,0,0,0.3);
-    color: white;
-    border: 1px solid white;
-    border-radius: 100%;
     cursor: pointer;
-    transition: 0,3s;
-}
-.btn-scrolltop-on{
-    transform: scale(1) translateY(0) ;
 }
 
 .h2-tip{
@@ -62,7 +54,6 @@ html{
 footer{
 	width: 100%;
     color: rgba(255,255,255,0.6);
-    background-image: url(/Pruebas/images/back-footer.jpg);    
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 14px;

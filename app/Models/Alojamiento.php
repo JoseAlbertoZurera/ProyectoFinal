@@ -18,6 +18,16 @@ class Alojamiento extends Model
         'fecha_fin',
         'precio_noche',
         'disponibilidad',
+        'descripcion',
+        'ruta_imagen',
+        'wifi',
+        'playa',
+        'limpieza',
+        'mascotas',
+        'estacionamiento',
+        'aire_acondicionado',
+        'habitaciones',
+        'max_personas',
         'id_usuario'
     ];
 }

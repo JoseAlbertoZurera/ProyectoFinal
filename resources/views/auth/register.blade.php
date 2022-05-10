@@ -51,8 +51,7 @@
                     <div class="form-group was-validated col-6">
                         <label class="form-label" for="name"><i class="fa fa-calendar" aria-hidden="true"></i> Fecha de
                             nacimiento</label>
-                        <input class="form-control" type="date" id="fecha-nacimiento" name="fecha_nacimiento"
-                            title="Introduce tu fecha de nacimiento" @error('fecha_nacimiento') is-invalid @enderror
+                        <input class="form-control" type="date" id="fecha-nacimiento" name="fecha_nacimiento" max"" title="Tienes que ser mayor de 18 años" @error('fecha_nacimiento') is-invalid @enderror
                             value="{{ old('fecha_nacimiento') }}" required />
                         @error('fecha_nacimiento')
                             <span class="invalid-feedback" role="alert">
@@ -166,4 +165,5 @@
             </form>
         </div>
     </div>
+    <script src="{{ asset('js/register.js') }}" defer></script>
 @endsection
