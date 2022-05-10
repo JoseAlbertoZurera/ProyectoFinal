@@ -1,21 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.contenedor {
     font-family: 'Poppins', sans-serif;
-}
-
-body {
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    background: #f7f7f7;
-}
-
-.formulario-login h3 {
-    margin-top: 15%;
+    width: 98vw;
 }
 
 .formulario-login {
@@ -36,15 +21,9 @@ body {
     margin-bottom: 12px;
 }
 
-.formulario-login form input[type="submit"] {
+.formulario-login form button {
     font-size: 17px;
     margin-top: 15px;
-}
-
-/*efecto hover sobre boton*/
-.formulario-login form input[type="submit"]:hover {
-    background: #FEDC66;
-    color: #000;
 }
 
 a {
@@ -63,13 +42,12 @@ a {
 }
 
 .contacta {
-    margin-top: 100px;
+    margin-top: 60px;
     height: 300px;
 }
 
 .contacta-2 {
-    /* background-image: url("/assets/images/contacto/mapa.png"); */
-     background-image: url("{{ asset('images/contacto/mapa.png') }}")
+     background-image: url("../images/contacto/mapa.png");
 }
 
 .invalid-feedback {

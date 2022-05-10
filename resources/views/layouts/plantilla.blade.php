@@ -18,6 +18,10 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     @yield('styles')
 
     <!--  yield = Campo título a rellenar -->
@@ -49,7 +53,7 @@
                             <a class="nav-link mx-2 text-dark" href="#">Publica tu alojamiento</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2 text-dark" href="#">Contacto</a>
+                            <a class="nav-link mx-2 text-dark" href="{{ route('contacto') }}">Contacto</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-2 text-dark" href="#">Quienes somos</a>
