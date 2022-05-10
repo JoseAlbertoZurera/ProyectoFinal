@@ -43,7 +43,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-0">
                         <li class="nav-item">
-                            <a class="nav-link mx-2 text-dark" href="#">Alojamientos</a>
+                            <a class="nav-link mx-2 text-dark" href="{{ route('alojamientos') }}">Alojamientos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-2 text-dark" href="#">Publica tu alojamiento</a>
