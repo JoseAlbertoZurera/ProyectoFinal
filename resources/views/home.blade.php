@@ -168,7 +168,7 @@
         </div>
 
         <!--- FOOTER -->
-        <footer style="background-image: url({{ asset('images/back-footer.jpg') }});">
+        <footer style="background-image: url({{ asset('images/home/back-footer.jpg') }});">
             <div class="py-5" id="footer-content">
                 <div class="container">
                     <div class="row">
@@ -227,9 +227,9 @@
         </footer>
 
         <!--Boton to top-->
-        <button class="btn-scrolltop" id="btn_scrolltop">
-            <i class="fa-solid fa-arrow-up"></i>
-        </button>
+        <div class="btn-scrolltop" id="btn_scrolltop">
+            <img src="{{ asset('images/home/flecha.png') }}" height="50px" width="50px" />
+        </div>
     </div>
 
 @endsection

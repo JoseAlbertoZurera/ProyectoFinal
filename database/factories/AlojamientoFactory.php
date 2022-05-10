@@ -33,7 +33,16 @@ class AlojamientoFactory extends Factory
             'fecha_fin' => $this->faker->dateTimeBetween($string1 , $string2),
             'precio_noche' => $this->faker->numberBetween(45, 250),
             'disponibilidad' => $this->faker->randomElement([0, 1]),
+            'descripcion' => $this->faker->text(400),
             'ruta_imagen' => $this->faker->imageUrl('640', '640', 'Alojamiento'),
+            'wifi' => $this->faker->randomElement([0, 1]),
+            'playa' => $this->faker->randomElement([0, 1]),
+            'limpieza' => $this->faker->randomElement([0, 1]),
+            'mascotas' => $this->faker->randomElement([0, 1]),
+            'estacionamiento' => $this->faker->randomElement([0, 1]),
+            'aire_acondicionado' => $this->faker->randomElement([0, 1]),
+            'habitaciones' => $this->faker->numberBetween(1, 10),
+            'max_personas' => $this->faker->randomElement([1, 10]),
             'id_usuario' => User::all()->random()->id
         ];
     }

@@ -31,7 +31,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ route('home') }}">
-                    <img src="{{ asset('images/logo.png') }}" width="90px" height="60px"
+                    <img src="{{ asset('images/logo.png') }}" width="85px" height="60px"
                         class="d-inline-block align-top" alt="" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

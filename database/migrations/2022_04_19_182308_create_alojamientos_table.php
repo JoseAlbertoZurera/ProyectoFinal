@@ -23,7 +23,16 @@ return new class extends Migration
             $table->date('fecha_fin');
             $table->integer('precio_noche');
             $table->boolean('disponibilidad');
+            $table->text('descripcion');
             $table->string('ruta_imagen');
+            $table->boolean('wifi');
+            $table->boolean('playa');
+            $table->boolean('limpieza');
+            $table->boolean('mascotas');
+            $table->boolean('estacionamiento');
+            $table->boolean('aire_acondicionado');
+            $table->integer('habitaciones');
+            $table->integer('max_personas');
             $table->integer('id_usuario')->unsigned();
             $table->timestamps();
 
