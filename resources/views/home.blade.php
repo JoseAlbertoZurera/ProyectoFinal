@@ -201,11 +201,11 @@
                                 <p class="mb-10">
                                     <a href="#">Alquilar alojamiento</a>
                                 </p>
-                                <p class="mb-10"><a href="#">Contacto</a></p>
+                                <p class="mb-10"><a href="{{ route('alojamientos') }}">Contacto</a></p>
                                 <p class="mb-10">
                                     <a href="#">Quienes somos</a>
                                 </p>
-                                <p class="mb-10"><a href="#">Política de privacidad y cookies</a></p>
+                                <p class="mb-10"><a href="{{ route('cookies') }}">Política de privacidad y cookies</a></p>
                                 <p class="mb-10"><a href="#">Atención al cliente</a></p>
                                 <p class="mb-10"><a href="#">Términos y condiciones</a></p>
                             </ul>
