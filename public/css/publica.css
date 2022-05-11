@@ -1,0 +1,57 @@
+.contenedor {
+    font-family: 'Poppins', sans-serif;
+    width: 98vw;
+}
+
+.formulario-login {
+    width: 800px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+
+}
+
+.formulario-login form {
+    font-size: 16px;
+}
+
+.formulario-login form .form-group {
+    margin-bottom: 12px;
+}
+
+.formulario-login form button {
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #64B6E7;
+}
+
+#info {
+    font-size: 60px;
+    line-height: 60px;
+    color: #98392e;
+}
+
+#info-p {
+    font-size: 1.25rem;
+}
+
+.contacta {
+    margin-top: 60px;
+    height: 300px;
+}
+
+.contacta-2 {
+    background-image: url("../images/publicar/casa2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.invalid-feedback {
+    color: white;
+}

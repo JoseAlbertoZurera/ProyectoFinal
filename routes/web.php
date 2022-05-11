@@ -37,3 +37,12 @@ Route::get('/contacto', function () {
 Route::get('/cookies', function () {
     return view('cookies');
 })->name('cookies');
+
+Route::get('/publica', function () {
+    return view('publica');
+})->name('publica');
+
+
+Route::get('/lista', function () {
+    return view('lista');
+})->name('lista');
