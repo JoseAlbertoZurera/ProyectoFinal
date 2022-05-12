@@ -8,115 +8,204 @@
 @section('titulo', 'Leasing | Lista Alojamientos')
 
 @section('contenido')
-    <!--SECCION TITULO Y PERFIL-->
-    <section>
-        <h1 class=" mb-5">Bienvenido Francisco</h1>
-    </section>
-    <!--SECCION DE TABLA ALOJAMIENTOS-->
-    <section>
-        <table class="table table-striped">
-            <thead>
-                <tr class="table-dark">
-                    <th scope="col">Nº REGISTRO</th>
-                    <th scope="col">CIUDAD</th>
-                    <th scope="col">CODIGO POSTAL</th>
-                    <th scope="col">DIRECCIÓN</th>
-                    <th scope="col">TIPO DE ALOJAMIENTO</th>
-                    <th scope="col">FECHA INICIO</th>
-                    <th scope="col">FECHA FIN</th>
-                    <th scope="col">PRECIO / NOCHE</th>
-                    <th scope="col">DISPONIBILIDAD</th>
-                    <th scope="col">DESCRIPCIÓN</th>
-                    <th scope="col">RUTA DE IMAGEN</th>
-                    <th scope="col">WIFI</th>
-                    <th scope="col">PLAYA</th>
-                    <th scope="col">LIMPIEZA</th>
-                    <th scope="col">MASCOTAS</th>
-                    <th scope="col">ESTACIONAMIENTO</th>
-                    <th scope="col">AIRE ACONDICIONADO</th>
-                    <th scope="col">HABITACIONES</th>
-                    <th scope="col">MAX PERSONAS</th>
+    <div class="container-fluid">
+        <h3 class="text-primary pt-3">
+            Bienvenido Francisco
+            <a class="btn btn-primary mx-1" href="{{ route('login') }}"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </h3>
+        <div class="row py-5">
+            <div class="col-md-12 col-sm-6">
+                <div class="card shadow">
+                    <div class="card-header d-flex justify-content-between">
+                        <h3 class="text-primary">Lista de Alojamientos</h3>
+                        <a class="btn btn-success" href="{{ route('publica') }}">Añadir Alojamientos</a>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Nº REGISTRO</th>
+                                    <th>CIUDAD</th>
+                                    <th>CODIGO POSTAL</th>
+                                    <th>DIRECCIÓN</th>
+                                    <th>TIPO DE ALOJAMIENTO</th>
+                                    <th>FECHA INICIO</th>
+                                    <th>FECHA FIN</th>
+                                    <th>PRECIO / NOCHE</th>
+                                    <th>DESCRIPCIÓN</th>
+                                    <th>HABITACIONES</th>
+                                    <th>MAX PERSONAS</th>
+                                    <th>OPCIONES</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th class="text-center">256</th>
+                                    <td class="text-center">Córdoba</td>
+                                    <td class="text-center">14005</td>
+                                    <td class="text-center">Avenida Guerrita P26 1º3</td>
+                                    <td class="text-center">Apartamento</td>
+                                    <td class="text-center">01/01/2022</td>
+                                    <td class="text-center">31/12/2022</td>
+                                    <td class="text-center">50€</td>
+                                    <td class="text-center">
+                                        Los Apartamentos Córdoba Atrium se encuentran en Córdoba,
+                                        a solo 700 metros de la mezquita
+                                    </td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">7</td>
+                                    <td class="d-flex text-center">
+                                        <a href="" class="btn btn-primary mx-1"><i class="fas fa-eye"></i></a>
+                                        <a href="" class="btn btn-success mx-1"><i class="fas fa-edit"></i></a>
+                                        <a href="" class="btn btn-danger mx-1"><i class="fa-solid fa-xmark"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <th class="text-center">256</th>
+                                    <td class="text-center">Córdoba</td>
+                                    <td class="text-center">14005</td>
+                                    <td class="text-center">Avenida Guerrita P26 1º3</td>
+                                    <td class="text-center">Apartamento</td>
+                                    <td class="text-center">01/01/2022</td>
+                                    <td class="text-center">31/12/2022</td>
+                                    <td class="text-center">50€</td>
+                                    <td class="text-center">
+                                        Los Apartamentos Córdoba Atrium se encuentran en Córdoba,
+                                        a solo 700 metros de la mezquita
+                                    </td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">7</td>
+                                    <td class="d-flex text-center">
+                                        <a href="" class="btn btn-primary mx-1"><i class="fas fa-eye"></i></a>
+                                        <a href="" class="btn btn-success mx-1"><i class="fas fa-edit"></i></a>
+                                        <a href="" class="btn btn-danger mx-1"><i class="fa-solid fa-xmark"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <th class="text-center">256</th>
+                                    <td class="text-center">Córdoba</td>
+                                    <td class="text-center">14005</td>
+                                    <td class="text-center">Avenida Guerrita P26 1º3</td>
+                                    <td class="text-center">Apartamento</td>
+                                    <td class="text-center">01/01/2022</td>
+                                    <td class="text-center">31/12/2022</td>
+                                    <td class="text-center">50€</td>
+                                    <td class="text-center">
+                                        Los Apartamentos Córdoba Atrium se encuentran en Córdoba,
+                                        a solo 700 metros de la mezquita
+                                    </td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">7</td>
+                                    <td class="d-flex text-center">
+                                        <a href="" class="btn btn-primary mx-1"><i class="fas fa-eye"></i></a>
+                                        <a href="" class="btn btn-success mx-1"><i class="fas fa-edit"></i></a>
+                                        <a href="" class="btn btn-danger mx-1"><i class="fa-solid fa-xmark"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <th class="text-center">256</th>
+                                    <td class="text-center">Córdoba</td>
+                                    <td class="text-center">14005</td>
+                                    <td class="text-center">Avenida Guerrita P26 1º3</td>
+                                    <td class="text-center">Apartamento</td>
+                                    <td class="text-center">01/01/2022</td>
+                                    <td class="text-center">31/12/2022</td>
+                                    <td class="text-center">50€</td>
+                                    <td class="text-center">
+                                        Los Apartamentos Córdoba Atrium se encuentran en Córdoba,
+                                        a solo 700 metros de la mezquita
+                                    </td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">7</td>
+                                    <td class="d-flex text-center">
+                                        <a href="" class="btn btn-primary mx-1"><i class="fas fa-eye"></i></a>
+                                        <a href="" class="btn btn-success mx-1"><i class="fas fa-edit"></i></a>
+                                        <a href="" class="btn btn-danger mx-1"><i class="fa-solid fa-xmark"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <th class="text-center">256</th>
+                                    <td class="text-center">Córdoba</td>
+                                    <td class="text-center">14005</td>
+                                    <td class="text-center">Avenida Guerrita P26 1º3</td>
+                                    <td class="text-center">Apartamento</td>
+                                    <td class="text-center">01/01/2022</td>
+                                    <td class="text-center">31/12/2022</td>
+                                    <td class="text-center">50€</td>
+                                    <td class="text-center">
+                                        Los Apartamentos Córdoba Atrium se encuentran en Córdoba,
+                                        a solo 700 metros de la mezquita
+                                    </td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">7</td>
+                                    <td class="d-flex text-center">
+                                        <a href="" class="btn btn-primary mx-1"><i class="fas fa-eye"></i></a>
+                                        <a href="" class="btn btn-success mx-1"><i class="fas fa-edit"></i></a>
+                                        <a href="" class="btn btn-danger mx-1"><i class="fa-solid fa-xmark"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <th class="text-center">256</th>
+                                    <td class="text-center">Córdoba</td>
+                                    <td class="text-center">14005</td>
+                                    <td class="text-center">Avenida Guerrita P26 1º3</td>
+                                    <td class="text-center">Apartamento</td>
+                                    <td class="text-center">01/01/2022</td>
+                                    <td class="text-center">31/12/2022</td>
+                                    <td class="text-center">50€</td>
+                                    <td class="text-center">
+                                        Los Apartamentos Córdoba Atrium se encuentran en Córdoba,
+                                        a solo 700 metros de la mezquita
+                                    </td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">7</td>
+                                    <td class="d-flex text-center">
+                                        <a href="" class="btn btn-primary mx-1"><i class="fas fa-eye"></i></a>
+                                        <a href="" class="btn btn-success mx-1"><i class="fas fa-edit"></i></a>
+                                        <a href="" class="btn btn-danger mx-1"><i class="fa-solid fa-xmark"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <th class="text-center">256</th>
+                                    <td class="text-center">Córdoba</td>
+                                    <td class="text-center">14005</td>
+                                    <td class="text-center">Avenida Guerrita P26 1º3</td>
+                                    <td class="text-center">Apartamento</td>
+                                    <td class="text-center">01/01/2022</td>
+                                    <td class="text-center">31/12/2022</td>
+                                    <td class="text-center">50€</td>
+                                    <td class="text-center">
+                                        Los Apartamentos Córdoba Atrium se encuentran en Córdoba,
+                                        a solo 700 metros de la mezquita
+                                    </td>
+                                    <td class="text-center">3</td>
+                                    <td class="text-center">7</td>
+                                    <td class="d-flex text-center">
+                                        <a href="" class="btn btn-primary mx-1"><i class="fas fa-eye"></i></a>
+                                        <a href="" class="btn btn-success mx-1"><i class="fas fa-edit"></i></a>
+                                        <a href="" class="btn btn-danger mx-1"><i class="fa-solid fa-xmark"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
 
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">256</th>
-                    <td>Córdoba</td>
-                    <td>14005</td>
-                    <td>Avenida Guerrita P26 1º3</td>
-                    <td>Apartamento</td>
-                    <td>01/01/2022</td>
-                    <td>31/12/2022</td>
-                    <td>50€</td>
-                    <td>Disponible</td>
-                    <td>Los Apartamentos Córdoba Atrium se encuentran en Córdoba, a solo 700 metros de la mezquita
-                    </td>
-                    <td>-</td>
-                    <td>YES</td>
-                    <td>YES</td>
-                    <td>YES</td>
-                    <td>YES</td>
-                    <td>YES</td>
-                    <td>YES</td>
-                    <td>3</td>
-                    <td>7</td>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/863190a504.js" crossorigin="anonymous"></script>
 
-                </tr>
-                <tr>
-                    <th scope="row">1506</th>
-                    <td>Córdoba</td>
-                    <td>14005</td>
-                    <td>Avenida Guerrita P26 1º3</td>
-                    <td>Apartamento</td>
-                    <td>01/01/2022</td>
-                    <td>31/12/2022</td>
-                    <td>50€</td>
-                    <td>Disponible</td>
-                    <td>Los Apartamentos Córdoba Atrium se encuentran en Córdoba, a solo 700 metros de la mezquita de
-                        Córdoba, y ofrecen alojamiento con bar, jardín, terraza y WiFi gratuita. El apartamento tiene patio.
-                    </td>
-                    <td>-</td>
-                    <td>YES</td>
-                    <td>YES</td>
-                    <td>YES</td>
-                    <td>YES</td>
-                    <td>YES</td>
-                    <td>YES</td>
-                    <td>3</td>
-                    <td>7</td>
-
-                </tr>
-                <tr>
-                    <th scope="row">786</th>
-                    <td>Córdoba</td>
-                    <td>14005</td>
-                    <td>Avenida Guerrita P26 1º3</td>
-                    <td>Apartamento</td>
-                    <td>01/01/2022</td>
-                    <td>31/12/2022</td>
-                    <td>50€</td>
-                    <td>Disponible</td>
-                    <td>Los Apartamentos Córdoba Atrium se encuentran en Córdoba, a solo 700 metros de la mezquita de
-                        Córdoba, y ofrecen alojamiento con bar, jardín, terraza y WiFi gratuita. El apartamento tiene patio.
-                    </td>
-                    <td>-</td>
-                    <td>YES</td>
-                    <td>YES</td>
-                    <td>YES</td>
-                    <td>YES</td>
-                    <td>YES</td>
-                    <td>YES</td>
-                    <td>3</td>
-                    <td>7</td>
-
-                </tr>
-
-            </tbody>
-        </table>
-    </section>
-    <section class="align-items-center text-center">
-        <button type="button" class="btn btn-success w-25">Editar</button>
-        <button type="button" class="btn btn-danger w-25">Eliminar</button>
-    </section>
 @endsection

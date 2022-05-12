@@ -18,7 +18,7 @@
                             <div class="col-md-6 form-group was-validated">
                                 <label class="form-label" for="name"><i class="fa fa-globe" aria-hidden="true"></i>
                                     Ciudad </label>
-                                <input class="form-control" type="text" id="name" required />
+                                <input class="form-control" type="text" id="name" name="Introduce una ciudad" required />
                             </div>
                             <div class="col-md-6 form-group was-validated">
                                 <label class="form-label" for="name"><i class="fa fa-codepen" aria-hidden="true"></i>

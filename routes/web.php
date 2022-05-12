@@ -46,3 +46,7 @@ Route::get('/publica', function () {
 Route::get('/lista', function () {
     return view('lista');
 })->name('lista');
+
+Route::get('/editar', function () {
+    return view('editar');
+})->name('editar');
