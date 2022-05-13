@@ -50,13 +50,14 @@
                             <a class="nav-link mx-2 text-dark" href="{{ route('alojamientos') }}">Alojamientos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2 text-dark" href="{{ route('publica') }}">Publica tu alojamiento</a>
+                            <a class="nav-link mx-2 text-dark" href="{{ route('publica') }}">Publica tu
+                                alojamiento</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link mx-2 text-dark" href="{{ route('contacto') }}">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2 text-dark" href="#">Quienes somos</a>
+                            <a class="nav-link mx-2 text-dark" href="{{ route('quienes') }}">Quienes somos</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
@@ -64,13 +65,15 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
+                                    <a class="nav-link"
+                                        href="{{ route('login') }}">{{ __('Iniciar Sesión') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
+                                    <a class="nav-link"
+                                        href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                                 </li>
                             @endif
                         @else
@@ -81,9 +84,10 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('dashboard') }}">{{ __('Mi cuenta') }}</a>
+                                    <a class="dropdown-item"
+                                        href="{{ route('dashboard') }}">{{ __('Mi cuenta') }}</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                             document.getElementById('logout-form').submit();">
                                         {{ __('Cerrar sesión') }}
                                     </a>
 

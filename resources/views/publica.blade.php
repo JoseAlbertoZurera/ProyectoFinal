@@ -118,21 +118,48 @@
                                 <textarea required="" maxlength="10000" rows="3" class="form-control" name="message" id="message"
                                     placeholder="Mensaje *"></textarea>
                             </div>
-                            <div class="col-md-6">
-                                <form>
-                                    <label class="form-label" for="name"><i class="fa fa-list-ul"
-                                            aria-hidden="true"></i>
-                                        Caracteristicas</label>
-                                    <select class="form-control accordion-item" multiple>
-                                        <option selected disabled>Selecciona las caracteristicas</option>
-                                        <option value="1">Wifi</option>
-                                        <option value="2">Playa</option>
-                                        <option value="3">Limpieza</option>
-                                        <option value="4">Mascotas</option>
-                                        <option value="5">Estacionamiento</option>
-                                        <option value="6">Aire acondicionado</option>
-                                    </select>
-                                </form>
+
+                            <div class=" col-md-6 multi-selector">
+                                <label class="form-label" for="name"><i class="fa fa-pencil" aria-hidden="true"></i>
+                                    Caracteristicas</label>
+                                <div class=" row select-field">
+                                    <div class="col-md-6">
+                                        <input type="input" name="" disabled placeholder="Elige sus caracteristicas" id=""
+                                            class="input-selector" />
+                                    </div>
+
+                                    <div class="col-md-6 flex-row-reverse">
+                                        <span class="down-arrow">&blacktriangledown;</span>
+                                    </div>
+
+                                </div>
+                                <!---------List of checkboxes and options----------->
+                                <div class="list">
+                                    <label for="task1" class="task">
+                                        <input type="checkbox" name="wifi" id="task1" />
+                                        Wifi
+                                    </label>
+                                    <label for="task2" class="task">
+                                        <input type="checkbox" name="limpieza" id="task2" />
+                                        Limpieza
+                                    </label>
+                                    <label for="task3" class="task">
+                                        <input type="checkbox" name="mascotas" id="task3" />
+                                        Mascotas
+                                    </label>
+                                    <label for="task4" class="task">
+                                        <input type="checkbox" name="stacionamiento" id="task4" />
+                                        Estacionamiento
+                                    </label>
+                                    <label for="task5" class="task">
+                                        <input type="checkbox" name="aire" id="task5" />
+                                        Aire acondicionado
+                                    </label>
+                                    <label for="task6" class="task">
+                                        <input type="checkbox" name="tv" id="task5" />
+                                        TV
+                                    </label>
+                                </div>
                             </div>
                         </div>
                         <div class="form-group form-check">
@@ -159,4 +186,11 @@
             </div>
         </div>
     </section>
+
+    <script>
+        document.querySelector(".select-field").addEventListener("click", () => {
+            document.querySelector(".list").classList.toggle("show");
+            document.querySelector(".down-arrow").classList.toggle("rotate180");
+        });
+    </script>
 @endsection

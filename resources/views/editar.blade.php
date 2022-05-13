@@ -19,9 +19,10 @@
                 <div class="col-md-8 border-right">
                     <div class="p-3 py-5">
                         <div class="d-flex flex-column align-items-center text-center"><img class="img-tio"
-                                width="300px" height="200px" src="{{ asset('images/alojamiento/tio.png') }}"><i
-                                class="fas fa-edit"></i>
-                            </span></div>
+                                width="300px" height="200px" src="{{ asset('images/alojamiento/tio.png') }}">
+                            <input type="file" id="file" name="file" multiple>
+                            </span>
+                        </div>
                         <div class="row mt-4">
                             <div class="col-md-12">
                                 <label class="form-label" for="name"><i class="fa fa-user" aria-hidden="true"></i>
@@ -102,8 +103,8 @@
                 <div class="col-md-2">
                 </div>
                 <!-- <div class="col-md-5 border-right">
-                                                                                                                                                                                                                                                                    <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
-                                                                                                                                                                                                                                                                </div> -->
+                                                                                                                                                                                                                                                                                                                            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
+                                                                                                                                                                                                                                                                                                                        </div> -->
             </div>
         </div>
         </div>

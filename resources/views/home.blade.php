@@ -25,11 +25,11 @@
                 <div class="col-sm-3">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
                         <div class="card">
-                            <img src="{{ asset('images/hotel-3.jpg') }}" class="card-img-top" alt="Phone" />
+                            <img src="{{ asset('images/home/hotel-barcelona.PNG') }}" class="card-img-top" alt="Phone" />
                             <div class="card-body">
-                                <h5 class="card-title">Casa De Sao Lourenco</h5>
+                                <h5 class="card-title">Kimpton Vividora Barcelona</h5>
                                 <p class="card-text">
-                                    Manteigas, Portugal
+                                    Carrer del Duc, 15, Barcelona
                                 </p>
                             </div>
                         </div>
@@ -39,11 +39,11 @@
                 <div class="col-sm-3">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
                         <div class="card">
-                            <img src="{{ asset('images/hotel-2.jpg') }}" class="card-img-top" alt="Phone" />
+                            <img src="{{ asset('images/home/hotel-granada.PNG') }}" class="card-img-top" alt="Phone" />
                             <div class="card-body">
-                                <h5 class="card-title">Casa De Sao Lourenco</h5>
+                                <h5 class="card-title">Hotel Meliá Granada</h5>
                                 <p class="card-text">
-                                    Manteigas, Portugal
+                                    C. Ángel Ganivet, 7, Granada
                                 </p>
                             </div>
                         </div>
@@ -52,11 +52,11 @@
                 <div class="col-sm-3">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
                         <div class="card">
-                            <img src="{{ asset('images/hotel-3.jpg') }}" class="card-img-top" alt="Phone" />
+                            <img src="{{ asset('images/home/hotel-madrid.PNG') }}" class="card-img-top" alt="Phone" />
                             <div class="card-body">
-                                <h5 class="card-title">Villa Copenhagen</h5>
+                                <h5 class="card-title">Hotel Santo Domingo Madrid</h5>
                                 <p class="card-text">
-                                    Copenhague, Dinamarca
+                                    C. de San Bernardo, 1, Madrid
                                 </p>
                             </div>
                         </div>
@@ -65,11 +65,11 @@
                 <div class="col-sm-3">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
                         <div class="card">
-                            <img src="{{ asset('images/hotel-.jpg') }}" class="card-img-top" alt="Phone" />
+                            <img src="{{ asset('images/home/hotel-mallorca.PNG') }}" class="card-img-top" alt="Phone" />
                             <div class="card-body">
-                                <h5 class="card-title">Beach Club By Haad Tien</h5>
+                                <h5 class="card-title">Club del Sol Resort & Spa</h5>
                                 <p class="card-text">
-                                    Ko Tao, Tailandia
+                                    Ctra. Puerto Pollensa, Mallorca
                                 </p>
                             </div>
                         </div>
@@ -85,9 +85,9 @@
                 <div class="col-sm-4">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
                         <div class="card">
-                            <img src="{{ asset('images/españa.jpg') }}" class="card-img-top" alt="Phone" />
+                            <img src="{{ asset('images/home/cordoba.jpg') }}" class="card-img-top" alt="Phone" />
                             <div class="card-body">
-                                <h5 class="card-title">España</h5>
+                                <h5 class="card-title">Córdoba</h5>
                                 <p class="card-text">
                                     Apartamentos y alquileres vacacionales
                                 </p>
@@ -99,9 +99,9 @@
                 <div class="col-sm-4">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
                         <div class="card">
-                            <img src="{{ asset('images/portugal.jpg') }}" class="card-img-top" alt="Phone" />
+                            <img src="{{ asset('images/home/mallorca.jpg') }}" class="card-img-top" alt="Phone" />
                             <div class="card-body">
-                                <h5 class="card-title">Portugal</h5>
+                                <h5 class="card-title">Palma de Mallorca</h5>
                                 <p class="card-text">
                                     Apartamentos y alquileres vacacionales
                                 </p>
@@ -112,9 +112,9 @@
                 <div class="col-sm-4">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
                         <div class="card">
-                            <img src="{{ asset('images/italia.jpg') }}" class="card-img-top" alt="Phone" />
+                            <img src="{{ asset('images/home/sevilla.jpg') }}" class="card-img-top" alt="Phone" />
                             <div class="card-body">
-                                <h5 class="card-title">Italia</h5>
+                                <h5 class="card-title">Sevilla</h5>
                                 <p class="card-text">
                                     Apartamentos y alquileres vacacionales
                                 </p>
@@ -127,9 +127,9 @@
                 <div class="col-sm-4">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
                         <div class="card">
-                            <img src="{{ asset('images/andorra.jpg') }}" class="card-img-top" alt="Phone" />
+                            <img src="{{ asset('images/home/granada.jpg') }}" class="card-img-top" alt="Phone" />
                             <div class="card-body">
-                                <h5 class="card-title">Andorra</h5>
+                                <h5 class="card-title">Granada</h5>
                                 <p class="card-text">
                                     Apartamentos y alquileres vacacionales
                                 </p>
@@ -141,9 +141,9 @@
                 <div class="col-sm-4">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
                         <div class="card">
-                            <img src="{{ asset('images/francia.jpg') }}" class="card-img-top" alt="Phone" />
+                            <img src="{{ asset('images/home/madrid.jpg') }}" class="card-img-top" alt="Phone" />
                             <div class="card-body">
-                                <h5 class="card-title">Francia</h5>
+                                <h5 class="card-title">Madrid</h5>
                                 <p class="card-text">
                                     Apartamentos y alquileres vacacionales
                                 </p>
@@ -154,9 +154,9 @@
                 <div class="col-sm-4">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
                         <div class="card">
-                            <img src="{{ asset('images/suiza.jpg') }}" class="card-img-top" alt="Phone" />
+                            <img src="{{ asset('images/home/barcelona.jpg') }}" class="card-img-top" alt="Phone" />
                             <div class="card-body">
-                                <h5 class="card-title">Suiza</h5>
+                                <h5 class="card-title">Barcelona</h5>
                                 <p class="card-text">
                                     Apartamentos y alquileres vacacionales
                                 </p>
@@ -205,7 +205,8 @@
                                 <p class="mb-10">
                                     <a href="#">Quienes somos</a>
                                 </p>
-                                <p class="mb-10"><a href="{{ route('cookies') }}">Política de privacidad y cookies</a></p>
+                                <p class="mb-10"><a href="{{ route('cookies') }}">Política de privacidad y
+                                        cookies</a></p>
                                 <p class="mb-10"><a href="#">Atención al cliente</a></p>
                                 <p class="mb-10"><a href="#">Términos y condiciones</a></p>
                             </ul>

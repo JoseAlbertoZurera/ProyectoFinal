@@ -10,5 +10,8 @@
 }
 
 .img-tio {
-    border-radius: 50%;
+    border-radius: 100%;
+    background-color: #b0b3addb;
+    margin-bottom: 20px;
+    border-style: none;
 }

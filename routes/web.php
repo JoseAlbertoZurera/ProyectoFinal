@@ -50,3 +50,7 @@ Route::get('/lista', function () {
 Route::get('/editar', function () {
     return view('editar');
 })->name('editar');
+
+Route::get('/quienes', function () {
+    return view('quienes');
+})->name('quienes');
