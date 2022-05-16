@@ -29,7 +29,7 @@
 
                         €927 / noche
                     </p>
-                    <a href="#" class="btn btn-dark mt-3">
+                    <a href="{{ route('alojamiento') }}" class="btn btn-dark mt-3">
                         <i class="bi bi-arrow-right"></i> Mas información
                     </a>
                 </div>
@@ -62,7 +62,7 @@
 
                         €1500 / noche
                     </p>
-                    <a href="#" class="btn btn-dark mt-3">
+                    <a href="{{ route('alojamiento') }}" class="btn btn-dark mt-3">
                         <i class="bi bi-arrow-right"></i> Mas información
                     </a>
                 </div>
@@ -93,7 +93,7 @@
 
                         €927 / noche
                     </p>
-                    <a href="#" class="btn btn-dark mt-3">
+                    <a href="{{ route('alojamiento') }}" class="btn btn-dark mt-3">
                         <i class="bi bi-arrow-right"></i> Mas información
                     </a>
                 </div>

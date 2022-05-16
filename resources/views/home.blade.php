@@ -199,16 +199,17 @@
                         <div class="col-md-4" id="footer-content1">
                             <ul class="footer-links list-unstyled">
                                 <p class="mb-10">
-                                    <a href="#">Alquilar alojamiento</a>
+                                    <a href="{{ route('alojamientos') }}">Alquilar alojamiento</a>
                                 </p>
-                                <p class="mb-10"><a href="{{ route('alojamientos') }}">Contacto</a></p>
+                                <p class="mb-10"><a href="{{ route('publica') }}">Anúnciante</a></p>
+                                <p class="mb-10"><a href="{{ route('contacto') }}">Contacto</a></p>
                                 <p class="mb-10">
-                                    <a href="#">Quienes somos</a>
+                                    <a href="{{ route('quienes') }}">Quienes somos</a>
                                 </p>
                                 <p class="mb-10"><a href="{{ route('cookies') }}">Política de privacidad y
                                         cookies</a></p>
-                                <p class="mb-10"><a href="#">Atención al cliente</a></p>
-                                <p class="mb-10"><a href="#">Términos y condiciones</a></p>
+                                <p class="mb-10"><a href="{{ route('condiciones') }}">Términos y condiciones</a>
+                                </p>
                             </ul>
                         </div>
                     </div>

@@ -54,3 +54,7 @@ Route::get('/editar', function () {
 Route::get('/quienes', function () {
     return view('quienes');
 })->name('quienes');
+
+Route::get('/condiciones', function () {
+    return view('condiciones');
+})->name('condiciones');

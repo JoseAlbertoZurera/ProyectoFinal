@@ -57,7 +57,8 @@
 
                             <div class="row">
                                 <div class="col-md-6 form-group was-validated">
-                                    <label class="form-label" for="name"><i class="fa fa-calendar" aria-hidden="true"></i> Selecciona dia</label>
+                                    <label class="form-label" for="name"><i class="fa fa-calendar"
+                                            aria-hidden="true"></i> Selecciona dia</label>
                                     <input class="form-control" type="date" id="fecha-nacimiento" required />
                                     <div class="invalid-feedback">
                                         Por favor introduzca su fecha de contacto
@@ -65,7 +66,8 @@
                                 </div>
 
                                 <div class="col-md-6 form-group was-validated">
-                                    <label class="form-label" for="name"><i class="fa fa-phone" aria-hidden="true"></i> Telefono </label>
+                                    <label class="form-label" for="name"><i class="fa fa-phone"
+                                            aria-hidden="true"></i> Telefono </label>
                                     <input class="form-control" type="tel" id="telefono" pattern="[0-9]{9}" required />
                                     <div class="invalid-feedback">
                                         Por favor introduzca su numero de telefono.

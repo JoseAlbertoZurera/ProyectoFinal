@@ -47,10 +47,10 @@
         <div class="container">
             <h2 class=" h2-instructors">CONOCE NUESTRO EQUIPO</h2>
             <hr style="height: 5px;
-                width: 50%;
-                text-align: center;
-                margin-left: 25%;
-                margin-bottom: 40px;">
+                    width: 50%;
+                    text-align: center;
+                    margin-left: 25%;
+                    margin-bottom: 40px;">
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="card bg-light">

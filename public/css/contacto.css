@@ -34,7 +34,7 @@ a {
 #info {
     font-size: 60px;
     line-height: 60px;
-    color: #98392e;
+    color: #54909A;
 }
 
 #info-p {
@@ -47,7 +47,7 @@ a {
 }
 
 .contacta-2 {
-     background-image: url("../images/contacto/mapa.png");
+    background-image: url("../images/contacto/mapa.png");
 }
 
 .invalid-feedback {
