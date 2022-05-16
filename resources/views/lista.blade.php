@@ -22,7 +22,7 @@
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered">
-                            <thead>
+                            <thead class="text-center bg-black text-white">
                                 <tr>
                                     <th>Nº REGISTRO</th>
                                     <th>CIUDAD</th>
