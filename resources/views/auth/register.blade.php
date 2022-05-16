@@ -126,7 +126,7 @@
                 <div class="form-check form-switch mt-3">
                     <input class="form-check-input" type="checkbox" id="check" required>
                     <label class="form-check-label" for="flexSwitchCheckDefault">He leído y acepto los términos y condiciones y la política
-                        de privacidad.</label>
+                        de privacidad</label>
                   </div>
                 <hr />
                 <button class="btn btn-warning w-100 mt-3" type="submit">

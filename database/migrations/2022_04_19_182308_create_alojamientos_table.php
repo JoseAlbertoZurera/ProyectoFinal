@@ -24,7 +24,7 @@ return new class extends Migration
             $table->integer('precio_noche');
             $table->boolean('disponibilidad');
             $table->text('descripcion');
-            $table->string('ruta_imagen');
+            $table->string('ruta_imagen')->nullable();
             $table->boolean('wifi');
             $table->boolean('playa');
             $table->boolean('limpieza');

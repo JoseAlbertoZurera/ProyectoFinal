@@ -18,7 +18,7 @@
                 <div class="card shadow">
                     <div class="card-header d-flex justify-content-between">
                         <h3 class="text-primary">Lista de Alojamientos</h3>
-                        <a class="btn btn-success" href="{{ route('publica') }}">Añadir Alojamientos</a>
+                        <a class="btn btn-success" href="{{ route('publicarAlojamiento') }}">Añadir Alojamientos</a>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered">
