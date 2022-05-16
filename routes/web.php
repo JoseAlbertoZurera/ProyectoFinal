@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PublicarAlojamientoController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -38,9 +39,9 @@ Route::get('/cookies', function () {
     return view('cookies');
 })->name('cookies');
 
-Route::get('/publica', function () {
-    return view('publica');
-})->name('publica');
+Route::get('/publicarAlojamiento', PublicarAlojamientoController::class)->name('publicarAlojamiento')->middleware('verified');
+Route::post('/publicarAlojamiento', [PublicarAlojamientoController::class, 'store'])->name('publicarAlojamiento.store');
+
 
 
 Route::get('/lista', function () {

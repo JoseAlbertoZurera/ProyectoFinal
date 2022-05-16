@@ -201,7 +201,7 @@
                                 <p class="mb-10">
                                     <a href="{{ route('alojamientos') }}">Alquilar alojamiento</a>
                                 </p>
-                                <p class="mb-10"><a href="{{ route('publica') }}">Anúnciante</a></p>
+                                <p class="mb-10"><a href="{{ route('publicarAlojamiento') }}">Anúnciante</a></p>
                                 <p class="mb-10"><a href="{{ route('contacto') }}">Contacto</a></p>
                                 <p class="mb-10">
                                     <a href="{{ route('quienes') }}">Quienes somos</a>
