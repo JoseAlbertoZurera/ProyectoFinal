@@ -204,11 +204,11 @@
                                 <p class="mb-10"><a href="{{ route('publicarAlojamiento') }}">Anúnciante</a></p>
                                 <p class="mb-10"><a href="{{ route('contacto') }}">Contacto</a></p>
                                 <p class="mb-10">
-                                    <a href="{{ route('quienes') }}">Quienes somos</a>
+                                    <a href="{{ route('sobreNosotros') }}">Sobre Nosotros</a>
                                 </p>
                                 <p class="mb-10"><a href="{{ route('cookies') }}">Política de privacidad y
                                         cookies</a></p>
-                                <p class="mb-10"><a href="{{ route('condiciones') }}">Términos y condiciones</a>
+                                <p class="mb-10"><a href="{{ route('terminosYCondiciones') }}">Términos y condiciones</a>
                                 </p>
                             </ul>
                         </div>
