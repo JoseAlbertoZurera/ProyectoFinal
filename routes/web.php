@@ -1,8 +1,14 @@
 <?php
 
+use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\CookiesController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AlojamientosPublicadosController;
 use App\Http\Controllers\PublicarAlojamientoController;
+use App\Http\Controllers\SobreNosotrosController;
+use App\Http\Controllers\TerminosYCondicionesController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +29,8 @@ Route::get('/', HomeController::class)->name('home');
 
 Route::get('/dashboard', DashboardController::class)->name('dashboard')->middleware('verified');
 
+Route::get('/dashboard/editar-perfil', [UserController::class, 'create'])->name('editarPerfil')->middleware('verified');
+
 Route::get('/alojamientos', function () {
     return view('alojamientos');
 })->name('alojamientos');
@@ -31,31 +39,17 @@ Route::get('/alojamiento', function () {
     return view('alojamiento');
 })->name('alojamiento');
 
-Route::get('/contacto', function () {
-    return view('contacto');
-})->name('contacto');
+Route::get('/contacto', ContactoController::class)->name('contacto');
 
-Route::get('/cookies', function () {
-    return view('cookies');
-})->name('cookies');
+Route::get('/cookies', CookiesController::class)->name('cookies');
 
-Route::get('/publicarAlojamiento', PublicarAlojamientoController::class)->name('publicarAlojamiento')->middleware('verified');
-Route::post('/publicarAlojamiento', [PublicarAlojamientoController::class, 'store'])->name('publicarAlojamiento.store');
+Route::get('/sobre-nosotros', SobreNosotrosController::class)->name('sobreNosotros');
+
+Route::get('/terminos-y-condiciones', TerminosYCondicionesController::class)->name('terminosYCondiciones');
+
+Route::get('/publicar-alojamiento', PublicarAlojamientoController::class)->name('publicarAlojamiento')->middleware('verified');
+Route::post('/publicar-alojamiento', [PublicarAlojamientoController::class, 'store'])->name('publicarAlojamiento.store');
 
 
-
-Route::get('/lista', function () {
-    return view('lista');
-})->name('lista');
-
-Route::get('/editar', function () {
-    return view('editar');
-})->name('editar');
-
-Route::get('/quienes', function () {
-    return view('quienes');
-})->name('quienes');
-
-Route::get('/condiciones', function () {
-    return view('condiciones');
-})->name('condiciones');
+Route::get('/alojamientos-publicados',[AlojamientosPublicadosController::class, 'index'])->name('alojamientosPublicados.index')->middleware('verified');
+Route::delete('/alojamientos-publicados{alojamiento}', [AlojamientosPublicadosController::class, 'destroy'])->name('alojamientosPublicados.destroy')->middleware('verified');

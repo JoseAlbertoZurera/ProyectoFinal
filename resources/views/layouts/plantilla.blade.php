@@ -57,7 +57,7 @@
                             <a class="nav-link mx-2 text-dark" href="{{ route('contacto') }}">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2 text-dark" href="{{ route('quienes') }}">Quienes somos</a>
+                            <a class="nav-link mx-2 text-dark" href="{{ route('sobreNosotros') }}">Sobre nosotros</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">

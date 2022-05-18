@@ -53,7 +53,7 @@ class PublicarAlojamientoController extends Controller
         }
 
 
-        $alojamiento = Alojamiento::create([
+        Alojamiento::create([
             'ciudad' => $request['ciudad'],
             'codigo_postal' => $request['codigo_postal'],
             'direccion' => $request['direccion'],
