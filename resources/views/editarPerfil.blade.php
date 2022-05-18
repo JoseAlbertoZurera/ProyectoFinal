@@ -2,7 +2,7 @@
 
 @section('styles')
     <link href="{{ asset('css/editarPerfil.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/editar.css') }}" rel="stylesheet">
 @endsection
 
 @section('titulo', 'Leasing | Editar perfil')

@@ -50,6 +50,5 @@ Route::get('/terminos-y-condiciones', TerminosYCondicionesController::class)->na
 Route::get('/publicar-alojamiento', PublicarAlojamientoController::class)->name('publicarAlojamiento')->middleware('verified');
 Route::post('/publicar-alojamiento', [PublicarAlojamientoController::class, 'store'])->name('publicarAlojamiento.store');
 
-
 Route::get('/alojamientos-publicados',[AlojamientosPublicadosController::class, 'index'])->name('alojamientosPublicados.index')->middleware('verified');
 Route::delete('/alojamientos-publicados{alojamiento}', [AlojamientosPublicadosController::class, 'destroy'])->name('alojamientosPublicados.destroy')->middleware('verified');
