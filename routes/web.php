@@ -44,13 +44,13 @@ Route::post('/publicarAlojamiento', [PublicarAlojamientoController::class, 'stor
 
 
 
-Route::get('/lista', function () {
-    return view('lista');
-})->name('lista');
+Route::get('/editarAlojamiento', function () {
+    return view('editarAlojamiento');
+})->name('editarAlojamiento');
 
-Route::get('/editar', function () {
-    return view('editar');
-})->name('editar');
+Route::get('/editarPerfil', function () {
+    return view('editarPerfil');
+})->name('editarPerfil');
 
 Route::get('/quienes', function () {
     return view('quienes');
