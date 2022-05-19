@@ -20,7 +20,7 @@
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-md">
-                    <img src="{{ asset('images/quienes/logo.png') }}" class="img-fluid" alt="" />
+                    <img src="{{ asset('images/quienes/logo.png') }}" class="img-logo" alt="" />
                     <img src="img/fundamentals.svg" class="img-fluid" alt="" />
                 </div>
                 <div class="col-md p-5">
@@ -47,10 +47,10 @@
         <div class="container">
             <h2 class=" h2-instructors">CONOCE NUESTRO EQUIPO</h2>
             <hr style="height: 5px;
-                    width: 50%;
-                    text-align: center;
-                    margin-left: 25%;
-                    margin-bottom: 40px;">
+                                width: 50%;
+                                text-align: center;
+                                margin-left: 25%;
+                                margin-bottom: 40px;">
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="card bg-light">
