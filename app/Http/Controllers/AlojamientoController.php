@@ -100,7 +100,7 @@ class AlojamientoController extends Controller
             'max_personas' => $request['max_personas'],
             'id_usuario' => Auth::id()
         ]);
-        return redirect()->route("alojamientos.index")->with(["mensaje" => "Alojamiento creado correctamente"]);
+        return redirect()->route("alojamientos")->with(["mensaje" => "Alojamiento creado correctamente"]);
     }
 
     /**

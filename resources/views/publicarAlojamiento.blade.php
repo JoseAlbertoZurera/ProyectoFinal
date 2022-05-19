@@ -32,7 +32,7 @@
                                 <label class="form-label" for="codigo_postal"><i class="fa fa-codepen"
                                         aria-hidden="true"></i>
                                     Código postal </label>
-                                <input class="form-control" type="text" id="codigo_postal" name="codigo_postal"
+                                <input class="form-control" type="number" id="codigo_postal" name="codigo_postal"
                                     title="Introduce un código postal" required />
                             </div>
                         </div>
@@ -88,13 +88,17 @@
                                     title="Introduce un precio por noche" required />
                             </div>
                             <div class="col-md-6 form-group was-validated">
-                                <label class="form-label" for="ruta_imagen"><i class="fa fa-camera"
-                                        aria-hidden="true"></i>
-                                    Imágenes</label>
-                                <input type="file" id="ruta_imagen" name="ruta_imagen" multiple>
+                                <label for="ruta_imagen" class="form-label"><i class="fa fa-camera"
+                                        aria-hidden="true"></i>Imágenes</label>
+                                <input class="form-control" id="ruta_imagen" name="ruta_imagen" type="file"
+                                    accept="image/*" multiple />
+                                @error('ruta_imagen')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-md-6 form-group was-validated">
                                 <label class="form-label" for="habitaciones"><i class="fa fa-bed"
@@ -126,50 +130,64 @@
                             <div class=" col-md-6 multi-selector">
                                 <label class="form-label"><i class="fa fa-pencil" aria-hidden="true"></i>
                                     Características</label>
-                                <div class=" row select-field">
-                                    <div class="col-md-6">
-                                        <input type="input" disabled placeholder="Elige sus caracteristicas"
-                                            class="input-selector" />
-                                    </div>
-
-                                    <div class="col-md-6 flex-row-reverse">
-                                        <span class="down-arrow">&blacktriangledown;</span>
-                                    </div>
-
-                                </div>
                                 <!---------List of checkboxes and options----------->
-                                <div class="list">
-                                    <label for="wifi" class="task">
-                                        <input type="checkbox" name="wifi" id="wifi" value="1" />
-                                        Wifi
-                                    </label>
-                                    <label for="limpieza" class="task">
-                                        <input type="checkbox" name="limpieza" id="limpieza" value="1" />
-                                        Servicio de limpieza
-                                    </label>
-                                    <label for="mascotas" class="task">
-                                        <input type="checkbox" name="mascotas" id="mascotas" value="1" />
-                                        Admite mascotas
-                                    </label>
-                                    <label for="estacionamiento" class="task">
-                                        <input type="checkbox" name="estacionamiento" id="estacionamiento" value="1" />
-                                        Servicio de estacionamiento
-                                    </label>
-                                    <label for="aire_acondicionado" class="task">
-                                        <input type="checkbox" name="aire_acondicionado" id="aire_acondicionado"
-                                            value="1" />
-                                        Aire acondicionado
-                                    </label>
-                                    <label for="playa" class="task">
-                                        <input type="checkbox" name="playa" id="playa" value="1" />
-                                        Cerca de la playa
-                                    </label>
+
+                                <div class="dropdown">
+                                    <button class="form-label dropdown-toggle" type="button" id="dropdownMenu2"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Caracteristicas
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item">
+                                            <input class="form-check-input" type="checkbox" name="wifi" id="wifi"
+                                                value="1" />
+                                            <label class="form-check-label" for="wifi">Wifi</label>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <label for="limpieza" class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="limpieza"
+                                                    id="limpieza" value="1" />
+                                                Servicio de limpieza
+                                            </label>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <label for="mascotas" class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="mascotas"
+                                                    id="mascotas" value="1" />
+                                                Admite mascotas
+                                            </label>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <label for="estacionamiento" class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="estacionamiento"
+                                                    id="estacionamiento" value="1" />
+                                                Servicio de estacionamiento
+                                            </label>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <label for="aire_acondicionado" class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="aire_acondicionado"
+                                                    id="aire_acondicionado" value="1" />
+                                                Aire acondicionado
+                                            </label>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <label for="playa" class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="playa" id="playa"
+                                                    value="1" />
+                                                Cerca de la playa
+                                            </label>
+                                        </li>
+                                    </ul>
                                 </div>
+
+
                             </div>
                         </div>
                         <div class="form-group form-check">
                             <input class="form-check-input" type="checkbox" id="check" required />
-                            <label class="form-check-label" for="check">He leído y acepto los términos y condiciones y la
+                            <label class="form-check-label" for="check">He leído y acepto los términos y condiciones y
+                                la
                                 política de privacidad</label>
                         </div>
 
@@ -191,11 +209,4 @@
             </div>
         </div>
     </section>
-
-    <script>
-        document.querySelector(".select-field").addEventListener("click", () => {
-            document.querySelector(".list").classList.toggle("show");
-            document.querySelector(".down-arrow").classList.toggle("rotate180");
-        });
-    </script>
 @endsection

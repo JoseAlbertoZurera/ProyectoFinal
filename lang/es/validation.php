@@ -60,7 +60,7 @@ return [
         'numeric' => 'El campo :attribute debe ser como mínimo :value.',
         'string'  => 'El campo :attribute debe tener como mínimo :value caracteres.',
     ],
-    'image'                => ':attribute debe ser una imagen.',
+    'image'                => 'El archivo debe ser una imagen.',
     'in'                   => ':attribute es inválido.',
     'in_array'             => 'El campo :attribute no existe en :other.',
     'integer'              => ':attribute debe ser un número entero.',

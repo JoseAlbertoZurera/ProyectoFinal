@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
         $usuario->save();
 
         User::factory(50)->create();
-        Alojamiento::factory(50)->create();
-        ReservaRealizada::factory(20)->create();
+        Alojamiento::factory(100)->create();
+        ReservaRealizada::factory(60)->create();
     }
 }
