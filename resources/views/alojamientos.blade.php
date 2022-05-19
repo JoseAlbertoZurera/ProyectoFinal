@@ -2,14 +2,13 @@
 
 @section('styles')
     <link href="{{ asset('css/alojamientos.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 @endsection
 
 @section('titulo', 'Leasing | Alojamientos')
 
 @section('contenido')
     <section id="learn" class="text-dark p-5">
-        <div class="container">
+        <div class="container contenedor">
             <div class="row align-items-center justify-content-between">
                 <div class="col-md-6 p-5">
                     <h2>The Valley Residence</h2>
@@ -104,4 +103,14 @@
             </div>
         </div>
     </section>
+
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="container">
+            <p class="lead">Copyright &copy; 2022 Leasing</p>
+
+            <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                <i class="bi bi-arrow-up-circle h1"></i>
+            </a>
+        </div>
+    </footer>
 @endsection

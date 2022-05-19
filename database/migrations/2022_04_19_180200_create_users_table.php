@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('email', 50)->unique();
             $table->string('password', 200);
             $table->string('telefono', 20)->nullable();
+            $table->string('ruta_imagen')->nullable();
             $table->string('rol', 20);
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();

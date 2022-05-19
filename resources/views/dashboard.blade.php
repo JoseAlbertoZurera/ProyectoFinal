@@ -35,7 +35,7 @@
                                         <th class="text-center">Fecha inicio</th>
                                         <th class="text-center">Fecha fin</th>
                                         <th class="text-center">Precio / Noche</th>
-                                        <th class="text-center">Opciones</th>
+                                        <th class="text-center">Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -49,18 +49,18 @@
                                             <td class="text-center">{{ $alojamiento->tipo_alojamiento }}</td>
                                             <td class="text-center">{{ $alojamiento->fecha_inicio }}</td>
                                             <td class="text-center">{{ $alojamiento->fecha_fin }}</td>
-                                            <td class="text-center">{{ $alojamiento->precio_noche }}</td>
+                                            <td class="text-center">{{ $alojamiento->precio_noche }}€</td>
                                             <td class="d-flex justify-content-center">
                                                 <button type="submit" class="btn btn-primary btn-sm mx-1"><i
-                                                        class="fas fa-eye fa-xl"></i></button>
+                                                        class="fas fa-eye fa-lg"></i></button>
                                                 <button type="submit" class="btn btn-success btn-sm mx-1"><i
-                                                        class="fas fa-edit fa-xl"></i></button>
+                                                        class="fas fa-edit fa-lg"></i></button>
                                                 <form action="{{ route('alojamientos.destroy', [$alojamiento]) }}"
                                                     method="post">
                                                     @method('delete')
                                                     @csrf
                                                     <button type="submit" class="btn btn-danger btn-sm mx-1"><i
-                                                            class="fa-solid fa-xmark fa-xl"></i></button>
+                                                            class="fa-solid fa-trash fa-lg"></i></button>
                                                 </form>
                                             </td>
                                         </tr>
@@ -83,7 +83,7 @@
                                         <th class="text-center">Fecha entrada</th>
                                         <th class="text-center">Fecha salida</th>
                                         <th class="text-center">Estado</th>
-                                        <th class="text-center">Opciones</th>
+                                        <th class="text-center">Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -96,13 +96,13 @@
                                             <td class="text-center">{{ $reserva->estado }}</td>
                                             <td class="d-flex justify-content-center">
                                                 <button type="submit" class="btn btn-success btn-sm mx-1"><i
-                                                        class="fas fa-edit fa-xl"></i></button>
+                                                        class="fas fa-edit fa-lg"></i></button>
                                                 <form action="{{ route('reservas.destroy', [$reserva]) }}"
                                                     method="post">
                                                     @method('delete')
                                                     @csrf
                                                     <button type="submit" class="btn btn-danger btn-sm mx-1"><i
-                                                            class="fa-solid fa-xmark fa-xl"></i></button>
+                                                            class="fa-solid fa-trash fa-lg"></i></button>
                                                 </form>
                                             </td>
                                         </tr>
@@ -118,5 +118,5 @@
 
         <a href="{{ route('perfil.index', Auth::user()->nombre) }}">Ver datos Perfil</a>
     </div>
-    </div>
+
 @endsection
