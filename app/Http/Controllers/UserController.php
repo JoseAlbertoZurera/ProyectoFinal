@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -39,8 +40,25 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        $request->validate([
+            'ruta_imagen' => 'nullable|image'
+        ]);
+
+        // Eliminamos la imagen anterior
+        if ($request->hasFile('ruta_imagen') && $user->ruta_imagen != null) {
+            $url = str_replace('storage', 'public', $user->ruta_imagen);
+            Storage::delete($url);
+        }
+
+        // Guardamos la nueva imagen
+        if ($request->hasFile('ruta_imagen')) {
+            $imagen = $request->file('ruta_imagen')->store('public/images/users');
+            $url = Storage::url($imagen);
+            $request['ruta_imagen'] = $url;
+        }
+
         $user->fill($request->input())->saveOrFail();
-        return redirect()->route("perfil.index")->with(["mensaje" => "Usuario actualizado"]);
+        return redirect()->route("perfil.index", [Auth::user()->nombre])->with(["mensaje" => "Usuario actualizado"]);
     }
 
     /**
