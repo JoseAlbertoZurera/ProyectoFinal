@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
         $usuario->email = 'admin@admin.com';
         $usuario->password = 'password';
         $usuario->telefono = NULL;
+        $usuario->ruta_imagen = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png';
         $usuario->rol = 'Administrador';
         $usuario->email_verified_at = now();
 
