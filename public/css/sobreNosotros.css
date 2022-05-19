@@ -1,9 +1,6 @@
 .img-fluid {
     width: 100%;
     height: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 
 }
 
@@ -28,8 +25,7 @@
 }
 
 .caja {
-    position: relative;
-    display: inline-block;
+    position: relative; 
 }
 
 .card-subtitle {

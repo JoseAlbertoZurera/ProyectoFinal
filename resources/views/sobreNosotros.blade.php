@@ -9,7 +9,7 @@
 @section('contenido')
 
     <section class="section--header">
-        <div class="caja">
+        <div class="caja ">
             <img src="{{ asset('images/quienes/fondo.jpg') }}" class="img-fluid" alt="" />
             <div class="title">SOBRE NOSOTROS</div>
             <div class="subtitle">Viajar nunca fue tan fácil</div>
