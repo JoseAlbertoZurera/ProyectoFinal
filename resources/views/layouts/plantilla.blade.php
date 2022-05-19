@@ -50,7 +50,7 @@
                             <a class="nav-link mx-2 text-dark" href="{{ route('alojamientos') }}">Alojamientos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mx-2 text-dark" href="{{ route('publicarAlojamiento') }}">Publica tu
+                            <a class="nav-link mx-2 text-dark" href="{{ route('alojamientos.create') }}">Publica tu
                                 alojamiento</a>
                         </li>
                         <li class="nav-item">
