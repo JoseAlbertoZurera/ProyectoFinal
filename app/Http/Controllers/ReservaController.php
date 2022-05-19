@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Alojamiento;
+use App\Models\ReservaRealizada;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class AlojamientosPublicadosController extends Controller
+class ReservaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,7 @@ class AlojamientosPublicadosController extends Controller
      */
     public function index()
     {
-        $alojamientos = Alojamiento::where('id_usuario', Auth::user()->id)->get();
-        return view('alojamientosPublicados', compact('alojamientos'));
+        //
     }
 
     /**
@@ -43,10 +41,10 @@ class AlojamientosPublicadosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Alojamiento  $alojamiento
+     * @param  \App\Models\ReservaRealizada  $reservaRealizada
      * @return \Illuminate\Http\Response
      */
-    public function show(Alojamiento $alojamiento)
+    public function show(ReservaRealizada $reservaRealizada)
     {
         //
     }
@@ -54,10 +52,10 @@ class AlojamientosPublicadosController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Alojamiento  $alojamiento
+     * @param  \App\Models\ReservaRealizada  $reservaRealizada
      * @return \Illuminate\Http\Response
      */
-    public function edit(Alojamiento $alojamiento)
+    public function edit(ReservaRealizada $reservaRealizada)
     {
         //
     }
@@ -66,10 +64,10 @@ class AlojamientosPublicadosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Alojamiento  $alojamiento
+     * @param  \App\Models\ReservaRealizada  $reservaRealizada
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Alojamiento $alojamiento)
+    public function update(Request $request, ReservaRealizada $reservaRealizada)
     {
         //
     }
@@ -77,12 +75,12 @@ class AlojamientosPublicadosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Alojamiento  $alojamiento
+     * @param  \App\Models\ReservaRealizada  $reservaRealizada
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Alojamiento $alojamiento)
+    public function destroy(ReservaRealizada $reservaRealizada)
     {
-        $alojamiento->delete();
-        return redirect()->route("alojamientosPublicados.index")->with(["mensaje" => "Alojamiento eliminado correctamente",]);
+        $reservaRealizada->delete();
+        return redirect()->route("dashboard")->with(["mensaje" => "Reserva eliminada correctamente",]);
     }
 }

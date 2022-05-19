@@ -4,8 +4,8 @@ use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\CookiesController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AlojamientosPublicadosController;
-use App\Http\Controllers\PublicarAlojamientoController;
+use App\Http\Controllers\AlojamientoController;
+use App\Http\Controllers\ReservaController;
 use App\Http\Controllers\SobreNosotrosController;
 use App\Http\Controllers\TerminosYCondicionesController;
 use App\Http\Controllers\UserController;
@@ -28,12 +28,12 @@ Auth::routes(['verify' => true]);
 Route::get('/', HomeController::class)->name('home');
 
 Route::get('/dashboard', DashboardController::class)->name('dashboard')->middleware('verified');
+Route::get('/dashboard/perfil/{user}', [UserController::class, 'index'])->name('perfil.index')->middleware('verified');
+Route::get('/dashboard/perfil/{user}/editar', [UserController::class, 'edit'])->name('perfil.edit')->middleware('verified');
+Route::put('/dashboard/perfil/{user}/editar', [UserController::class, 'update'])->name('perfil.update')->middleware('verified');
+Route::delete('/dashboard/perfil/{user}', [UserController::class, 'destroy'])->name('perfil.destroy')->middleware('verified');
 
-Route::get('/dashboard/editar-perfil', [UserController::class, 'create'])->name('editarPerfil')->middleware('verified');
-
-Route::get('/alojamientos', function () {
-    return view('alojamientos');
-})->name('alojamientos');
+Route::get('/alojamientos', AlojamientoController::class)->name('alojamientos');
 
 Route::get('/alojamiento', function () {
     return view('alojamiento');
@@ -47,8 +47,9 @@ Route::get('/sobre-nosotros', SobreNosotrosController::class)->name('sobreNosotr
 
 Route::get('/terminos-y-condiciones', TerminosYCondicionesController::class)->name('terminosYCondiciones');
 
-Route::get('/publicar-alojamiento', PublicarAlojamientoController::class)->name('publicarAlojamiento')->middleware('verified');
-Route::post('/publicar-alojamiento', [PublicarAlojamientoController::class, 'store'])->name('publicarAlojamiento.store');
+Route::get('/publicar-alojamiento', [AlojamientoController::class, 'create'])->name('alojamientos.create')->middleware('verified');
+Route::post('/publicar-alojamiento', [AlojamientoController::class, 'store'])->name('alojamientos.store')->middleware('verified');
 
-Route::get('/alojamientos-publicados',[AlojamientosPublicadosController::class, 'index'])->name('alojamientosPublicados.index')->middleware('verified');
-Route::delete('/alojamientos-publicados{alojamiento}', [AlojamientosPublicadosController::class, 'destroy'])->name('alojamientosPublicados.destroy')->middleware('verified');
+Route::delete('/alojamientos-publicados/{alojamiento}', [AlojamientoController::class, 'destroy'])->name('alojamientos.destroy')->middleware('verified');
+
+Route::delete('/reservas/{reserva}', [ReservaController::class, 'destroy'])->name('reservas.destroy')->middleware('verified');

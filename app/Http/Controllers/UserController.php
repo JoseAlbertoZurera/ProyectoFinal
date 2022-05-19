@@ -4,64 +4,34 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Muestra una vista con los datos del usuario.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        $user = Auth::user();
+        return view('perfil', compact('user'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Muestra el formulario para editar el usuario especificado.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function edit()
     {
-        return view('editarPerfil');
+        $user = Auth::user();
+        return view('editarPerfil', compact('user'));
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function show(User $user)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(User $user)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
+     * Actualiza el usuario especificado en la BBDD.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\User  $user
@@ -69,17 +39,19 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $user->fill($request->input())->saveOrFail();
+        return redirect()->route("perfil.index")->with(["mensaje" => "Usuario actualizado"]);
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Elimina el usuario especificado de la BBDD.
      *
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
     public function destroy(User $user)
     {
-        //
+        $user->delete();
+        return redirect()->route("home")->with(["mensaje" => "Usuario eliminado correctamente",]);
     }
 }

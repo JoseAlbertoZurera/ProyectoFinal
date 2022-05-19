@@ -6,14 +6,40 @@ use App\Models\Alojamiento;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class PublicarAlojamientoController extends Controller
+class AlojamientoController extends Controller
 {
     public function __invoke()
+    {
+        return view('alojamientos');
+    }
+
+    /**
+     * 
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
     {
         return view('publicarAlojamiento');
     }
 
-    protected function store(Request $request)
+    /**
+     * Almacena el alojamieto creado en la BBDD y muestra .
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
     {
 
         if ($request['wifi']) {
@@ -74,6 +100,52 @@ class PublicarAlojamientoController extends Controller
             'max_personas' => $request['max_personas'],
             'id_usuario' => Auth::id()
         ]);
-        return redirect('/lista');
+        return redirect()->route("alojamientos.index")->with(["mensaje" => "Alojamiento creado correctamente"]);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Alojamiento  $alojamiento
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Alojamiento $alojamiento)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Alojamiento  $alojamiento
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Alojamiento $alojamiento)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Alojamiento  $alojamiento
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Alojamiento $alojamiento)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Alojamiento  $alojamiento
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Alojamiento $alojamiento)
+    {
+        $alojamiento->delete();
+        return redirect()->route("dashboard")->with(["mensaje" => "Alojamiento eliminado correctamente",]);
     }
 }

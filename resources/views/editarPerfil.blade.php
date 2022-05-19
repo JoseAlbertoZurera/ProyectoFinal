@@ -14,90 +14,89 @@
                 <h3 class="text-center col-12 pt-5">Editar Perfil</h3>
             </div>
             <div class="row">
-                <div class="col-md-2">
-                </div>
+                <div class="col-md-2"></div>
                 <div class="col-md-8 border-right">
                     <div class="p-3 py-5">
-                        <div class="d-flex flex-column align-items-center text-center"><img class="img-tio"
-                                width="300px" height="200px" src="{{ asset('images/alojamiento/tio.png') }}">
-                            <input type="file" id="file" name="file" multiple>
-                            </span>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col-md-12">
-                                <label class="form-label" for="name"><i class="fa fa-user" aria-hidden="true"></i>
-                                    Nombre</label>
-                                <input type="text" class="form-control" value="">
+                        <form method="POST" action="{{ route('perfil.update', [$user]) }}">
+                            @method('PUT')
+                            @csrf
+                            <div class="d-flex flex-column align-items-center text-center"><img class="img-tio"
+                                    width="300px" height="200px" src="{{ asset('images/alojamiento/tio.png') }}">
+                                <input type="file" id="file" name="file" multiple>
+                                </span>
                             </div>
-                            <div class="col-md-12">
-                                <label class="form-label" for="apellidos"><i class="fa fa-user"
-                                        aria-hidden="true"></i>
-                                    Apellidos</label>
-                                <input type="text" class="form-control" value="">
+                            <div class="row mt-4">
+                                <div class="col-md-12">
+                                    <label class="form-label" for="nombre"><i class="fa fa-user"
+                                            aria-hidden="true"></i>
+                                        Nombre</label>
+                                    <input type="text" class="form-control" name="nombre"
+                                        value="{{ old('nombre', $user->nombre) }}">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label" for="apellidos"><i class="fa fa-user"
+                                            aria-hidden="true"></i>
+                                        Apellidos</label>
+                                    <input type="text" class="form-control" name="apellidos"
+                                        value="{{ old('apellidos', $user->apellidos) }}">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label" for="fecha_nacimiento"><i class="fa fa-calendar"
+                                            aria-hidden="true"></i>
+                                        Fecha de nacimiento</label>
+                                    <input type="text" class="form-control" name="fecha_nacimiento"
+                                        value="{{ old('fecha_nacimiento', $user->fecha_nacimiento) }}">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label" for="dni"><i class="fa fa-address-card"
+                                            aria-hidden="true"></i>
+                                        Dni</label>
+                                    <input type="text" class="form-control" name="dni"
+                                        value="{{ old('dni', $user->dni) }}">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label" for="email"><i class="fa fa-envelope"
+                                            aria-hidden="true"></i>
+                                        Correo
+                                        electrónico</label>
+                                    <input type="text" class="form-control" name="email"
+                                        value="{{ old('email', $user->email) }}">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label" for="telefono"><i class="fa fa-phone"
+                                            aria-hidden="true"></i>
+                                        Teléfono</label>
+                                    <input type="text" class="form-control" name="telefono"
+                                        value="{{ old('telefono', $user->telefono) }}">
+                                </div>
                             </div>
-                            <div class="col-md-12">
-                                <label class="form-label" for="name"><i class="fa fa-calendar" aria-hidden="true"></i>
-                                    Fecha
-                                    de
-                                    nacimiento</label>
-                                <input type="text" class="form-control" value="">
-                            </div>
-                            <div class="col-md-12">
-                                <label class="form-label" for="dni"><i class="fa fa-address-card"
-                                        aria-hidden="true"></i>
-                                    Dni</label>
-                                <input type="text" class="form-control" value="">
-                            </div>
-                            <div class="col-md-12">
-                                <label class="form-label" for="email"><i class="fa fa-envelope" aria-hidden="true"></i>
-                                    Correo
-                                    electrónico</label>
-                                <input type="text" class="form-control" value="">
-                            </div>
-                            <div class="col-md-12">
-                                <label class="form-label" for="password"><i class="fa fa-unlock-alt"
-                                        aria-hidden="true"></i>
-                                    Contraseña</label>
-                                <input type="text" class="form-control" value="">
-                            </div>
-                            <div class="col-md-12">
-                                <label for="password-confirm" class="form-label"><i class="fa fa-unlock"
-                                        aria-hidden="true"></i>{{ __(' Confirmar Contraseña') }}</label>
-                                <input type="text" class="form-control" value="">
-                            </div>
-                            <div class="col-md-12">
-                                <label class="form-label" for="telefono"><i class="fa fa-phone"
-                                        aria-hidden="true"></i>
-                                    Teléfono</label>
-                                <input type="text" class="form-control" value="">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <button class="btn btn-warning w-100 mt-3" type="submit">
-                                    <div class="row align-items-center">
-                                        <div class="col-1">
-                                            <i class="fa-solid fa-floppy-disk"></i>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button class="btn btn-warning w-100 mt-3" type="submit">
+                                        <div class="row align-items-center">
+                                            <div class="col-1">
+                                                <i class="fa-solid fa-floppy-disk"></i>
+                                            </div>
+                                            <div class="col-11">
+                                                <span class="span-btn">Guardar perfil</span>
+                                            </div>
                                         </div>
-                                        <div class="col-11">
-                                            <span class="span-btn">Guardar perfil</span>
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <a class="btn btn-warning w-100 mt-3" href="{{ route('dashboard') }}">
+                                        <div class="row align-items-center">
+                                            <div class="col-1">
+                                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                            </div>
+                                            <div class="col-11">
+                                                <span class="span-btn">Salir</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </button>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <button class="btn btn-warning w-100 mt-3" type="submit">
-                                    <div class="row align-items-center">
-                                        <div class="col-1">
-                                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                                        </div>
-                                        <div class="col-11">
-                                            <span class="span-btn">Salir</span>
-                                        </div>
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
                 <div class="col-md-2">

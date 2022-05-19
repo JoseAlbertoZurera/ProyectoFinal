@@ -13,7 +13,7 @@
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <div class="formulario-login m-5">
                     <h2 class="text-center">Publica tu alojamiento</h2>
-                    <form class="m-4" method="POST" action="{{ route('publicarAlojamiento.store') }}">
+                    <form class="m-4" method="POST" action="{{ route('alojamientos.store') }}">
                         @csrf
 
                         <div class="row">
@@ -51,7 +51,7 @@
                                         aria-hidden="true"></i>
                                     Tipo de alojamiento </label>
                                 <select class="form-select" aria-label="Default select example" id="tipo_alojamiento"
-                                    name="tipo_alojamiento" title="Selecciona un tipo de alojamiento">
+                                    name="tipo_alojamiento" title="Selecciona un tipo de alojamiento" required>
                                     <option selected disabled>Tipo de alojamiento</option>
                                     <option value="Casa">Casa</option>
                                     <option value="Apartamento">Apartamento</option>

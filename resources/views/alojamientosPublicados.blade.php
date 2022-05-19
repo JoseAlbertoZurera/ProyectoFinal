@@ -2,7 +2,6 @@
 
 @section('styles')
     <link href="{{ asset('css/alojamientosPublicados.css') }}" rel="stylesheet">
-
 @endsection
 
 @section('titulo', 'Leasing | Lista Alojamientos')
@@ -18,7 +17,7 @@
                 <div class="card shadow">
                     <div class="card-header d-flex justify-content-between">
                         <h3 class="text-primary">Alojamientos Publicados</h3>
-                        <a class="btn btn-success" href="{{ route('publicarAlojamiento') }}">Añadir Alojamientos</a>
+                        <a class="btn btn-success" href="{{ route('alojamientos.create') }}">Añadir Alojamientos</a>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered">
@@ -56,7 +55,7 @@
                                                     class="fas fa-eye"></i></button>
                                             <button type="submit" class="btn btn-success mx-1"><i
                                                     class="fas fa-edit"></i></button>
-                                            <form action="{{ route('alojamientosPublicados.destroy', [$alojamiento]) }}"
+                                            <form action="{{ route('alojamientos.destroy', [$alojamiento]) }}"
                                                 method="post">
                                                 @method('delete')
                                                 @csrf
