@@ -23,20 +23,14 @@
                     <img src="img/fundamentals.svg" class="img-fluid" alt="" />
                 </div>
                 <div class="col-md p-5">
-                    <h2>Learn The Fundamentals</h2>
+                    <h2>Sobre nosotros...</h2>
                     <p class="lead">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Similique deleniti possimus magnam corporis ratione facere!
+                        Leasing aparece de la palabra inglesa leasing, la cual significa arrendamiento, nuestra empresa es
+                        una plataforma de búsqueda de tarifas de viaje y alojamiento en la red, su misión es conectar
+                        clientes los cuales necesitan un alojamiento y vendedores que alquilan su propiedad de turismo desde
+                        cualquier parte de España. En Leasing incluso se pueden hacer reservas con anticipación, así como
+                        observar la lista de precios y experiencias de los usuarios.
                     </p>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
-                        reiciendis eius autem eveniet mollitia, at asperiores suscipit
-                        quae similique laboriosam iste minus placeat odit velit quos,
-                        nulla architecto amet voluptates?
-                    </p>
-                    <a href="#" class="btn btn-light mt-3">
-                        <i class="bi bi-chevron-right"></i> Read More
-                    </a>
                 </div>
             </div>
         </div>
@@ -46,10 +40,10 @@
         <div class="container">
             <h2 class=" h2-instructors">CONOCE NUESTRO EQUIPO</h2>
             <hr style="height: 5px;
-                                width: 50%;
-                                text-align: center;
-                                margin-left: 25%;
-                                margin-bottom: 40px;">
+                                                                                width: 50%;
+                                                                                text-align: center;
+                                                                                margin-left: 25%;
+                                                                                margin-bottom: 40px;">
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="card bg-light">
@@ -65,7 +59,7 @@
                             <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
                             <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
                             <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                            <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-github text-dark mx-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -84,7 +78,7 @@
                             <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
                             <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
                             <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                            <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-github text-dark mx-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -94,7 +88,7 @@
                         <div class="card-body text-center">
                             <img src="https://randomuser.me/api/portraits/women/37.jpg" class="rounded-circle mb-3"
                                 alt="" />
-                            <h3 class="card-title mb-3">Adrian Martinez</h3>
+                            <h3 class="card-title mb-3">Adrian Romero</h3>
                             <h4 class="card-subtitle text-muted mb-3">
                                 TROLASO End Developer, España</h4>
                             <p class="card-text">
@@ -104,7 +98,7 @@
                             <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
                             <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
                             <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                            <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-github text-dark mx-1"></i></a>
                         </div>
                     </div>
                 </div>

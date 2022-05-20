@@ -9,11 +9,12 @@
 
 @section('contenido')
     <section class="contacta-2">
-        <div class="row">
+        <div class="row-yaya">
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <div class="formulario-login m-5">
                     <h2 class="text-center">Publica tu alojamiento</h2>
-                    <form class="m-4" method="POST" action="{{ route('alojamientos.store') }}" enctype="multipart/form-data">
+                    <form class="m-4" method="POST" action="{{ route('alojamientos.store') }}"
+                        enctype="multipart/form-data">
                         @csrf
 
                         <div class="row">

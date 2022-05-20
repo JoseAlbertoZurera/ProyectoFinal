@@ -1,26 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
 /* Header fixed */
-#header{
-	position:fixed;
-	top: 0px;
+#header {
+    position: fixed;
+    top: 0px;
     width: 100%;
 }
 
-#fondo-playa{
+#fondo-playa {
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 
-.btn-scrolltop{
+.btn-scrolltop {
     position: fixed;
     bottom: 10px;
     right: 15px;
@@ -28,40 +30,44 @@ html{
     cursor: pointer;
 }
 
-.h2-tip{
+.h2-tip {
     font-size: 25px;
     font-weight: bold;
     color: black;
     margin-bottom: 2px;
 }
-.card-img-top{
+
+.card-img-top {
     width: 100%;
     height: 250px;
     object-fit: cover;
 
 }
-.card{
+
+.card {
     position: inherit !important;
 }
 
 
 /* ESTILOS FOOTER */
 
-#back-footer{
+#back-footer {
     background-size: cover;
     background-repeat: no-repeat;
 }
-footer{
-	width: 100%;
-    color: rgba(255,255,255,0.6);
+
+footer {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.6);
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 14px;
     display: block;
 }
-#footer-content2 ul li{
-	display: flex;
-	color: #fff;
+
+#footer-content2 ul li {
+    display: flex;
+    color: #fff;
 }
 
 #footer-content2 ul li span {
@@ -71,23 +77,27 @@ footer{
     /* align-items: center; */
     margin-top: 4px;
 }
-footer-content1 ul li a{
-	list-style: none;
-	text-decoration: none;
-	margin-left: 0;
-	padding-left: 0px;
-	font-weight: 500;
+
+footer-content1 ul li a {
+    list-style: none;
+    text-decoration: none;
+    margin-left: 0;
+    padding-left: 0px;
+    font-weight: 500;
 }
-#img-footer{
+
+#img-footer {
     margin-bottom: 20px;
     display: block;
     height: 50px;
 }
-footer a{
-    color: rgba(255,255,255,0.6);
+
+footer a {
+    color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
 }
-footer a:hover{
+
+footer a:hover {
     color: #fff;
 }
 
@@ -100,18 +110,17 @@ div.footer-buttons {
     text-align: center;
     padding: 20px;
 }
-div.footer-buttons a, div.footer-buttons a i {
+
+div.footer-buttons a,
+div.footer-buttons a i {
     color: #fff;
     text-decoration: none;
 }
 
-.hidden-down-buttons{
-	display:none;
-}
-.show-down-buttons{
-	display:block;
+.hidden-down-buttons {
+    display: none;
 }
 
-
-
-
+.show-down-buttons {
+    display: block;
+}

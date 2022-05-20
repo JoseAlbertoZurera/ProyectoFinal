@@ -1,3 +1,7 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 .img-fluid {
     width: 100%;
     height: auto;
@@ -16,7 +20,7 @@
 .subtitle {
     position: absolute;
     top: 53%;
-    left: 40%;
+    left: 37%;
     color: white;
     font-size: 30px;
     line-height: 34px;
@@ -25,7 +29,7 @@
 }
 
 .caja {
-    position: relative; 
+    position: relative;
 }
 
 .card-subtitle {

@@ -1,11 +1,15 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
 .contenedor {
     font-family: 'Poppins', sans-serif;
-    width: 98vw;
+    width: 100vw;
 }
 
 .formulario-login {
     width: 800px;
-    height: min-content;
+    height: max-content;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -47,9 +51,10 @@ a {
 }
 
 .contacta-2 {
-    background-image: url("../images/publicar/casa2.jpg");
+    /* background-image: url("../images/publicar/casa2.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .invalid-feedback {
@@ -104,4 +109,9 @@ input {
 
 .rotate180 {
     transform: rotate(-60deg);
+}
+
+.row-yaya {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 0rem;
 }

@@ -2,6 +2,10 @@
 
 @section('titulo', 'Leasing | Dashboard')
 
+@section('styles')
+    <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+@endsection
+
 @section('contenido')
     <div class="container">
         <div class="row d-flex justify-content-center align-items-center" style=" min-height: 25vh;">
@@ -112,7 +116,9 @@
             </div>
         </div>
 
-        <a href="{{ route('perfil.index', Auth::user()->nombre) }}">Ver datos Perfil</a>
+        <a href="{{ route('perfil.index', Auth::user()->nombre) }}" class="btn btn-dark mt-3">
+            <i class="bi bi-arrow-right"></i> Ver perfil
+        </a>
     </div>
 
 @endsection
