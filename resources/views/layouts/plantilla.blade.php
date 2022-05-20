@@ -107,6 +107,8 @@
     </header>
 
     <main>@yield('contenido')</main>
+    
+    @yield('JavaScript')
 
 </body>
 

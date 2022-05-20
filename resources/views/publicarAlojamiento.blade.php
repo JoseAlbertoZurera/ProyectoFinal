@@ -13,7 +13,7 @@
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <div class="formulario-login m-5">
                     <h2 class="text-center">Publica tu alojamiento</h2>
-                    <form class="m-4" method="POST" action="{{ route('alojamientos.store') }}">
+                    <form class="m-4" method="POST" action="{{ route('alojamientos.store') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="row">
@@ -21,7 +21,7 @@
                                 <label class="form-label" for="ciudad"><i class="fa fa-globe" aria-hidden="true"></i>
                                     Ciudad </label>
                                 <input class="form-control" type="text" id="ciudad" name="ciudad"
-                                    title="Introduce una ciudad" @error('ciudad') is-invalid @enderror required />
+                                    title="Introduce una ciudad" required />
                                 @error('ciudad')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

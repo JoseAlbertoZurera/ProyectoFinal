@@ -2,10 +2,6 @@
 
 @section('titulo', 'Leasing | Dashboard')
 
-@section('styles')
-    <link href="{{ asset('css/alojamientosPublicados.css') }}" rel="stylesheet">
-@endsection
-
 @section('contenido')
     <div class="container">
         <div class="row d-flex justify-content-center align-items-center" style=" min-height: 25vh;">
@@ -55,7 +51,8 @@
                                                         class="fas fa-eye fa-lg"></i></button>
                                                 <button type="submit" class="btn btn-success btn-sm mx-1"><i
                                                         class="fas fa-edit fa-lg"></i></button>
-                                                <form action="{{ route('alojamientos.destroy', [$alojamiento]) }}"
+                                                <form class="eliminarAlojamiento"
+                                                    action="{{ route('alojamientos.destroy', [$alojamiento]) }}"
                                                     method="post">
                                                     @method('delete')
                                                     @csrf
@@ -97,8 +94,7 @@
                                             <td class="d-flex justify-content-center">
                                                 <button type="submit" class="btn btn-success btn-sm mx-1"><i
                                                         class="fas fa-edit fa-lg"></i></button>
-                                                <form action="{{ route('reservas.destroy', [$reserva]) }}"
-                                                    method="post">
+                                                <form action="{{ route('reservas.destroy', [$reserva]) }}" method="post">
                                                     @method('delete')
                                                     @csrf
                                                     <button type="submit" class="btn btn-danger btn-sm mx-1"><i
@@ -118,5 +114,45 @@
 
         <a href="{{ route('perfil.index', Auth::user()->nombre) }}">Ver datos Perfil</a>
     </div>
+
+@endsection
+
+@section('JavaScript')
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    @if (null !== session('mensaje'))
+        <script>
+            Swal.fire(
+                'Eliminado!',
+                'Su alojamiento ha sido eliminado.',
+                'success'
+            )
+        </script>
+    @endif
+
+    <script>
+        $(document).ready(function() {
+            $('.eliminarAlojamiento').submit(function(event) {
+                event.preventDefault();
+
+                Swal.fire({
+                    title: 'Estas seguro',
+                    text: "¡No podrás revertir esto!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Si, eliminar!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        this.submit();
+                    }
+                })
+            });
+        });
+    </script>
 
 @endsection
