@@ -51,10 +51,10 @@
                                             <td class="text-center">{{ $alojamiento->fecha_fin }}</td>
                                             <td class="text-center">{{ $alojamiento->precio_noche }}€</td>
                                             <td class="d-flex justify-content-center">
-                                                <button type="submit" class="btn btn-primary btn-sm mx-1"><i
-                                                        class="fas fa-eye fa-lg"></i></button>
-                                                <button type="submit" class="btn btn-success btn-sm mx-1"><i
-                                                        class="fas fa-edit fa-lg"></i></button>
+                                                <a class="btn btn-primary btn-sm mx-1"  href="{{ route('alojamiento')}}"><i
+                                                        class="fas fa-eye fa-lg"></i></a>
+                                                <a class="btn btn-success btn-sm mx-1" href="{{ route('editarAlojamiento')}}""><i
+                                                        class="fas fa-edit fa-lg"></i></a>
                                                 <form class="eliminarAlojamiento"
                                                     action="{{ route('alojamientos.destroy', [$alojamiento]) }}"
                                                     method="post">

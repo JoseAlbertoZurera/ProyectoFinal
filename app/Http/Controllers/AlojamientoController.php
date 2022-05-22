@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Alojamiento;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class AlojamientoController extends Controller
 {
@@ -14,13 +15,13 @@ class AlojamientoController extends Controller
     }
 
     /**
+     * Muestra la vista de un alojamiento específico
      * 
-     *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        return view('alojamiento');
     }
 
     /**
@@ -41,6 +42,9 @@ class AlojamientoController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'ruta_imagen' => 'nullable|image'
+        ]);
 
         if ($request['wifi']) {
             $wifi = $request['wifi'];
@@ -79,6 +83,13 @@ class AlojamientoController extends Controller
         }
 
 
+        // Guardamos la nueva imagen
+        if ($request->hasFile('ruta_imagen')) {
+            $imagen = $request->file('ruta_imagen')->store('public/images/alojamientos');
+            $url_imagen = Storage::url($imagen);
+        }
+
+
         Alojamiento::create([
             'ciudad' => $request['ciudad'],
             'codigo_postal' => $request['codigo_postal'],
@@ -89,7 +100,7 @@ class AlojamientoController extends Controller
             'precio_noche' => $request['precio_noche'],
             'disponibilidad' => 1,
             'descripcion' => $request['descripcion'],
-            'ruta_imagen' => $request['ruta_imagen'],
+            'ruta_imagen' => $url_imagen,
             'wifi' => $wifi,
             'playa' => $playa,
             'limpieza' => $limpieza,

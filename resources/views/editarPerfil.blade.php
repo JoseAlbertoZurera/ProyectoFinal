@@ -79,7 +79,7 @@
                         </button>
                     </div>
                     <div class="col-md-6">
-                        <a class="btn btn-warning w-100 mt-3" href="{{ route('dashboard') }}">
+                        <a class="btn btn-warning w-100 mt-3" href="{{ route('perfil.index', Auth::user()->nombre) }}">
                             <div class="row align-items-center">
                                 <div class="col-1">
                                     <i class="fa-solid fa-arrow-right-from-bracket"></i>

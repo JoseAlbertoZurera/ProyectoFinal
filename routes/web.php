@@ -35,9 +35,7 @@ Route::delete('/dashboard/perfil/{user}', [UserController::class, 'destroy'])->n
 
 Route::get('/alojamientos', AlojamientoController::class)->name('alojamientos');
 
-Route::get('/alojamiento', function () {
-    return view('alojamiento');
-})->name('alojamiento');
+Route::get('/alojamiento', [AlojamientoController::class, 'index'])->name('alojamiento');
 
 Route::get('/contacto', ContactoController::class)->name('contacto');
 
