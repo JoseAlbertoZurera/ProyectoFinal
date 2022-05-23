@@ -4,6 +4,7 @@
 
 @section('styles')
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/dashboard.js') }}" defer></script>
 @endsection
 
 @section('contenido')
@@ -23,51 +24,56 @@
                             <a class="btn btn-outline-secondary btn-sm" href="{{ route('alojamientos.create') }}">Añadir
                                 Alojamiento</a>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <table class="table table-striped table-hover table-sm">
-                                <thead class="table-secondary">
-                                    <tr>
-                                        <th class="text-center">Nº Alojamiento</th>
-                                        <th class="text-center">Ciudad</th>
-                                        <th class="text-center">Código Postal</th>
-                                        <th class="text-center">Dirección</th>
-                                        <th class="text-center">Tipo</th>
-                                        <th class="text-center">Fecha inicio</th>
-                                        <th class="text-center">Fecha fin</th>
-                                        <th class="text-center">Precio / Noche</th>
-                                        <th class="text-center">Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    @foreach ($alojamientos as $alojamiento)
+                                @if (sizeof($alojamientos))
+                                    <thead class="table-secondary">
                                         <tr>
-                                            <th class="text-center">{{ $alojamiento->id }}</th>
-                                            <td class="text-center">{{ $alojamiento->ciudad }}</td>
-                                            <td class="text-center">{{ $alojamiento->codigo_postal }}</td>
-                                            <td class="text-center">{{ $alojamiento->direccion }}</td>
-                                            <td class="text-center">{{ $alojamiento->tipo_alojamiento }}</td>
-                                            <td class="text-center">{{ $alojamiento->fecha_inicio }}</td>
-                                            <td class="text-center">{{ $alojamiento->fecha_fin }}</td>
-                                            <td class="text-center">{{ $alojamiento->precio_noche }}€</td>
-                                            <td class="d-flex justify-content-center">
-                                                <a class="btn btn-primary btn-sm mx-1"  href="{{ route('alojamiento')}}"><i
-                                                        class="fas fa-eye fa-lg"></i></a>
-                                                <a class="btn btn-success btn-sm mx-1" href="{{ route('editarAlojamiento')}}""><i
-                                                        class="fas fa-edit fa-lg"></i></a>
-                                                <form class="eliminarAlojamiento"
-                                                    action="{{ route('alojamientos.destroy', [$alojamiento]) }}"
-                                                    method="post">
-                                                    @method('delete')
-                                                    @csrf
-                                                    <button type="submit" class="btn btn-danger btn-sm mx-1"><i
-                                                            class="fa-solid fa-trash fa-lg"></i></button>
-                                                </form>
-                                            </td>
+                                            <th>Nº Alojamiento</th>
+                                            <th>Ciudad</th>
+                                            <th>Código Postal</th>
+                                            <th>Dirección</th>
+                                            <th>Tipo</th>
+                                            <th>Fecha inicio</th>
+                                            <th>Fecha fin</th>
+                                            <th>Precio / Noche</th>
+                                            <th>Acciones</th>
                                         </tr>
-                                </tbody>
-                                @endforeach
-
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($alojamientos as $alojamiento)
+                                            <tr>
+                                                <th>{{ $alojamiento->id }}</th>
+                                                <td>{{ $alojamiento->ciudad }}</td>
+                                                <td>{{ $alojamiento->codigo_postal }}</td>
+                                                <td>{{ $alojamiento->direccion }}</td>
+                                                <td>{{ $alojamiento->tipo_alojamiento }}</td>
+                                                <td>{{ $alojamiento->fecha_inicio }}</td>
+                                                <td>{{ $alojamiento->fecha_fin }}</td>
+                                                <td>{{ $alojamiento->precio_noche }}€</td>
+                                                <td class="d-flex justify-content-center">
+                                                    <a class="btn btn-primary btn-sm mx-1"
+                                                        href="{{ route('alojamiento', [$alojamiento]) }}"
+                                                        title="Ver alojamiento"><i class="fas fa-eye fa-lg"></i></a>
+                                                    <a class="btn btn-success btn-sm mx-1"
+                                                        href="{{ route('editarAlojamiento') }}"
+                                                        title="Editar alojamiento"><i class="fas fa-edit fa-lg"></i></a>
+                                                    <form class="eliminarAlojamiento"
+                                                        action="{{ route('alojamientos.destroy', [$alojamiento]) }}"
+                                                        method="post">
+                                                        @method('delete')
+                                                        @csrf
+                                                        <button type="submit" class="btn btn-danger btn-sm mx-1"
+                                                            title="Eliminar alojamiento"><i
+                                                                class="fa-solid fa-trash fa-lg"></i></button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                @else
+                                    <h7>Actualmente no tienes ningún alojamiento publicado</h7>
+                                @endif
                             </table>
                         </div>
                     </div>
@@ -76,39 +82,44 @@
                         <div class="card-header d-flex justify-content-between align-items-center">
                             <h5>{{ __('Reservas realizadas') }}</h5>
                         </div>
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <table class="table table-striped table-hover table-sm">
-                                <thead class="table-secondary">
-                                    <tr>
-                                        <th class="text-center">Nº Reserva</th>
-                                        <th class="text-center">Fecha entrada</th>
-                                        <th class="text-center">Fecha salida</th>
-                                        <th class="text-center">Estado</th>
-                                        <th class="text-center">Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-
-                                    @foreach ($reservas as $reserva)
+                                @if (sizeof($reservas))
+                                    <thead class="table-secondary">
                                         <tr>
-                                            <th class="text-center">{{ $reserva->id }}</th>
-                                            <td class="text-center">{{ $reserva->fecha_entrada }}</td>
-                                            <td class="text-center">{{ $reserva->fecha_salida }}</td>
-                                            <td class="text-center">{{ $reserva->estado }}</td>
-                                            <td class="d-flex justify-content-center">
-                                                <button type="submit" class="btn btn-success btn-sm mx-1"><i
-                                                        class="fas fa-edit fa-lg"></i></button>
-                                                <form action="{{ route('reservas.destroy', [$reserva]) }}" method="post">
-                                                    @method('delete')
-                                                    @csrf
-                                                    <button type="submit" class="btn btn-danger btn-sm mx-1"><i
-                                                            class="fa-solid fa-trash fa-lg"></i></button>
-                                                </form>
-                                            </td>
+                                            <th>Nº Reserva</th>
+                                            <th>Fecha entrada</th>
+                                            <th>Fecha salida</th>
+                                            <th>Estado</th>
+                                            <th>Acciones</th>
                                         </tr>
-                                </tbody>
-                                @endforeach
+                                    </thead>
+                                    <tbody>
 
+                                        @foreach ($reservas as $reserva)
+                                            <tr>
+                                                <th>{{ $reserva->id }}</th>
+                                                <td>{{ $reserva->fecha_entrada }}</td>
+                                                <td>{{ $reserva->fecha_salida }}</td>
+                                                <td>{{ $reserva->estado }}</td>
+                                                <td class="d-flex justify-content-center">
+                                                    <button type="submit" class="btn btn-success btn-sm mx-1"
+                                                        title="Modificar reserva"><i class="fas fa-edit fa-lg"></i></button>
+                                                    <form action="{{ route('reservas.destroy', [$reserva]) }}"
+                                                        method="post">
+                                                        @method('delete')
+                                                        @csrf
+                                                        <button type="submit" class="btn btn-danger btn-sm mx-1"
+                                                            title="Cancelar reserva"><i
+                                                                class="fa-solid fa-xmark fa-xl"></i></button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                @else
+                                    <h7>Actualmente no has realizado niguna reserva</h7>
+                                @endif
                             </table>
                         </div>
                     </div>
@@ -125,11 +136,7 @@
 
 @section('JavaScript')
 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-    @if (null !== session('mensaje'))
+    @if (session('alojamientoEliminado') != null)
         <script>
             Swal.fire(
                 'Eliminado!',
@@ -138,27 +145,5 @@
             )
         </script>
     @endif
-
-    <script>
-        $(document).ready(function() {
-            $('.eliminarAlojamiento').submit(function(event) {
-                event.preventDefault();
-
-                Swal.fire({
-                    title: 'Estas seguro',
-                    text: "¡No podrás revertir esto!",
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonColor: '#3085d6',
-                    cancelButtonColor: '#d33',
-                    confirmButtonText: 'Si, eliminar!'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        this.submit();
-                    }
-                })
-            });
-        });
-    </script>
 
 @endsection

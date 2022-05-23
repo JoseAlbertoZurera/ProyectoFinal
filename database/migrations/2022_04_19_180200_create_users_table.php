@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('password', 200);
             $table->string('telefono', 20)->nullable();
             $table->string('ruta_imagen')->nullable();
+            $table->text('descripcion')->nullable();
             $table->string('rol', 20);
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();

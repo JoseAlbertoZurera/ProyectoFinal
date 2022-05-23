@@ -13,8 +13,8 @@
             <div class="container contenedor">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-md-6 p-5">
-                        <h2>{{ $alojamiento->ciudad }}</h2>
-                        <p class="lead">{{ $alojamiento->direccion }}</p>
+                        <h2>{{$alojamiento->tipo_alojamiento}} {{ $alojamiento->nombre }}</h2>
+                        <p class="lead">{{ $alojamiento->ciudad }}</p>
                         <span>{{ $alojamiento->habitaciones }} habitaciones</span>
                         <span>{{ $alojamiento->max_personas }} personas</span>
                         <i class="bi bi-house"></i>
@@ -27,7 +27,7 @@
 
                             Precio: {{ $alojamiento->precio_noche }}€ / noche / persona
                         </p>
-                        <a href="{{ route('alojamiento') }}" class="btn btn-dark mt-3">
+                        <a href="{{ route('alojamiento', [$alojamiento->id]) }}" class="btn btn-dark mt-3">
                             <i class="bi bi-arrow-right"></i> Mas información
                         </a>
                     </div>

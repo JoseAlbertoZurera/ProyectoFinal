@@ -25,16 +25,17 @@ class AlojamientoFactory extends Factory
         $string2 = '+' . strval($diferencia->days + 180) . ' days';
 
         return [
-            'ciudad' => $this->faker->city(),
+            'nombre' => $this->faker->words(2, true),
+            'ciudad' => $this->faker->randomElement(['Córdoba', 'Málaga', 'Cádiz', 'Sevilla']),
             'codigo_postal' => $this->faker->postcode(),
             'direccion' => $this->faker->streetAddress(),
             'tipo_alojamiento' => $this->faker->randomElement(['Casa', 'Apartamento', 'Hotel', 'Hostal']),
-            'fecha_publicacion' => $this->faker->dateTimeBetween('-6 months' ,'now'),
             'fecha_inicio' => $fechaInicio,
             'fecha_fin' => $this->faker->dateTimeBetween($string1 , $string2),
             'precio_noche' => $this->faker->numberBetween(45, 250),
             'disponibilidad' => $this->faker->randomElement([0, 1]),
-            'descripcion' => $this->faker->text(400),
+            'descripcion' => $this->faker->text(700),
+            'descripcion_ubicacion' => $this->faker->text(650),
             'ruta_imagen' => $this->faker->imageUrl('640', '640', 'Alojamiento'),
             'wifi' => $this->faker->randomElement([0, 1]),
             'playa' => $this->faker->randomElement([0, 1]),
