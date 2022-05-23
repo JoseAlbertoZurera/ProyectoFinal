@@ -1,4 +1,3 @@
 npm install
 composer install
-php artisan migrate
-php artisan db:seed
+php artisan migrate:fresh --seed
