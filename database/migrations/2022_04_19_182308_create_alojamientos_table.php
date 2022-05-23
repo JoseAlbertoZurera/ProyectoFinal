@@ -15,16 +15,17 @@ return new class extends Migration
     {
         Schema::create('alojamientos', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nombre', 50);
             $table->string('ciudad', 50);
             $table->integer('codigo_postal');
             $table->string('direccion', 80);
             $table->string('tipo_alojamiento', 20);
-            $table->date('fecha_publicacion');
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
             $table->integer('precio_noche');
             $table->boolean('disponibilidad');
             $table->text('descripcion');
+            $table->text('descripcion_ubicacion');
             $table->string('ruta_imagen')->nullable();
             $table->boolean('wifi');
             $table->boolean('playa');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Alojamiento;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -11,7 +12,7 @@ class AlojamientoController extends Controller
 {
     public function __invoke()
     {
-        $alojamientos = Alojamiento::where('disponibilidad', 1)->orderBy('fecha_publicacion', 'desc')->get();
+        $alojamientos = Alojamiento::where('disponibilidad', 1)->orderBy('created_at', 'desc')->get();
 
         return view('alojamientos', compact('alojamientos'));
     }
@@ -21,9 +22,13 @@ class AlojamientoController extends Controller
      * 
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        return view('alojamiento');
+        $alojamiento = Alojamiento::find($id);
+
+        $user = User::find($alojamiento->id_usuario);
+
+        return view('alojamiento', compact('alojamiento', 'user'));
     }
 
     /**
@@ -159,6 +164,6 @@ class AlojamientoController extends Controller
     public function destroy(Alojamiento $alojamiento)
     {
         $alojamiento->delete();
-        return redirect()->route("dashboard")->with(["mensaje" => "Alojamiento eliminado correctamente",]);
+        return redirect()->route("dashboard")->with(["alojamientoEliminado" => "Alojamiento eliminado correctamente",]);
     }
 }
