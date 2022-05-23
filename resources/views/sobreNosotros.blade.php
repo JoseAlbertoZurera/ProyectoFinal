@@ -39,11 +39,12 @@
     <section id="instructors" class="p-5">
         <div class="container">
             <h2 class=" h2-instructors">CONOCE NUESTRO EQUIPO</h2>
-            <hr style="height: 5px;
-                                                                                width: 50%;
-                                                                                text-align: center;
-                                                                                margin-left: 25%;
-                                                                                margin-bottom: 40px;">
+            <hr
+                style="height: 5px;
+                                                                                                                        width: 50%;
+                                                                                                                        text-align: center;
+                                                                                                                        margin-left: 25%;
+                                                                                                                        margin-bottom: 40px;">
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="card bg-light">
@@ -53,8 +54,8 @@
                             <h4 class="card-subtitle text-muted mb-3">
                                 Front End Developer, España</h4>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                                Encargado de que el sitio web sea atractiva para el usuario, además de que sea fácil de
+                                navegar.
                             </p>
                             <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
                             <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
@@ -72,8 +73,8 @@
                             <h4 class="card-subtitle text-muted mb-3">
                                 Back End Developer, España</h4>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                                Encargado de trabajar en el servidor, la base de datos y las APIs que se utilizan en la
+                                aplicación web.
                             </p>
                             <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
                             <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
@@ -90,10 +91,9 @@
                                 alt="" />
                             <h3 class="card-title mb-3">Adrian Romero</h3>
                             <h4 class="card-subtitle text-muted mb-3">
-                                TROLASO End Developer, España</h4>
+                                Chief Financial Officer, España</h4>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Assumenda accusamus nobis sed cupiditate iusto? Quibusdam.
+                                Encargado del seguimiento del flujo de caja y la planificación financiera.
                             </p>
                             <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
                             <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
@@ -105,7 +105,7 @@
             </div>
         </div>
     </section>
-    
+
     @include('layouts.footer')
 
 @endsection

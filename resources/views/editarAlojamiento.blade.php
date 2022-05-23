@@ -1,7 +1,7 @@
 @extends('layouts.plantilla')
 
 @section('styles')
-    <link href="{{ asset('css/alojamiento.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/editarAlojamiento.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
 @endsection
@@ -12,10 +12,15 @@
     <section id="learn" class="text-dark p-5">
         <div class="container">
             <div class="row align-items-center justify-content-between">
-                <h1 contenteditable="true">The Valley Residence <i class="fas fa-edit fa-2xs"></i></h1>
+                <div class="h1">
+                    <h1 contenteditable="true">The Valley Residence <i class="fas fa-edit fa-2xs"></i></h1>
+
+                </div>
                 <div class="col-12">
-                    <i class="bi bi-geo-alt-fill"></i> <span contenteditable="true">San Mateo, Ibiza <i
-                            class="fas fa-edit fa-2xs"></i></span>
+                    <div class="span">
+                        <i class="bi bi-geo-alt-fill"></i> <span contenteditable="true">San Mateo, Ibiza <i
+                                class="fas fa-edit fa-2xs"></i></span>
+                    </div>
                     <br>
                     <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
                     <i class="bi bi-star-fill"> </i> <i class="bi bi-star-half"></i>
@@ -64,7 +69,7 @@
                     <div class="row align-items-center">
                         <div class="col-md-6">
                             <h5>Detalles del Alojamiento</h5>
-                            <p contenteditable="true">
+                            <p class="texto" contenteditable="true">
                                 Esta residencia tiene 5 dormitorios y 3 baños. El dormitorio
                                 principal tiene 1 cama doble más 2 sofás cama individuales,
                                 TV, baño privado y terraza. El dormitorio del jardín tiene 1
@@ -81,7 +86,7 @@
                         </div>
                         <div class="col-md-6">
                             <h5>Acerca de la ubicación</h5>
-                            <p contenteditable="true">
+                            <p class="texto" contenteditable="true">
                                 Esta vivienda se encuentra en San Mateo, Ibiza. Esta zona
                                 tranquila y hermosa está a 25 minutos del aeropuerto de Ibiza,
                                 a 20 minutos de la ciudad de Ibiza ya 10 minutos de la ciudad
@@ -378,16 +383,19 @@
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                         <div class="col-md-6">
-                            <h5 contenteditable="true">Dirección <i class="fas fa-edit fa-2xs"></i></h5>
-                            <p contenteditable="true">San Mateo, Ibiza</p>
-                            <p contenteditable="true">Carrer Del Riu Tamesis 35</p>
-                            <h5 contenteditable="true">Ubicación y entorno</h5>
-                            <p contenteditable="true">3 km a la playa, 3 km al centro de localidad, 10 km al aeropuerto, 2
+                            <h5>Dirección <i class="fas fa-edit fa-2xs"></i>
+                            </h5>
+                            <p class="texto" contenteditable="true">San Mateo, Ibiza</p>
+                            <p class="texto" contenteditable="true">Carrer Del Riu Tamesis 35</p>
+                            <h5>Ubicación y entorno</h5>
+                            <p class="texto " contenteditable="true">3 km a la playa, 3 km al centro de localidad,
+                                10 km al aeropuerto, 2
                                 km al supermercado, 28
                                 km a la estación de tren, 6 km a la estación de autobuses, 5 km al hospital, 3 km a una ruta
                                 de senderismo.</p>
-                            <h5 contenteditable="true">Actividades</h5>
-                            <p contenteditable="true">9 km a un campo de golf, 8 km de un puerto deportivo, 8 km de un
+                            <h5>Actividades</h5>
+                            <p class="texto " contenteditable="true">9 km a un campo de golf, 8 km de un puerto
+                                deportivo, 8 km de un
                                 centro ecuestre, 8 km de una
                                 escuela de submarinismo.</p>
                         </div>
@@ -401,7 +409,7 @@
                                 </div>
                                 <div class="col-md-6 p-5">
                                     <h2>Juan Carlos <i class="bi bi-check-circle-fill"></i></h2>
-                                    <p class="lead" contenteditable="true">
+                                    <p class="texto" contenteditable="true">
                                         Me encanta ser anfitrion de mis amigos, cuido los detalles y soy un romántico
                                         enamorado de mi
                                         tierra. Por desgracia sólo la disfruto en vacaciones, ya que viajo muy a menudo, por
@@ -430,14 +438,15 @@
                                     <div class="col-md">
                                         <div class="card bg-dark text-light">
                                             <div class="card-body text-center">
-                                                <div class="h1 mb-3">
+                                                <div class="h2 mb-3">
                                                     <i class="bi bi-person-circle"></i>
                                                 </div>
                                                 <h3 class="card-title mb-3">Francisco</h3>
                                                 <p class="card-text">
                                                     El apartamento muy acogedor y con todo lo necesario, un súper justo bajo
                                                     para comprar y a 10 minutos andando de la playa. En cuanto a David un
-                                                    anfitrión genial, muy amable. ¡En resumen un 10!
+                                                    anfitrión genial, muy amable, y la bonita playa
+                                                    de El Sardinero. ¡En resumen un 10!
                                                 </p>
                                             </div>
                                         </div>
@@ -447,7 +456,7 @@
                                     <div class="col-md">
                                         <div class="card bg-dark text-light">
                                             <div class="card-body text-center">
-                                                <div class="h1 mb-3">
+                                                <div class="h2 mb-3">
                                                     <i class="bi bi-person-circle"></i>
                                                 </div>
                                                 <h3 class="card-title mb-3">Laura</h3>
@@ -465,7 +474,7 @@
                                     <div class="col-md">
                                         <div class="card bg-dark text-light">
                                             <div class="card-body text-center">
-                                                <div class="h1 mb-3">
+                                                <div class="h2 mb-3">
                                                     <i class="bi bi-person-circle"></i>
                                                 </div>
                                                 <h3 class="card-title mb-3">Antonio</h3>
@@ -483,7 +492,7 @@
                                     <div class="col-md">
                                         <div class="card bg-dark text-light">
                                             <div class="card-body text-center">
-                                                <div class="h1 mb-3">
+                                                <div class="h2 mb-3">
                                                     <i class="bi bi-person-circle"></i>
                                                 </div>
                                                 <h3 class="card-title mb-3">Carlos</h3>
@@ -584,5 +593,5 @@
     </section>
 
     @include('layouts.footer')
-    
+
 @endsection

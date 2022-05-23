@@ -1,0 +1,52 @@
+.d-block {
+    height: 500px;
+    width: 505px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+}
+
+.tabla1 {
+    margin-top: 1em;
+}
+
+.tabla1 th,
+.tabla1 td {
+    text-align: center;
+    padding: .2em .5em;
+}
+
+.tabla1 caption {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.h1 {
+    border-radius: 20px;
+    border: 2px solid;
+}
+
+.span {
+    border-radius: 20px;
+    border: 2px solid;
+}
+
+.texto {
+    border-radius: 5px;
+    border: 2px solid;
+}
+
+.h5 {
+    border-radius: 5px;
+    border: 2px solid;
+}
+
+.accordion-item {}

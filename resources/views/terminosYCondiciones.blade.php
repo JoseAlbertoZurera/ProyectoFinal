@@ -15,59 +15,109 @@
                     <div class="col-md-12">
                         <h1 id="info">Condiciones Generales</h1>
 
-                        <h3 id="info-h3">POLÍTICA DE COOKIES</h3>
-                        <p>En esta web recopilamos y utilizamos la información según indicamos en nuestra política de
-                            privacidad. Una de las formas en las que recopilamos información es a través del uso de la
-                            tecnología llamada “cookies”. En Leasing, utilizamos cookies para varias cosas.</p>
+                        <h3 id="info-h3">Prohibiciones generales</h3>
+                        <p>El Alojamiento acuerda no compartir, subir, publicar, enviar o transmitir a través de o en el
+                            Sitio o en los Servicios de la Página web del Alojamiento ningún Contenido que: (1) infrinja,
+                            malverse o viole una patente de terceros, derechos de autor, marcas registradas, secretos
+                            comerciales, derechos morales o cualquier otro derecho de propiedad intelectual, o derechos de
+                            publicidad o de protección de privacidad/datos, o que viole de cualquier manera o fomente alguna
+                            conducta que pudiese</p>
 
-                        <h3 id="info-h3">¿Qué es una cookie?</h3>
-                        <p>Una “cookie” es una pequeña cantidad de texto que se almacena en tu navegador (como Chrome de
-                            Google o Safari de Apple) cuando navegas por la mayoría de los sitios web.</p>
+                        <h3 id="info-h3">Control, investigación y soluciones</h3>
+                        <p>El Alojamiento está de acuerdo y acepta que BookingSuite tiene el derecho de investigar y
+                            procesar la violación de cualquiera de las prohibiciones arriba citadas, así como la de
+                            cualquiera de estos Términos, hasta el máximo permitido por las Leyes. El Alojamiento admite que
+                            BookingSuite no tiene obligación de controlar el acceso del Alojamiento o el uso que haga del
+                            Sitio, así como de revisar o editar cualquier Contenido del Alojamiento, pero sí tiene derecho a
+                            hacerlo con el objetivo de controlar el Sitio, para asegurar que el Alojamiento cumple con estos
+                            Términos, para cumplir las Leyes vigentes, incluidas las órdenes y requisitos de un juzgado,
+                            agencia administrativa o cualquier cuerpo gubernamental o como lo considere necesario o
+                            apropiado.</p>
 
-                        <h3 id="info-h3">¿Qué NO es una cookie?</h3>
-                        <p>No es un virus, ni un troyano, ni un gusano, ni spam, ni spyware, ni abre ventanas pop-up.</p>
+                        <h3 id="info-h3">Licencia otorgada por Leasing</h3>
+                        <p>Al proporcionar cualquier Contenido del Alojamiento en o a través del Sitio o los Servicios de la
+                            Página web del Alojamiento, por el presente el Alojamiento otorga a BookingSuite licencia y
+                            derecho mundial, no exclusivo, no revocable, perpetuo, transferible y sin derechos de autor, con
+                            el derecho a sublicenciar, usar, ver, copiar, adaptar, modificar, distribuir, licenciar,
+                            transferir, mostrar o representar públicamente, transmitir, divulgar, utilizar o explotar de
+                            cualquier otra manera este Contenido del Alojamiento de la manera necesaria para que
+                            BookingSuite pueda prestar los Servicios de la Página web del Alojamiento. El Alojamiento
+                            también garantiza a BookingSuite el derecho y licencia para usar, comercializar, promover,
+                            mostrar, incluir y utilizar el Contenido del Alojamiento (incluido el Alojamiento) (ya sea en el
+                            Sitio, a través de los Servicios de la Página web del Alojamiento o para hacer web-marketing
+                            online (incluidos anuncios de pago por clic, banners y otros anuncios online) y enviar e-mails
+                            de marketing) por y en beneficio del Alojamiento. BookingSuite realiza las campañas de marketing
+                            online y por email a cuenta y discreción propia. BookingSuite no reclama derechos de propiedad
+                            sobre ningún Contenido del Alojamiento y ninguna de las cláusulas de estos Términos tiene la
+                            intención de restringir los derechos que tenga el Alojamiento para usar y explotar el Contenido
+                            del Alojamiento. </p>
 
-                        <h3 id="info-h3">¿Qué información almacena una cookie?</h3>
-                        <p>Las cookies no suelen almacenar información sensible sobre usted, como tarjetas de crédito o
-                            datos bancarios, fotografías o información personal, etc. Los datos que guardan son de carácter
-                            técnico, estadísticos, preferencias personales, personalización de contenidos, etc.
-
-                            El servidor web no le asocia a usted como persona sino a su navegador web. De hecho, si usted
-                            navega habitualmente con el navegador Chrome y prueba a navegar por la misma web con el
-                            navegador Firefox, verá que la web no se da cuenta que es usted la misma persona porque en
-                            realidad está asociando la información al navegador, no a la persona.</p>
-
-                        <h3 id="info-h3">¿Qué tipo de cookies existen?</h3>
-                        <p><strong>Cookies técnicas:</strong> Son las más elementales y permiten, entre otras cosas, saber
-                            cuándo está navegando un humano o una aplicación automatizada, cuándo navega un usuario anónimo
-                            y uno registrado, tareas básicas para el funcionamiento de cualquier web dinámica.
-                            <br>
-                            <strong>Cookies de análisis:</strong> Recogen información sobre el tipo de navegación que está
-                            realizando, las secciones que más utiliza, productos consultados, franja horaria de uso, idioma,
-                            etc.
-                            <br>
-                            <strong>Cookies publicitarias:</strong>Muestran publicidad en función de su navegación, su país
-                            de procedencia, idioma, etc.
+                        <h3 id="info-h3">Propiedad y todos los derechos reservados</h3>
+                        <p>
+                            Sin limitar cualquier otro idioma en estos Términos, el Alojamiento está de acuerdo y acepta que
+                            el Sitio, los Servicios de la Página web del Alojamiento y el Contenido de BookingSuite
+                            (incluido cualquier Contenido generado o creado por BookingSuite, como por ejemplo, las
+                            traducciones de la descripción del alojamiento creadas por BookingSuite) están protegidos por
+                            derechos de autor, de marca registrada y de bases de datos, así como por otras Leyes, y que el
+                            Sitio, los Servicios de la Página web del Alojamiento y el Contenido de BookingSuite son
+                            propiedad única y exclusiva de BookingSuite y sus licenciatarios. El Alojamiento también está de
+                            acuerdo y acepta que todas las Marcas Registradas que aparecen en el Sitio, los Servicios de la
+                            Página web del Alojamiento o en el Contenido de BookingSuite son propiedad de BookingSuite o de
+                            las terceras partes que lo proporcionan. El Alojamiento no podrá eliminar, alterar, ocultar ni
+                            reclamar la propiedad de ningún derecho de autor, marca registrada, marca de servicio o
+                            cualquier otro derecho de propiedad incorporado en o asociado al Sitio, los Servicios de la
+                            Página web del Alojamiento o el Contenido de BookingSuite. Para evitar cualquier duda, entre el
+                            Alojamiento y BookingSuite, el Alojamiento posee cualquier Contenido del Alojamiento
+                            proporcionado por el Alojamiento a BookingSuite (sin incluir las traducciones del mismo
+                            realizadas por BookingSuite que serán propiedad exclusiva de BookingSuite).
                         </p>
 
 
-                        <h3 id="info-h3">¿Se pueden eliminar las cookies?</h3>
-                        <p>Sí, y no sólo eliminar, también bloquear, de forma general o particular para un dominio
-                            específico.
+                        <h3 id="info-h3">Responsabilidad del Alojamiento</h3>
+                        <p>El Alojamiento está de acuerdo y acepta que el Alojamiento es el único responsable de todo el
+                            Contenido que el Alojamiento proporcione a través del Sitio o los Servicios de la Página web del
+                            Alojamiento. De la misma forma, el Alojamiento declara y garantiza que: (1) el Alojamiento es el
+                            propietario único y en exclusiva de todo el Contenido (salvo de cualquier contenido que haya
+                            creado o generado BookingSuite) o que el Alojamiento tiene los derechos, licencias,
+                            consentimientos y comunicados necesarios para garantizar los derechos y licencias a BookingSuite
+                            tal y como se establece en estos Términos, y (2) el Contenido, su publicación, carga,
+                            presentación, envío o transmisión o el uso del Contenido de BookingSuite (o de cualquiera de sus
+                            partes) tal y como se establece en estos Términos, a través de, en relación a o por medio del
+                            Sitio o los Servicios de la Página web del Alojamiento no infringe, viola o malversa (ni ahora
+                            ni en el futuro) ninguna patente, derecho de autor, de marca registrada, de secreto de marca,
+                            derechos morales o cualquier otro derecho de la propiedad intelectual de una tercera parte, ni
+                            derechos de publicidad o privacidad, ni viola ni resulta en la violación de ninguna de las Leyes
+                            aplicables.</p>
 
-                            Para eliminar las cookies de un sitio web debe ir a la configuración de su navegador y allí
-                            podrá buscar las asociadas al dominio en cuestión y proceder a su eliminación.</p>
+                        <h3 id="info-h3">Responsabilidades de las Partes</h3>
+                        <p>En caso de que el Alojamiento acepte tarjeta de crédito como forma de pago, el Alojamiento tiene
+                            la obligación de cumplir (y de que sus proveedores cumplan) con los requisitos, criterios de
+                            conformidad y procesos de validación según lo establecido en el Estándar de Seguridad de Datos
+                            de la Industria de Tarjeta de Pago (en inglés, "PCI") que se publica periódicamente en las
+                            principales empresas de tarjetas de crédito.
 
-                        <h3 id="info-h3">Más información sobre las cookies</h3>
-                        <p>Puedes consultar el reglamento sobre cookies publicado por la Agencia Española de Protección de
-                            Datos en su “Guía sobre el uso de las cookies” y obtener más información sobre las cookies en
-                            Internet, <a href="http://www.aboutcookies.org/"
-                                target="_blank">http://www.aboutcookies.org/</a>
+                            El Alojamiento admite ser responsable de la seguridad de los datos de los usuarios que procese
+                            en el contexto de este Acuerdo, y BookingSuite admite ser responsable de la seguridad de los
+                            datos de los usuarios que procese en el contexto de este Acuerdo.
 
-                            Si desea tener un mayor control sobre la instalación de cookies, puede instalar programas o
-                            complementos a su navegador, conocidos como herramientas de “Do Not Track”, que le permitirán
-                            escoger aquellas cookies que desea permitir.</p>
+                            BookingSuite no es responsable de la validez, verificación o autorización de las tarjetas de
+                            crédito.</p>
 
+                        <h3 id="info-h3">Licencia otorgada por el Alojamiento</h3>
+                        <p>El Alojamiento está de acuerdo y acepta que el Alojamiento es el único responsable de todo el
+                            Contenido que el Alojamiento proporcione a través del Sitio o los Servicios de la Página web del
+                            Alojamiento. De la misma forma, el Alojamiento declara y garantiza que: (1) el Alojamiento es el
+                            propietario único y en exclusiva de todo el Contenido (salvo de cualquier contenido que haya
+                            creado o generado BookingSuite) o que el Alojamiento tiene los derechos, licencias,
+                            consentimientos y comunicados necesarios para garantizar los derechos y licencias a BookingSuite
+                            tal y como se establece en estos Términos, y (2) el Contenido, su publicación, carga,
+                            presentación, envío o transmisión o el uso del Contenido de BookingSuite (o de cualquiera de sus
+                            partes) tal y como se establece en estos Términos, a través de, en relación a o por medio del
+                            Sitio o los Servicios de la Página web del Alojamiento no infringe, viola o malversa (ni ahora
+                            ni en el futuro) ninguna patente, derecho de autor, de marca registrada, de secreto de marca,
+                            derechos morales o cualquier otro derecho de la propiedad intelectual de una tercera parte, ni
+                            derechos de publicidad o privacidad, ni viola ni resulta en la violación de ninguna de las Leyes
+                            aplicables.</p>
                     </div>
                 </div>
         </section>

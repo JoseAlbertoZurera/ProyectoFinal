@@ -22,7 +22,7 @@
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-4">
-                        <img src="{{ asset('images/contacto/logo-blue.png') }}" alt="logo" id="logo" />
+                        <img src="{{ asset('images/contacto/logo.png') }}" alt="logo" id="logo" />
                     </div>
                 </div>
             </div>
