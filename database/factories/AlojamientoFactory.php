@@ -29,6 +29,7 @@ class AlojamientoFactory extends Factory
             'codigo_postal' => $this->faker->postcode(),
             'direccion' => $this->faker->streetAddress(),
             'tipo_alojamiento' => $this->faker->randomElement(['Casa', 'Apartamento', 'Hotel', 'Hostal']),
+            'fecha_publicacion' => $this->faker->dateTimeBetween('-6 months' ,'now'),
             'fecha_inicio' => $fechaInicio,
             'fecha_fin' => $this->faker->dateTimeBetween($string1 , $string2),
             'precio_noche' => $this->faker->numberBetween(45, 250),

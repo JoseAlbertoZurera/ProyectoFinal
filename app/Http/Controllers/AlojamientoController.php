@@ -11,7 +11,9 @@ class AlojamientoController extends Controller
 {
     public function __invoke()
     {
-        return view('alojamientos');
+        $alojamientos = Alojamiento::where('disponibilidad', 1)->orderBy('fecha_publicacion', 'desc')->get();
+
+        return view('alojamientos', compact('alojamientos'));
     }
 
     /**

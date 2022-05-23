@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('codigo_postal');
             $table->string('direccion', 80);
             $table->string('tipo_alojamiento', 20);
+            $table->date('fecha_publicacion');
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
             $table->integer('precio_noche');

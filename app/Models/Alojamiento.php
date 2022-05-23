@@ -14,6 +14,7 @@ class Alojamiento extends Model
         'codigo_postal',
         'direccion',
         'tipo_alojamiento',
+        'fecha_publicacion',
         'fecha_inicio',
         'fecha_fin',
         'precio_noche',
