@@ -22,59 +22,25 @@
         <div class="container mt-5">
             <div class="row">
                 <h2 class="h2-tip">Alojamientos destacados</h2>
-                <div class="col-sm-3">
-                    <div style="margin: 2rem auto; width: 20rem ml-3">
-                        <div class="card">
-                            <img src="{{ asset('images/home/hotel-barcelona.PNG') }}" class="card-img-top" alt="Phone" />
-                            <div class="card-body">
-                                <h5 class="card-title">Kimpton Vividora Barcelona</h5>
-                                <p class="card-text">
-                                    Carrer del Duc, 15, Barcelona
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-sm-3">
-                    <div style="margin: 2rem auto; width: 20rem ml-3">
-                        <div class="card">
-                            <img src="{{ asset('images/home/hotel-granada.PNG') }}" class="card-img-top" alt="Phone" />
-                            <div class="card-body">
-                                <h5 class="card-title">Hotel Meliá Granada</h5>
-                                <p class="card-text">
-                                    C. Ángel Ganivet, 7, Granada
-                                </p>
-                            </div>
+                @foreach ($alojamientos as $alojamiento)
+                    <div class="col-sm-3">
+                        <div style="margin: 2rem auto; width: 20rem ml-3">
+                            <a id="link" href="{{ route('alojamiento', [$alojamiento->id]) }}">
+                                <div class="card">
+                                    <img src="{{ $alojamiento->ruta_imagen }}" class="card-img-top" />
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $alojamiento->tipo_alojamiento }}
+                                            {{ $alojamiento->nombre }}</h5>
+                                        <p class="card-text">
+                                            {{ $alojamiento->direccion }}, {{ $alojamiento->ciudad }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-3">
-                    <div style="margin: 2rem auto; width: 20rem ml-3">
-                        <div class="card">
-                            <img src="{{ asset('images/home/hotel-madrid.PNG') }}" class="card-img-top" alt="Phone" />
-                            <div class="card-body">
-                                <h5 class="card-title">Hotel Santo Domingo Madrid</h5>
-                                <p class="card-text">
-                                    C. de San Bernardo, 1, Madrid
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div style="margin: 2rem auto; width: 20rem ml-3">
-                        <div class="card">
-                            <img src="{{ asset('images/home/hotel-mallorca.PNG') }}" class="card-img-top" alt="Phone" />
-                            <div class="card-body">
-                                <h5 class="card-title">Club del Sol Resort & Spa</h5>
-                                <p class="card-text">
-                                    Ctra. Puerto Pollensa, Mallorca
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
 
@@ -175,22 +141,19 @@
                         <div class="col-md-4">
                             <img src="{{ asset('images/logo.png') }}" height="160px" width="190px" />
                             <p class="mt-4" id="p-footer">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-                                ducimus ea doloribus, nam dolores reiciendis eius numquam quia
-                                hic quisquam nisi culpa earum, ut magnam Lorem ipsum dolor sit
-                                amet consectetur adipisicing elit. Non ducimus ea doloribus, nam
-                                dolores reiciendis eius numquam.
+                                Leasing aparece de la palabra inglesa leasing, la cual significa arrendamiento, nuestra
+                                empresa es una plataforma de búsqueda de tarifas de viaje y alojamiento en la red, su misión
+                                es conectar clientes los cuales necesitan un alojamiento y vendedores que alquilan su
+                                propiedad
+                                de turismo desde cualquier parte de España. En Leasing incluso se pueden hacer reservas con
+                                anticipación, así como observar la lista de precios y experiencias de los usuarios.
                             </p>
                         </div>
                         <div class="col-md-4" id="footer-content1">
                             <ul class="footer-links list-unstyled">
-                                <p class="mb-10">
-                                    <a href="#">Hoteles</a>
-                                </p>
+                                <p class="mb-10"><a href="#">Hoteles</a></p>
                                 <p class="mb-10"><a href="#">Casas</a></p>
-                                <p class="mb-10">
-                                    <a href="#">Apartamentos</a>
-                                </p>
+                                <p class="mb-10"><a href="#">Apartamentos</a></p>
                                 <p class="mb-10"><a href="#">Hostales y pensiones</a></p>
                                 <p class="mb-10"><a href="#">Albergues</a></p>
                                 <p class="mb-10"><a href="#">Resorts</a></p>
@@ -198,16 +161,11 @@
                         </div>
                         <div class="col-md-4" id="footer-content1">
                             <ul class="footer-links list-unstyled">
-                                <p class="mb-10">
-                                    <a href="{{ route('alojamientos') }}">Alquilar alojamiento</a>
-                                </p>
+                                <p class="mb-10"><a href="{{ route('alojamientos') }}">Alquilar alojamiento</a></p>
                                 <p class="mb-10"><a href="{{ route('alojamientos.create') }}">Anúnciante</a></p>
                                 <p class="mb-10"><a href="{{ route('contacto') }}">Contacto</a></p>
-                                <p class="mb-10">
-                                    <a href="{{ route('sobreNosotros') }}">Sobre Nosotros</a>
-                                </p>
-                                <p class="mb-10"><a href="{{ route('cookies') }}">Política de privacidad y
-                                        cookies</a></p>
+                                <p class="mb-10"><a href="{{ route('sobreNosotros') }}">Sobre Nosotros</a></p>
+                                <p class="mb-10"><a href="{{ route('cookies') }}">Política de privacidad y cookies</a></p>
                                 <p class="mb-10"><a href="{{ route('terminosYCondiciones') }}">Términos y condiciones</a>
                                 </p>
                             </ul>

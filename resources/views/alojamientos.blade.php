@@ -8,8 +8,12 @@
 
 @section('contenido')
 
+<div class="container d-flex justify-content-end pt-2">
+    {{ $alojamientos->links('vendor.pagination.bootstrap-4') }}
+</div>
+
     @foreach ($alojamientos as $alojamiento)
-        <section id="learn" class="text-dark p-5">
+        <section id="learn" class="text-dark pb-4">
             <div class="container contenedor">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-md-6 p-5">
@@ -39,6 +43,10 @@
             </div>
         </section>
     @endforeach
+
+    <div class="container pb-3">
+        {{ $alojamientos->links('vendor.pagination.bootstrap-5') }}
+    </div>
 
     @include('layouts.footer')
     

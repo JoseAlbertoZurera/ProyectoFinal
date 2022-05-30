@@ -12,7 +12,7 @@ class AlojamientoController extends Controller
 {
     public function __invoke()
     {
-        $alojamientos = Alojamiento::where('disponibilidad', 1)->orderBy('created_at', 'desc')->get();
+        $alojamientos = Alojamiento::where('disponibilidad', 1)->orderBy('created_at', 'desc')->paginate(8);
 
         return view('alojamientos', compact('alojamientos'));
     }
