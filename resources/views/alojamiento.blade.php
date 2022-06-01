@@ -12,7 +12,14 @@
     <section id="learn" class="text-dark p-5">
         <div class="container">
             <div class="row align-items-center justify-content-between">
-                <h1>{{ $alojamiento->tipo_alojamiento }} {{ $alojamiento->nombre }}</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1>{{ $alojamiento->tipo_alojamiento }} {{ $alojamiento->nombre }}</h1>
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end">
+                        <button type="button" class="btn btn-primary btn-lg ">Reservar</button>
+                    </div>
+                </div>
                 <div class="col-12">
                     <i class="bi bi-geo-alt-fill"></i> {{ $alojamiento->ciudad }}
                     <br>
@@ -332,7 +339,7 @@
                                 @if ($user->descripcion)
                                     <p class="lead">{{ $user->descripcion }}</p>
                                 @else
-                                <p class="lead">Esta persona no ha añadido una descripción</p>
+                                    <p class="lead">Esta persona no ha añadido una descripción</p>
                                 @endif
                                 <p>
                                     Ratio de respuesta: 100%
@@ -444,19 +451,22 @@
                 <!--Preguntas frecuentes-->
                 <section id="questions" class="p-5">
                     <div class="container">
-                        <h2 class="text-center mb-4">Preguntas frecuentes sobre {{ $alojamiento->tipo_alojamiento }} {{ $alojamiento->nombre }}</h2>
+                        <h2 class="text-center mb-4">Preguntas frecuentes sobre {{ $alojamiento->tipo_alojamiento }}
+                            {{ $alojamiento->nombre }}</h2>
                         <div class="accordion accordion-flush" id="questions">
                             <!-- Item 1 -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#question-one">
-                                        ¿Cuántas personas pueden alojarse en {{ $alojamiento->tipo_alojamiento }} {{ $alojamiento->nombre }}?
+                                        ¿Cuántas personas pueden alojarse en {{ $alojamiento->tipo_alojamiento }}
+                                        {{ $alojamiento->nombre }}?
                                     </button>
                                 </h2>
                                 <div id="question-one" class="accordion-collapse collapse" data-bs-parent="#questions">
                                     <div class="accordion-body">
-                                        {{ $alojamiento->tipo_alojamiento }} {{ $alojamiento->nombre }} puede alojar un máximo de 10 huéspedes.
+                                        {{ $alojamiento->tipo_alojamiento }} {{ $alojamiento->nombre }} puede alojar
+                                        un máximo de 10 huéspedes.
                                     </div>
                                 </div>
                             </div>
@@ -465,12 +475,14 @@
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#question-two">
-                                        ¿Cuántos cuartos de baño tiene {{ $alojamiento->tipo_alojamiento }} {{ $alojamiento->nombre }}?
+                                        ¿Cuántos cuartos de baño tiene {{ $alojamiento->tipo_alojamiento }}
+                                        {{ $alojamiento->nombre }}?
                                     </button>
                                 </h2>
                                 <div id="question-two" class="accordion-collapse collapse" data-bs-parent="#questions">
                                     <div class="accordion-body">
-                                        {{ $alojamiento->tipo_alojamiento }} {{ $alojamiento->nombre }} tiene 3 cuartos de baño disponibles.
+                                        {{ $alojamiento->tipo_alojamiento }} {{ $alojamiento->nombre }} tiene 3
+                                        cuartos de baño disponibles.
                                     </div>
                                 </div>
                             </div>
@@ -479,12 +491,14 @@
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#question-three">
-                                        ¿Cuántos dormitorios tiene {{ $alojamiento->tipo_alojamiento }} {{ $alojamiento->nombre }}?
+                                        ¿Cuántos dormitorios tiene {{ $alojamiento->tipo_alojamiento }}
+                                        {{ $alojamiento->nombre }}?
                                     </button>
                                 </h2>
                                 <div id="question-three" class="accordion-collapse collapse" data-bs-parent="#questions">
                                     <div class="accordion-body">
-                                        {{ $alojamiento->tipo_alojamiento }} {{ $alojamiento->nombre }} tiene 5 dormitorios disponibles.
+                                        {{ $alojamiento->tipo_alojamiento }} {{ $alojamiento->nombre }} tiene 5
+                                        dormitorios disponibles.
                                     </div>
                                 </div>
                                 <!-- Item 4 -->
@@ -492,13 +506,15 @@
                                     <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#question-four">
-                                            ¿Cuál es el número mínimo de noches que hay que alojarse en {{ $alojamiento->tipo_alojamiento }} {{ $alojamiento->nombre }}?
+                                            ¿Cuál es el número mínimo de noches que hay que alojarse en
+                                            {{ $alojamiento->tipo_alojamiento }} {{ $alojamiento->nombre }}?
                                         </button>
                                     </h2>
                                     <div id="question-four" class="accordion-collapse collapse"
                                         data-bs-parent="#questions">
                                         <div class="accordion-body">
-                                            Las estancias en {{ $alojamiento->tipo_alojamiento }} {{ $alojamiento->nombre }} deben ser de al menos 2 noches.
+                                            Las estancias en {{ $alojamiento->tipo_alojamiento }}
+                                            {{ $alojamiento->nombre }} deben ser de al menos 2 noches.
                                         </div>
                                     </div>
                                 </div>

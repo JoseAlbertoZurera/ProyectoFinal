@@ -135,21 +135,17 @@
 
         <!--- FOOTER -->
         <footer style="background-image: url({{ asset('images/home/back-footer.jpg') }});">
-            <div class="py-5" id="footer-content">
+            <div class="pt-3" id="footer-content">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
                             <img src="{{ asset('images/logo.png') }}" height="160px" width="190px" />
                             <p class="mt-4" id="p-footer">
-                                Leasing aparece de la palabra inglesa leasing, la cual significa arrendamiento, nuestra
-                                empresa es una plataforma de búsqueda de tarifas de viaje y alojamiento en la red, su misión
-                                es conectar clientes los cuales necesitan un alojamiento y vendedores que alquilan su
-                                propiedad
-                                de turismo desde cualquier parte de España. En Leasing incluso se pueden hacer reservas con
-                                anticipación, así como observar la lista de precios y experiencias de los usuarios.
+                                La base de la idea de Leasing nace desde el punto de vista en el que otras plataformas como
+                                Trivago y Booking dominan el mercado internacional.
                             </p>
                         </div>
-                        <div class="col-md-4" id="footer-content1">
+                        <div class="col-md-4 " id="footer-content1">
                             <ul class="footer-links list-unstyled">
                                 <p class="mb-10"><a href="#">Hoteles</a></p>
                                 <p class="mb-10"><a href="#">Casas</a></p>
@@ -161,12 +157,15 @@
                         </div>
                         <div class="col-md-4" id="footer-content1">
                             <ul class="footer-links list-unstyled">
-                                <p class="mb-10"><a href="{{ route('alojamientos') }}">Alquilar alojamiento</a></p>
+                                <p class="mb-10"><a href="{{ route('alojamientos') }}">Alquilar alojamiento</a>
+                                </p>
                                 <p class="mb-10"><a href="{{ route('alojamientos.create') }}">Anúnciante</a></p>
                                 <p class="mb-10"><a href="{{ route('contacto') }}">Contacto</a></p>
                                 <p class="mb-10"><a href="{{ route('sobreNosotros') }}">Sobre Nosotros</a></p>
-                                <p class="mb-10"><a href="{{ route('cookies') }}">Política de privacidad y cookies</a></p>
-                                <p class="mb-10"><a href="{{ route('terminosYCondiciones') }}">Términos y condiciones</a>
+                                <p class="mb-10"><a href="{{ route('cookies') }}">Política de privacidad y
+                                        cookies</a></p>
+                                <p class="mb-10"><a href="{{ route('terminosYCondiciones') }}">Términos y
+                                        condiciones</a>
                                 </p>
                             </ul>
                         </div>
@@ -179,9 +178,6 @@
                 <p class="text-center mt-2">
                     Copyright © 2022 Leasing. Todos los derechos
                     reservados.
-                    <br />
-                    Leasing líder nacional en viajes
-                    online y servicios relacionados.
                 </p>
             </div>
         </footer>

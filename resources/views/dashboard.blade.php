@@ -9,11 +9,51 @@
 
 @section('contenido')
     <div class="container">
+        <div class="offcanvas offcanvas-start navbar-light bg-light" id="offcanvasMenus" style="width: 300px;">
+            <!-- Sidebar Header -->
+            <div class=" text-center border-bottom p-4 mb-4 shadow-sm">
+                <a href="#"><img src="{{ asset('images/editar/tio.png   ') }}" alt="..." class="img-fluid w-50"></a>
+                <h5 class="offcanvas-title mt-3">{{ Auth::user()->nombre }}</h5>
+                <button type="button" class="btn-close float-end text-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+
+            <!-- Navbar Menus Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="{{ route('home') }}" class="nav-link px-4">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-4">Mensajes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-4">Ajustes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('perfil.index', Auth::user()->nombre) }}" class="nav-link px-4">Ver perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-4">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-4">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-4">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-4">Logout</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-4">Logout</a>
+                </li>
+            </ul>
+        </div>
         <div class="row d-flex justify-content-center align-items-center" style=" min-height: 25vh;">
             <h3 class="pt-3" style="color: #00C2CB;">
                 Bienvenido {{ Auth::user()->nombre }}
-                <a class="mx-1" href="{{ route('login') }}" style="color: #00C2CB;"><i
-                        class="fa-solid fa-right-from-bracket"></i></a>
+                <a class="mx-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenus"
+                    style="color: #00C2CB;"><i class="fa-solid fa-bars"></i></a>
             </h3>
             <div class="row py-5">
                 <div class="col-md-12 col-sm-6">
@@ -126,10 +166,6 @@
                 </div>
             </div>
         </div>
-
-        <a href="{{ route('perfil.index', Auth::user()->nombre) }}" class="btn btn-dark mt-3">
-            <i class="bi bi-arrow-right"></i> Ver perfil
-        </a>
     </div>
 
 @endsection

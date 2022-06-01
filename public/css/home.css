@@ -67,12 +67,16 @@ footer {
     display: block;
 }
 
-#footer-content2 ul li {
+#footer-content ul li {
     display: flex;
     color: #fff;
 }
 
-#footer-content2 ul li span {
+#footer-content1 {
+    margin-top: 10px;
+}
+
+#footer-content ul li span {
     margin-right: 15px;
     font-size: 22px;
     /* align-self: center; */
@@ -107,13 +111,11 @@ div.footer-buttons {
     position: fixed;
     bottom: 0;
     background: #98392e;
-    background: linear-gradient(
-        to right,
-        #76cfcd 0%,
-        #76cfcd 50%,
-        #54909a 50%,
-        #54909a 100%
-    );
+    background: linear-gradient(to right,
+            #76cfcd 0%,
+            #76cfcd 50%,
+            #54909a 50%,
+            #54909a 100%);
     width: 100%;
     text-align: center;
     padding: 20px;
@@ -131,4 +133,8 @@ div.footer-buttons a i {
 
 .show-down-buttons {
     display: block;
+}
+
+.pt-3 {
+    padding-top: 2rem !important;
 }
