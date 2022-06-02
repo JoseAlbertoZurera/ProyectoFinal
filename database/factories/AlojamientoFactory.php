@@ -22,7 +22,7 @@ class AlojamientoFactory extends Factory
         $diferencia = DateTime::createFromFormat('Y-m-d', date("Y-m-d"))->diff($fechaInicio);
         
         $string1 = '+' . strval($diferencia->days + 3) . ' days';
-        $string2 = '+' . strval($diferencia->days + 180) . ' days';
+        $string2 = '+' . strval($diferencia->days + 90) . ' days';
 
         return [
             'nombre' => $this->faker->words(2, true),

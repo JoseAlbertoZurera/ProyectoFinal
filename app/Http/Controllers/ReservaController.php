@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Alojamiento;
 use App\Models\ReservaRealizada;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReservaController extends Controller
 {
@@ -33,9 +35,19 @@ class ReservaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Alojamiento $alojamiento)
     {
-        //
+        $fecha = explode(' to ', $request['fecha']);
+
+        ReservaRealizada::create([
+            'id_usuario' => Auth::id(),
+            'id_alojamiento' => $alojamiento->id,
+            'fecha_entrada' => $fecha[0],
+            'fecha_salida' => $fecha[1],
+            'hora_entrada' => $request['hora'],
+            'estado' => 'Pendiente de pago'
+        ]);
+        return redirect()->route("dashboard")->with(["reservaRealizada" => "Reserva realizada correctamente"]);
     }
 
     /**

@@ -31,7 +31,7 @@
 
                             Precio: {{ $alojamiento->precio_noche }}€ / noche / persona
                         </p>
-                        <a href="{{ route('alojamiento', [$alojamiento->id]) }}" class="btn btn-dark mt-3">
+                        <a href="{{ route('alojamiento.show', [$alojamiento->id]) }}" class="btn btn-dark mt-3">
                             <i class="bi bi-arrow-right"></i> Mas información
                         </a>
                     </div>

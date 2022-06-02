@@ -15,6 +15,7 @@ class ReservaRealizada extends Model
         'id_alojamiento',
         'fecha_entrada',
         'fecha_salida',
+        'hora_entrada',
         'estado'
     ];
 }
