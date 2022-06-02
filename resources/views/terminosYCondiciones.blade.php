@@ -24,10 +24,10 @@
                             conducta que pudiese</p>
 
                         <h3 id="info-h3">Control, investigación y soluciones</h3>
-                        <p>El Alojamiento está de acuerdo y acepta que BookingSuite tiene el derecho de investigar y
+                        <p>El Alojamiento está de acuerdo y acepta que Leasing tiene el derecho de investigar y
                             procesar la violación de cualquiera de las prohibiciones arriba citadas, así como la de
                             cualquiera de estos Términos, hasta el máximo permitido por las Leyes. El Alojamiento admite que
-                            BookingSuite no tiene obligación de controlar el acceso del Alojamiento o el uso que haga del
+                            Leasing no tiene obligación de controlar el acceso del Alojamiento o el uso que haga del
                             Sitio, así como de revisar o editar cualquier Contenido del Alojamiento, pero sí tiene derecho a
                             hacerlo con el objetivo de controlar el Sitio, para asegurar que el Alojamiento cumple con estos
                             Términos, para cumplir las Leyes vigentes, incluidas las órdenes y requisitos de un juzgado,
@@ -36,18 +36,18 @@
 
                         <h3 id="info-h3">Licencia otorgada por Leasing</h3>
                         <p>Al proporcionar cualquier Contenido del Alojamiento en o a través del Sitio o los Servicios de la
-                            Página web del Alojamiento, por el presente el Alojamiento otorga a BookingSuite licencia y
+                            Página web del Alojamiento, por el presente el Alojamiento otorga a Leasing licencia y
                             derecho mundial, no exclusivo, no revocable, perpetuo, transferible y sin derechos de autor, con
                             el derecho a sublicenciar, usar, ver, copiar, adaptar, modificar, distribuir, licenciar,
                             transferir, mostrar o representar públicamente, transmitir, divulgar, utilizar o explotar de
                             cualquier otra manera este Contenido del Alojamiento de la manera necesaria para que
-                            BookingSuite pueda prestar los Servicios de la Página web del Alojamiento. El Alojamiento
-                            también garantiza a BookingSuite el derecho y licencia para usar, comercializar, promover,
+                            Leasing pueda prestar los Servicios de la Página web del Alojamiento. El Alojamiento
+                            también garantiza a Leasing el derecho y licencia para usar, comercializar, promover,
                             mostrar, incluir y utilizar el Contenido del Alojamiento (incluido el Alojamiento) (ya sea en el
                             Sitio, a través de los Servicios de la Página web del Alojamiento o para hacer web-marketing
                             online (incluidos anuncios de pago por clic, banners y otros anuncios online) y enviar e-mails
-                            de marketing) por y en beneficio del Alojamiento. BookingSuite realiza las campañas de marketing
-                            online y por email a cuenta y discreción propia. BookingSuite no reclama derechos de propiedad
+                            de marketing) por y en beneficio del Alojamiento. Leasing realiza las campañas de marketing
+                            online y por email a cuenta y discreción propia. Leasing no reclama derechos de propiedad
                             sobre ningún Contenido del Alojamiento y ninguna de las cláusulas de estos Términos tiene la
                             intención de restringir los derechos que tenga el Alojamiento para usar y explotar el Contenido
                             del Alojamiento. </p>
@@ -55,21 +55,21 @@
                         <h3 id="info-h3">Propiedad y todos los derechos reservados</h3>
                         <p>
                             Sin limitar cualquier otro idioma en estos Términos, el Alojamiento está de acuerdo y acepta que
-                            el Sitio, los Servicios de la Página web del Alojamiento y el Contenido de BookingSuite
-                            (incluido cualquier Contenido generado o creado por BookingSuite, como por ejemplo, las
-                            traducciones de la descripción del alojamiento creadas por BookingSuite) están protegidos por
+                            el Sitio, los Servicios de la Página web del Alojamiento y el Contenido de Leasing
+                            (incluido cualquier Contenido generado o creado por Leasing, como por ejemplo, las
+                            traducciones de la descripción del alojamiento creadas por Leasing) están protegidos por
                             derechos de autor, de marca registrada y de bases de datos, así como por otras Leyes, y que el
-                            Sitio, los Servicios de la Página web del Alojamiento y el Contenido de BookingSuite son
-                            propiedad única y exclusiva de BookingSuite y sus licenciatarios. El Alojamiento también está de
+                            Sitio, los Servicios de la Página web del Alojamiento y el Contenido de Leasing son
+                            propiedad única y exclusiva de Leasing y sus licenciatarios. El Alojamiento también está de
                             acuerdo y acepta que todas las Marcas Registradas que aparecen en el Sitio, los Servicios de la
-                            Página web del Alojamiento o en el Contenido de BookingSuite son propiedad de BookingSuite o de
+                            Página web del Alojamiento o en el Contenido de Leasing son propiedad de Leasing o de
                             las terceras partes que lo proporcionan. El Alojamiento no podrá eliminar, alterar, ocultar ni
                             reclamar la propiedad de ningún derecho de autor, marca registrada, marca de servicio o
                             cualquier otro derecho de propiedad incorporado en o asociado al Sitio, los Servicios de la
-                            Página web del Alojamiento o el Contenido de BookingSuite. Para evitar cualquier duda, entre el
-                            Alojamiento y BookingSuite, el Alojamiento posee cualquier Contenido del Alojamiento
-                            proporcionado por el Alojamiento a BookingSuite (sin incluir las traducciones del mismo
-                            realizadas por BookingSuite que serán propiedad exclusiva de BookingSuite).
+                            Página web del Alojamiento o el Contenido de Leasing. Para evitar cualquier duda, entre el
+                            Alojamiento y Leasing, el Alojamiento posee cualquier Contenido del Alojamiento
+                            proporcionado por el Alojamiento a Leasing (sin incluir las traducciones del mismo
+                            realizadas por Leasing que serán propiedad exclusiva de Leasing).
                         </p>
 
 
@@ -78,10 +78,10 @@
                             Contenido que el Alojamiento proporcione a través del Sitio o los Servicios de la Página web del
                             Alojamiento. De la misma forma, el Alojamiento declara y garantiza que: (1) el Alojamiento es el
                             propietario único y en exclusiva de todo el Contenido (salvo de cualquier contenido que haya
-                            creado o generado BookingSuite) o que el Alojamiento tiene los derechos, licencias,
-                            consentimientos y comunicados necesarios para garantizar los derechos y licencias a BookingSuite
+                            creado o generado Leasing) o que el Alojamiento tiene los derechos, licencias,
+                            consentimientos y comunicados necesarios para garantizar los derechos y licencias a Leasing
                             tal y como se establece en estos Términos, y (2) el Contenido, su publicación, carga,
-                            presentación, envío o transmisión o el uso del Contenido de BookingSuite (o de cualquiera de sus
+                            presentación, envío o transmisión o el uso del Contenido de Leasing (o de cualquiera de sus
                             partes) tal y como se establece en estos Términos, a través de, en relación a o por medio del
                             Sitio o los Servicios de la Página web del Alojamiento no infringe, viola o malversa (ni ahora
                             ni en el futuro) ninguna patente, derecho de autor, de marca registrada, de secreto de marca,
@@ -97,10 +97,10 @@
                             principales empresas de tarjetas de crédito.
 
                             El Alojamiento admite ser responsable de la seguridad de los datos de los usuarios que procese
-                            en el contexto de este Acuerdo, y BookingSuite admite ser responsable de la seguridad de los
+                            en el contexto de este Acuerdo, y Leasing admite ser responsable de la seguridad de los
                             datos de los usuarios que procese en el contexto de este Acuerdo.
 
-                            BookingSuite no es responsable de la validez, verificación o autorización de las tarjetas de
+                            Leasing no es responsable de la validez, verificación o autorización de las tarjetas de
                             crédito.</p>
 
                         <h3 id="info-h3">Licencia otorgada por el Alojamiento</h3>
@@ -108,10 +108,10 @@
                             Contenido que el Alojamiento proporcione a través del Sitio o los Servicios de la Página web del
                             Alojamiento. De la misma forma, el Alojamiento declara y garantiza que: (1) el Alojamiento es el
                             propietario único y en exclusiva de todo el Contenido (salvo de cualquier contenido que haya
-                            creado o generado BookingSuite) o que el Alojamiento tiene los derechos, licencias,
-                            consentimientos y comunicados necesarios para garantizar los derechos y licencias a BookingSuite
+                            creado o generado Leasing) o que el Alojamiento tiene los derechos, licencias,
+                            consentimientos y comunicados necesarios para garantizar los derechos y licencias a Leasing
                             tal y como se establece en estos Términos, y (2) el Contenido, su publicación, carga,
-                            presentación, envío o transmisión o el uso del Contenido de BookingSuite (o de cualquiera de sus
+                            presentación, envío o transmisión o el uso del Contenido de Leasing (o de cualquiera de sus
                             partes) tal y como se establece en estos Términos, a través de, en relación a o por medio del
                             Sitio o los Servicios de la Página web del Alojamiento no infringe, viola o malversa (ni ahora
                             ni en el futuro) ninguna patente, derecho de autor, de marca registrada, de secreto de marca,
