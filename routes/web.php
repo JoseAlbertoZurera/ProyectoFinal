@@ -35,7 +35,7 @@ Route::delete('/dashboard/perfil/{user}', [UserController::class, 'destroy'])->n
 
 Route::get('/alojamientos', AlojamientoController::class)->name('alojamientos');
 
-Route::get('/alojamiento/{alojamiento}', [AlojamientoController::class, 'index'])->name('alojamiento');
+Route::get('/alojamiento/{id}', [AlojamientoController::class, 'show'])->name('alojamiento.show');
 
 Route::get('/contacto', ContactoController::class)->name('contacto');
 
@@ -50,6 +50,7 @@ Route::post('/publicar-alojamiento', [AlojamientoController::class, 'store'])->n
 
 Route::delete('/alojamientos-publicados/{alojamiento}', [AlojamientoController::class, 'destroy'])->name('alojamientos.destroy')->middleware('verified');
 
+Route::post('/reservas/{alojamiento}', [ReservaController::class, 'store'])->name('reservas.store')->middleware('verified');
 Route::delete('/reservas/{reserva}', [ReservaController::class, 'destroy'])->name('reservas.destroy')->middleware('verified');
 
 

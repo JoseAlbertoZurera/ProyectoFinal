@@ -2,13 +2,51 @@
 
 @section('styles')
     <link href="{{ asset('css/alojamiento.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 @endsection
 
 @section('titulo', 'Leasing | Alojamiento')
 
 @section('contenido')
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Reservar alojamiento</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form class="m-4" method="POST" action="{{ route('reservas.store', [$alojamiento]) }}">
+                    @csrf
+                    <div class="modal-body">
+
+                        <div class="mb-3">
+                            <label for="fecha" class="form-label">Fecha</label>
+                            <input class="form-control form-control-solid flatpickr-input" placeholder="Selecciona la fecha..."
+                                type="text" id="fecha" name="fecha" required />
+                        </div>
+
+                        <div class="mb-2">
+                            <label for="hora" class="form-label">Hora de entrada</label>
+                            <input class="form-control form-control-solid flatpickr-input active"
+                                placeholder="Selecciona la hora..." id="hora" name="hora" type="text" readonly="readonly"
+                                required />
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Reservar alojamiento</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--end::Modal-->
+
     <section id="learn" class="text-dark p-5">
         <div class="container">
             <div class="row align-items-center justify-content-between">
@@ -17,7 +55,8 @@
                         <h1>{{ $alojamiento->tipo_alojamiento }} {{ $alojamiento->nombre }}</h1>
                     </div>
                     <div class="col-md-6 d-flex justify-content-end">
-                        <button type="button" class="btn btn-primary btn-lg ">Reservar</button>
+                        <button type="button" class="btn btn-primary btn-lg" id="reservar" data-bs-toggle="modal"
+                            data-bs-target="#modal">Reservar</button>
                     </div>
                 </div>
                 <div class="col-12">
@@ -526,4 +565,52 @@
 
     @include('layouts.footer')
 
+@endsection
+
+@section('JavaScript')
+    <script>
+        const alojamiento = @json($alojamiento);
+
+        $(document).ready(function() {
+            $("#fecha").flatpickr({
+                onReady: function() {
+                    this.jumpToDate(alojamiento.fecha_inicio.substring(0, alojamiento.fecha_inicio
+                        .length - 3))
+                },
+                altInput: true,
+                altFormat: "j F, Y",
+                dateFormat: "Y-m-d",
+                mode: "range",
+                minDate: alojamiento.fecha_inicio.substring(0, alojamiento.fecha_inicio.length - 3),
+                enable: [{
+                    from: alojamiento.fecha_inicio,
+                    to: alojamiento.fecha_fin
+                }],
+                locale: {
+                    firstDayOfWeek: 1,
+                    weekdays: {
+                        shorthand: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+                        longhand: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes',
+                            'Sábado'
+                        ],
+                    },
+                    months: {
+                        shorthand: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Оct',
+                            'Nov', 'Dic'
+                        ],
+                        longhand: ['Enero', 'Febreo', 'Мarzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto',
+                            'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+                        ],
+                    },
+                },
+            });
+
+            $("#hora").flatpickr({
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: "H:i",
+                time_24hr: true
+            });
+        });
+    </script>
 @endsection

@@ -19,8 +19,8 @@ return new class extends Migration
             $table->integer('id_alojamiento')->unsigned();
             $table->date('fecha_entrada');
             $table->date('fecha_salida');
+            $table->time('hora_entrada');
             $table->string('estado', 20);
-
             $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade')->onUpdate("cascade");
             $table->foreign('id_alojamiento')->references('id')->on('alojamientos')->onDelete('cascade')->onUpdate("cascade");
             $table->timestamps();

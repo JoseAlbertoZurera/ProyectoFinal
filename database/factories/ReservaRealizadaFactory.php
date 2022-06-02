@@ -28,6 +28,7 @@ class ReservaRealizadaFactory extends Factory
             'id_alojamiento' => $id_alojamiento,
             'fecha_entrada' => $fecha_entrada = $this->faker->dateTimeBetween($fecha_inicio, $fecha_fin),
             'fecha_salida' => $this->faker->dateTimeBetween($fecha_entrada, $fecha_fin),
+            'hora_entrada' => $this->faker->time('H:0:0'),
             'estado' => $this->faker->randomElement(['Pendiente de pago', 'Reservado', 'Finalizado', 'Cancelado']),
 
 

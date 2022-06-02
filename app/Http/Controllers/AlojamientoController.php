@@ -18,20 +18,6 @@ class AlojamientoController extends Controller
     }
 
     /**
-     * Muestra la vista de un alojamiento específico
-     * 
-     * @return \Illuminate\Http\Response
-     */
-    public function index($id)
-    {
-        $alojamiento = Alojamiento::find($id);
-
-        $user = User::find($alojamiento->id_usuario);
-
-        return view('alojamiento', compact('alojamiento', 'user'));
-    }
-
-    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -118,18 +104,21 @@ class AlojamientoController extends Controller
             'max_personas' => $request['max_personas'],
             'id_usuario' => Auth::id()
         ]);
-        return redirect()->route("alojamientos")->with(["mensaje" => "Alojamiento creado correctamente"]);
+        return redirect()->route("alojamientos")->with(["alojamientoCreado" => "Alojamiento creado correctamente"]);
     }
 
     /**
-     * Display the specified resource.
+     * Muestra la vista de un alojamiento específico
      *
-     * @param  \App\Models\Alojamiento  $alojamiento
      * @return \Illuminate\Http\Response
      */
-    public function show(Alojamiento $alojamiento)
+    public function show($id)
     {
-        //
+        $alojamiento = Alojamiento::find($id);
+
+        $user = User::find($alojamiento->id_usuario);
+
+        return view('alojamiento', compact('alojamiento', 'user'));
     }
 
     /**

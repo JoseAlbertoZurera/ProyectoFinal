@@ -26,7 +26,7 @@
                 @foreach ($alojamientos as $alojamiento)
                     <div class="col-sm-3">
                         <div style="margin: 2rem auto; width: 20rem ml-3">
-                            <a id="link" href="{{ route('alojamiento', [$alojamiento->id]) }}">
+                            <a id="link" href="{{ route('alojamiento.show', [$alojamiento->id]) }}">
                                 <div class="card">
                                     <img src="{{ $alojamiento->ruta_imagen }}" class="card-img-top" />
                                     <div class="card-body">

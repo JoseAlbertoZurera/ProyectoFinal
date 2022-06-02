@@ -93,7 +93,7 @@
                                                 <td>{{ $alojamiento->precio_noche }}€</td>
                                                 <td class="d-flex justify-content-center">
                                                     <a class="btn btn-primary btn-sm mx-1"
-                                                        href="{{ route('alojamiento', [$alojamiento]) }}"
+                                                        href="{{ route('alojamiento.show', [$alojamiento]) }}"
                                                         title="Ver alojamiento"><i class="fas fa-eye fa-lg"></i></a>
                                                     <a class="btn btn-success btn-sm mx-1"
                                                         href="{{ route('editarAlojamiento') }}"
@@ -175,8 +175,18 @@
     @if (session('alojamientoEliminado') != null)
         <script>
             Swal.fire(
-                'Eliminado!',
+                '¡Eliminado!',
                 'Su alojamiento ha sido eliminado.',
+                'success'
+            )
+        </script>
+    @endif
+
+    @if (session('reservaRealizada') != null)
+        <script>
+            Swal.fire(
+                '¡Reserva realizada!',
+                'Su reserva ha sido realizada correctamente.',
                 'success'
             )
         </script>
