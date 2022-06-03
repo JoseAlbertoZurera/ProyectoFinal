@@ -25,8 +25,8 @@
 
                         <div class="mb-3">
                             <label for="fecha" class="form-label">Fecha</label>
-                            <input class="form-control form-control-solid flatpickr-input" placeholder="Selecciona la fecha..."
-                                type="text" id="fecha" name="fecha" required />
+                            <input class="form-control form-control-solid flatpickr-input"
+                                placeholder="Selecciona la fecha..." type="text" id="fecha" name="fecha" required />
                         </div>
 
                         <div class="mb-2">
@@ -570,22 +570,29 @@
 @section('JavaScript')
     <script>
         const alojamiento = @json($alojamiento);
+        const reservas = @json($reservas);
+        
+        var rangoFechasReservadas = [];
+
+        for (var key in reservas) {
+            rangoFechasReservadas.push({
+                from: reservas[key].fecha_entrada,
+                to: reservas[key].fecha_salida,
+            });
+        }
 
         $(document).ready(function() {
             $("#fecha").flatpickr({
                 onReady: function() {
-                    this.jumpToDate(alojamiento.fecha_inicio.substring(0, alojamiento.fecha_inicio
-                        .length - 3))
+                    this.jumpToDate(alojamiento.fecha_inicio.substring(0, alojamiento.fecha_inicio.length - 3))
                 },
                 altInput: true,
                 altFormat: "j F, Y",
                 dateFormat: "Y-m-d",
+                disable: rangoFechasReservadas,
                 mode: "range",
-                minDate: alojamiento.fecha_inicio.substring(0, alojamiento.fecha_inicio.length - 3),
-                enable: [{
-                    from: alojamiento.fecha_inicio,
-                    to: alojamiento.fecha_fin
-                }],
+                minDate: alojamiento.fecha_inicio,
+                maxDate: alojamiento.fecha_fin,
                 locale: {
                     firstDayOfWeek: 1,
                     weekdays: {
