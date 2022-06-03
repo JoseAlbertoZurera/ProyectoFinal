@@ -45,7 +45,11 @@ class ReservaController extends Controller
             'fecha_entrada' => $fecha[0],
             'fecha_salida' => $fecha[1],
             'hora_entrada' => $request['hora'],
-            'estado' => 'Pendiente de pago'
+            'estado' => 'Pendiente de pago',
+            'titulo' => $alojamiento->titulo,
+            'ciudad' => $alojamiento->ciudad,
+            'direccion' => $alojamiento->direccion,
+            'precio_noche' => $alojamiento->precio_noche
         ]);
         return redirect()->route("dashboard")->with(["reservaRealizada" => "Reserva realizada correctamente"]);
     }
@@ -92,7 +96,14 @@ class ReservaController extends Controller
      */
     public function destroy(ReservaRealizada $reservaRealizada)
     {
-        $reservaRealizada->delete();
-        return redirect()->route("dashboard")->with(["mensaje" => "Reserva eliminada correctamente",]);
+        //
+    }
+
+    public function cancelarReserva(ReservaRealizada $reserva)
+    {
+        $reserva->estado = "Cancelado";
+        $reserva->save();
+
+        return redirect()->route("dashboard")->with(["reservaCancelada" => "Reserva cancelada correctamente"]);
     }
 }

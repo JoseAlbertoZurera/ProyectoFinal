@@ -51,7 +51,7 @@ Route::post('/publicar-alojamiento', [AlojamientoController::class, 'store'])->n
 Route::delete('/alojamientos-publicados/{alojamiento}', [AlojamientoController::class, 'destroy'])->name('alojamientos.destroy')->middleware('verified');
 
 Route::post('/reservas/{alojamiento}', [ReservaController::class, 'store'])->name('reservas.store')->middleware('verified');
-Route::delete('/reservas/{reserva}', [ReservaController::class, 'destroy'])->name('reservas.destroy')->middleware('verified');
+Route::put('/reservas/{reserva}', [ReservaController::class, 'cancelarReserva'])->name('reservas.cancelarReserva')->middleware('verified');
 
 
 Route::get('/editarAlojamiento', function () {

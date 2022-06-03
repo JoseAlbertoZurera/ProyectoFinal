@@ -70,8 +70,8 @@
                                     <thead class="table-secondary">
                                         <tr>
                                             <th>Nº Alojamiento</th>
+                                            <th>Nombre</th>
                                             <th>Ciudad</th>
-                                            <th>Código Postal</th>
                                             <th>Dirección</th>
                                             <th>Tipo</th>
                                             <th>Fecha inicio</th>
@@ -84,8 +84,8 @@
                                         @foreach ($alojamientos as $alojamiento)
                                             <tr>
                                                 <th>{{ $alojamiento->id }}</th>
+                                                <td>{{ $alojamiento->titulo }}</td>
                                                 <td>{{ $alojamiento->ciudad }}</td>
-                                                <td>{{ $alojamiento->codigo_postal }}</td>
                                                 <td>{{ $alojamiento->direccion }}</td>
                                                 <td>{{ $alojamiento->tipo_alojamiento }}</td>
                                                 <td>{{ $alojamiento->fecha_inicio }}</td>
@@ -98,9 +98,8 @@
                                                     <a class="btn btn-success btn-sm mx-1"
                                                         href="{{ route('editarAlojamiento') }}"
                                                         title="Editar alojamiento"><i class="fas fa-edit fa-lg"></i></a>
-                                                    <form class="eliminarAlojamiento"
-                                                        action="{{ route('alojamientos.destroy', [$alojamiento]) }}"
-                                                        method="post">
+                                                    <form class="eliminarAlojamiento" method="post"
+                                                        action="{{ route('alojamientos.destroy', [$alojamiento]) }}">
                                                         @method('delete')
                                                         @csrf
                                                         <button type="submit" class="btn btn-danger btn-sm mx-1"
@@ -128,8 +127,12 @@
                                     <thead class="table-secondary">
                                         <tr>
                                             <th>Nº Reserva</th>
+                                            <th>Nombre</th>
+                                            <th>Ciudad</th>
+                                            <th>Dirección</th>
                                             <th>Fecha entrada</th>
                                             <th>Fecha salida</th>
+                                            <th>Precio / Noche</th>
                                             <th>Estado</th>
                                             <th>Acciones</th>
                                         </tr>
@@ -139,15 +142,19 @@
                                         @foreach ($reservas as $reserva)
                                             <tr>
                                                 <th>{{ $reserva->id }}</th>
+                                                <td>{{ $reserva->titulo }}</td>
+                                                <td>{{ $reserva->ciudad }}</td>
+                                                <td>{{ $reserva->direccion }}</td>
                                                 <td>{{ $reserva->fecha_entrada }}</td>
                                                 <td>{{ $reserva->fecha_salida }}</td>
+                                                <td>{{ $reserva->precio_noche }}€</td>
                                                 <td>{{ $reserva->estado }}</td>
                                                 <td class="d-flex justify-content-center">
                                                     <button type="submit" class="btn btn-success btn-sm mx-1"
                                                         title="Modificar reserva"><i class="fas fa-edit fa-lg"></i></button>
-                                                    <form action="{{ route('reservas.destroy', [$reserva]) }}"
-                                                        method="post">
-                                                        @method('delete')
+                                                    <form method="post" class="cancelarReserva"
+                                                        action="{{ route('reservas.cancelarReserva', [$reserva]) }}">
+                                                        @method('put')
                                                         @csrf
                                                         <button type="submit" class="btn btn-danger btn-sm mx-1"
                                                             title="Cancelar reserva"><i
@@ -187,6 +194,16 @@
             Swal.fire(
                 '¡Reserva realizada!',
                 'Su reserva ha sido realizada correctamente.',
+                'success'
+            )
+        </script>
+    @endif
+
+    @if (session('reservaCancelada') != null)
+        <script>
+            Swal.fire(
+                '¡Reserva cancelada!',
+                'Su reserva ha sido cancelada correctamente.',
                 'success'
             )
         </script>

@@ -30,8 +30,7 @@
                                 <div class="card">
                                     <img src="{{ $alojamiento->ruta_imagen }}" class="card-img-top" />
                                     <div class="card-body">
-                                        <h5 class="card-title">{{ $alojamiento->tipo_alojamiento }}
-                                            {{ $alojamiento->nombre }}</h5>
+                                        <h5 class="card-title">{{ $alojamiento->titulo }}</h5>
                                         <p class="card-text">
                                             {{ $alojamiento->direccion }}, {{ $alojamiento->ciudad }}
                                         </p>

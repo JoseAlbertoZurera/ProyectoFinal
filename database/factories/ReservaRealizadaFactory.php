@@ -29,9 +29,11 @@ class ReservaRealizadaFactory extends Factory
             'fecha_entrada' => $fecha_entrada = $this->faker->dateTimeBetween($fecha_inicio, $fecha_fin),
             'fecha_salida' => $this->faker->dateTimeBetween($fecha_entrada, $fecha_fin),
             'hora_entrada' => $this->faker->time('H:0:0'),
+            'titulo' => $this->faker->words(2, true),
+            'ciudad' => $this->faker->randomElement(['Córdoba', 'Málaga', 'Cádiz', 'Sevilla']),
+            'direccion' => $this->faker->streetAddress(),
             'estado' => $this->faker->randomElement(['Pendiente de pago', 'Reservado', 'Finalizado', 'Cancelado']),
-
-
+            'precio_noche' => $this->faker->numberBetween(45, 250)
         ];
     }
 }

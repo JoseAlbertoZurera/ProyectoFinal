@@ -24,12 +24,14 @@ class AlojamientoFactory extends Factory
         $string1 = '+' . strval($diferencia->days + 3) . ' days';
         $string2 = '+' . strval($diferencia->days + 90) . ' days';
 
+        $tipo_alojamiento = $this->faker->randomElement(['Casa', 'Apartamento', 'Hotel', 'Hostal']);
+
         return [
-            'nombre' => $this->faker->words(2, true),
+            'titulo' => $tipo_alojamiento . ' ' . $this->faker->words(2, true),
             'ciudad' => $this->faker->randomElement(['Córdoba', 'Málaga', 'Cádiz', 'Sevilla']),
             'codigo_postal' => $this->faker->postcode(),
             'direccion' => $this->faker->streetAddress(),
-            'tipo_alojamiento' => $this->faker->randomElement(['Casa', 'Apartamento', 'Hotel', 'Hostal']),
+            'tipo_alojamiento' => $tipo_alojamiento,
             'fecha_inicio' => $fechaInicio,
             'fecha_fin' => $this->faker->dateTimeBetween($string1 , $string2),
             'precio_noche' => $this->faker->numberBetween(45, 250),

@@ -40,23 +40,23 @@
                         <!-- fefefefef -->
                         <div class="row">
                             <div class="col-md-6 form-group was-validated">
-                                <label class="form-label" for="nombre"><i class="fa fa-header" aria-hidden="true"></i>
-                                    Nombre </label>
-                                <input class="form-control" type="text" id="nombre" name="nombre"
-                                    title="Introduce un Nombre" required />
-                                @error('ciudad')
+                                <label class="form-label" for="titulo"><i class="fa fa-header" aria-hidden="true"></i>
+                                    Título del alojamiento </label>
+                                <input class="form-control" type="text" id="titulo" name="titulo"
+                                    title="Introduce un título para el alojamiento" required />
+                                @error('titulo')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
-                            <div class=" col-md-6 multi-selector">
+                            <div class="col-md-6 form-group was-validated">
                                 <label class="form-label"><i class="fa fa-pencil" aria-hidden="true"></i>
                                     Características</label>
+                                    <br>
                                 <!---------List of checkboxes and options----------->
-
-                                <div class="dropdown">
-                                    <button class="form-label dropdown-toggle" type="button" id="dropdownMenu2"
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-light dropdown-toggle" type="button" id="dropdownMenu2"
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                         Caracteristicas
                                     </button>
@@ -199,11 +199,11 @@
                                     required></textarea>
                             </div>
                             <div class="col-md-6 form-group was-validated">
-                                <label class="form-label" for="descripcion"><i class="fa fa-pencil"
+                                <label class="form-label" for="descripcion_ubicacion"><i class="fa fa-pencil"
                                         aria-hidden="true"></i>
                                     Descripción de la ubicación</label>
-                                <textarea maxlength="10000" rows="3" class="form-control" name="descripcion" id="descripcion"
-                                    title="Introduce una descripcion del alojamiento" placeholder=""
+                                <textarea maxlength="10000" rows="3" class="form-control" name="descripcion_ubicacion" id="descripcion_ubicacion"
+                                    title="Introduce una descripcion de la ubicación" placeholder=""
                                     required></textarea>
                             </div>
                         </div>

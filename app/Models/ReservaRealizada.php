@@ -16,6 +16,10 @@ class ReservaRealizada extends Model
         'fecha_entrada',
         'fecha_salida',
         'hora_entrada',
-        'estado'
+        'estado',
+        'titulo',
+        'ciudad',
+        'direccion',
+        'precio_noche'
     ];
 }
