@@ -37,6 +37,77 @@
                                     title="Introduce un código postal" required />
                             </div>
                         </div>
+                        <!-- fefefefef -->
+                        <div class="row">
+                            <div class="col-md-6 form-group was-validated">
+                                <label class="form-label" for="nombre"><i class="fa fa-header" aria-hidden="true"></i>
+                                    Nombre </label>
+                                <input class="form-control" type="text" id="nombre" name="nombre"
+                                    title="Introduce un Nombre" required />
+                                @error('ciudad')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                            <div class=" col-md-6 multi-selector">
+                                <label class="form-label"><i class="fa fa-pencil" aria-hidden="true"></i>
+                                    Características</label>
+                                <!---------List of checkboxes and options----------->
+
+                                <div class="dropdown">
+                                    <button class="form-label dropdown-toggle" type="button" id="dropdownMenu2"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Caracteristicas
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item">
+                                            <input class="form-check-input" type="checkbox" name="wifi" id="wifi"
+                                                value="1" />
+                                            <label class="form-check-label" for="wifi">Wifi</label>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <label for="limpieza" class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="limpieza"
+                                                    id="limpieza" value="1" />
+                                                Servicio de limpieza
+                                            </label>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <label for="mascotas" class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="mascotas"
+                                                    id="mascotas" value="1" />
+                                                Admite mascotas
+                                            </label>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <label for="estacionamiento" class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="estacionamiento"
+                                                    id="estacionamiento" value="1" />
+                                                Servicio de estacionamiento
+                                            </label>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <label for="aire_acondicionado" class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="aire_acondicionado"
+                                                    id="aire_acondicionado" value="1" />
+                                                Aire acondicionado
+                                            </label>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <label for="playa" class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" name="playa" id="playa"
+                                                    value="1" />
+                                                Cerca de la playa
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!-- dweddwd -->
 
                         <div class="row">
                             <div class="col-md-6 form-group was-validated">
@@ -120,69 +191,20 @@
 
                         <div class="row">
                             <div class="col-md-6 form-group was-validated">
-                                <label class="form-label" for="descripcion"><i class="fa fa-pencil"
+                                <label class="form-label" for="descripcion"><i class="fa fa-comment"
                                         aria-hidden="true"></i>
                                     Descripción</label>
                                 <textarea maxlength="10000" rows="3" class="form-control" name="descripcion" id="descripcion"
                                     title="Introduce una descripcion del alojamiento" placeholder="Mensaje *"
                                     required></textarea>
                             </div>
-
-                            <div class=" col-md-6 multi-selector">
-                                <label class="form-label"><i class="fa fa-pencil" aria-hidden="true"></i>
-                                    Características</label>
-                                <!---------List of checkboxes and options----------->
-
-                                <div class="dropdown">
-                                    <button class="form-label dropdown-toggle" type="button" id="dropdownMenu2"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        Caracteristicas
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li class="dropdown-item">
-                                            <input class="form-check-input" type="checkbox" name="wifi" id="wifi"
-                                                value="1" />
-                                            <label class="form-check-label" for="wifi">Wifi</label>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <label for="limpieza" class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" name="limpieza"
-                                                    id="limpieza" value="1" />
-                                                Servicio de limpieza
-                                            </label>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <label for="mascotas" class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" name="mascotas"
-                                                    id="mascotas" value="1" />
-                                                Admite mascotas
-                                            </label>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <label for="estacionamiento" class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" name="estacionamiento"
-                                                    id="estacionamiento" value="1" />
-                                                Servicio de estacionamiento
-                                            </label>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <label for="aire_acondicionado" class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" name="aire_acondicionado"
-                                                    id="aire_acondicionado" value="1" />
-                                                Aire acondicionado
-                                            </label>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <label for="playa" class="form-check-label">
-                                                <input class="form-check-input" type="checkbox" name="playa" id="playa"
-                                                    value="1" />
-                                                Cerca de la playa
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-
-
+                            <div class="col-md-6 form-group was-validated">
+                                <label class="form-label" for="descripcion"><i class="fa fa-pencil"
+                                        aria-hidden="true"></i>
+                                    Descripción de la ubicación</label>
+                                <textarea maxlength="10000" rows="3" class="form-control" name="descripcion" id="descripcion"
+                                    title="Introduce una descripcion del alojamiento" placeholder=""
+                                    required></textarea>
                             </div>
                         </div>
                         <div class="form-group form-check">
