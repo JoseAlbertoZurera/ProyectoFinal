@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Alojamiento;
+use App\Models\ReservaRealizada;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -115,10 +116,10 @@ class AlojamientoController extends Controller
     public function show($id)
     {
         $alojamiento = Alojamiento::find($id);
-
         $user = User::find($alojamiento->id_usuario);
+        $reservas = ReservaRealizada::where('id_alojamiento', $id)->get();
 
-        return view('alojamiento', compact('alojamiento', 'user'));
+        return view('alojamiento', compact('alojamiento', 'user', 'reservas'));
     }
 
     /**
