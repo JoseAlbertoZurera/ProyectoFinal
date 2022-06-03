@@ -83,8 +83,9 @@ class AlojamientoController extends Controller
             $url_imagen = Storage::url($imagen);
         }
 
-
+        
         Alojamiento::create([
+            'titulo' => $request['titulo'],
             'ciudad' => $request['ciudad'],
             'codigo_postal' => $request['codigo_postal'],
             'direccion' => $request['direccion'],
@@ -94,6 +95,7 @@ class AlojamientoController extends Controller
             'precio_noche' => $request['precio_noche'],
             'disponibilidad' => 1,
             'descripcion' => $request['descripcion'],
+            'descripcion_ubicacion' => $request['descripcion_ubicacion'],
             'ruta_imagen' => $url_imagen,
             'wifi' => $wifi,
             'playa' => $playa,
@@ -105,7 +107,10 @@ class AlojamientoController extends Controller
             'max_personas' => $request['max_personas'],
             'id_usuario' => Auth::id()
         ]);
-        return redirect()->route("alojamientos")->with(["alojamientoCreado" => "Alojamiento creado correctamente"]);
+
+        $id = Alojamiento::select('id')->orderBy('id', 'desc')->first();
+
+        return redirect()->route("alojamiento.show", [$id])->with(["alojamientoCreado" => "Alojamiento creado correctamente"]);
     }
 
     /**
@@ -117,7 +122,7 @@ class AlojamientoController extends Controller
     {
         $alojamiento = Alojamiento::find($id);
         $user = User::find($alojamiento->id_usuario);
-        $reservas = ReservaRealizada::where('id_alojamiento', $id)->get();
+        $reservas = ReservaRealizada::where('id_alojamiento', $id)->where('estado', '!=', 'Cancelado')->get();
 
         return view('alojamiento', compact('alojamiento', 'user', 'reservas'));
     }

@@ -17,7 +17,7 @@
             <div class="container contenedor">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-md-6 p-5">
-                        <h2>{{$alojamiento->tipo_alojamiento}} {{ $alojamiento->nombre }}</h2>
+                        <h2>{{ $alojamiento->titulo }}</h2>
                         <p class="lead">{{ $alojamiento->ciudad }}</p>
                         <span>{{ $alojamiento->habitaciones }} habitaciones</span>
                         <span>{{ $alojamiento->max_personas }} personas</span>

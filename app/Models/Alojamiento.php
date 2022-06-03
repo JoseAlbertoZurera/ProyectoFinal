@@ -10,7 +10,7 @@ class Alojamiento extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre',
+        'titulo',
         'ciudad',
         'codigo_postal',
         'direccion',

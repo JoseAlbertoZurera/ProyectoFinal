@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('alojamientos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre', 50);
+            $table->string('titulo', 50);
             $table->string('ciudad', 50);
             $table->integer('codigo_postal');
             $table->string('direccion', 80);

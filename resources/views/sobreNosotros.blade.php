@@ -68,7 +68,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card bg-light">
                         <div class="card-body text-center">
-                            <img src="https://randomuser.me/api/portraits/men/90.jpg" class="rounded-circle mb-3" alt="" />
+                            <img src="{{ asset('images/quienes/JoseAlbertoZureraPNG.png') }}" class="rounded-circle mb-3" alt="" width="130px" height="130px" />
                             <h3 class="card-title mb-3">Jose Alberto Zurera</h3>
                             <h4 class="card-subtitle text-muted mb-3">
                                 Back End Developer, España</h4>

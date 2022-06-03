@@ -23,6 +23,10 @@ return new class extends Migration
             $table->string('estado', 20);
             $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade')->onUpdate("cascade");
             $table->foreign('id_alojamiento')->references('id')->on('alojamientos')->onDelete('cascade')->onUpdate("cascade");
+            $table->string('titulo', 50);
+            $table->string('ciudad', 50);
+            $table->string('direccion', 80);
+            $table->integer('precio_noche');
             $table->timestamps();
         });
     }
