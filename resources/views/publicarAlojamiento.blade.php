@@ -9,7 +9,7 @@
 
 @section('contenido')
     <section class="contacta-2">
-        <div class="row-yaya">
+        <div class="row">
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <div class="formulario-login m-5">
                     <h2 class="text-center">Publica tu alojamiento</h2>
@@ -53,18 +53,16 @@
                             <div class="col-md-6 form-group was-validated">
                                 <label class="form-label"><i class="fa fa-pencil" aria-hidden="true"></i>
                                     Características</label>
-                                    <br>
                                 <!---------List of checkboxes and options----------->
-                                <div class="btn-group">
+                                <div class="form-check-label">
                                     <button class="btn btn-sm btn-light dropdown-toggle" type="button" id="dropdownMenu2"
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                         Caracteristicas
                                     </button>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-item">
-                                            <input class="form-check-input" type="checkbox" name="wifi" id="wifi"
-                                                value="1" />
-                                            <label class="form-check-label" for="wifi">Wifi</label>
+                                            <label class="form-check-label" for="wifi"><input class="form-check-input"
+                                                type="checkbox" name="wifi" id="wifi" value="1" /> Wifi</label>
                                         </li>
                                         <li class="dropdown-item">
                                             <label for="limpieza" class="form-check-label">

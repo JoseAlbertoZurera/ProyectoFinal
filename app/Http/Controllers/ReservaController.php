@@ -40,7 +40,8 @@ class ReservaController extends Controller
         $fecha = explode(' to ', $request['fecha']);
 
         ReservaRealizada::create([
-            'id_usuario' => Auth::id(),
+            'id_usuario' => $alojamiento->id_usuario,
+            'id_solicitante' => Auth::id(),
             'id_alojamiento' => $alojamiento->id,
             'fecha_entrada' => $fecha[0],
             'fecha_salida' => $fecha[1],

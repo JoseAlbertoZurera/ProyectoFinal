@@ -12,6 +12,7 @@ class ReservaRealizada extends Model
 
     protected $fillable = [
         'id_usuario',
+        'id_solicitante',
         'id_alojamiento',
         'fecha_entrada',
         'fecha_salida',
