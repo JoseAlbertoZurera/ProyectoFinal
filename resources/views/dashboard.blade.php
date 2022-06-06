@@ -150,6 +150,9 @@
                                                 <td>{{ $reserva->precio_noche }}€</td>
                                                 <td>{{ $reserva->estado }}</td>
                                                 <td class="d-flex justify-content-center">
+                                                    <a class="btn btn-primary btn-sm mx-1"
+                                                        href="{{ route('alojamiento.show', [$reserva->id_alojamiento]) }}"
+                                                        title="Ver alojamiento"><i class="fas fa-eye fa-lg"></i></a>
                                                     <button type="submit" class="btn btn-success btn-sm mx-1"
                                                         title="Modificar reserva"><i class="fas fa-edit fa-lg"></i></button>
                                                     <form method="post" class="cancelarReserva"
@@ -166,6 +169,53 @@
                                     </tbody>
                                 @else
                                     <h7>Actualmente no has realizado niguna reserva</h7>
+                                @endif
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mt-5">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <h5>{{ __('Alojamientos reservados') }}</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <table class="table table-striped table-hover table-sm">
+                                @if (sizeof($alojamientosReservados))
+                                    <thead class="table-secondary">
+                                        <tr>
+                                            <th>Nº Reserva</th>
+                                            <th>Nombre</th>
+                                            <th>Ciudad</th>
+                                            <th>Dirección</th>
+                                            <th>Fecha entrada</th>
+                                            <th>Fecha salida</th>
+                                            <th>Precio / Noche</th>
+                                            <th>Estado</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        @foreach ($alojamientosReservados as $alojamientosReservado)
+                                            <tr>
+                                                <th>{{ $alojamientosReservado->id }}</th>
+                                                <td>{{ $alojamientosReservado->titulo }}</td>
+                                                <td>{{ $alojamientosReservado->ciudad }}</td>
+                                                <td>{{ $alojamientosReservado->direccion }}</td>
+                                                <td>{{ $alojamientosReservado->fecha_entrada }}</td>
+                                                <td>{{ $alojamientosReservado->fecha_salida }}</td>
+                                                <td>{{ $alojamientosReservado->precio_noche }}€</td>
+                                                <td>{{ $alojamientosReservado->estado }}</td>
+                                                <td class="d-flex justify-content-center">
+                                                    <a class="btn btn-primary btn-sm mx-1"
+                                                        href="{{ route('alojamiento.show', [$alojamientosReservado->id_alojamiento]) }}"
+                                                        title="Ver alojamiento"><i class="fas fa-eye fa-lg"></i></a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                @else
+                                    <h7>Actualmente no dispones de ningún alojamiento reservado</h7>
                                 @endif
                             </table>
                         </div>
