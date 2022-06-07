@@ -33,21 +33,8 @@
                     <a href="{{ route('perfil.index', Auth::user()->nombre) }}" class="nav-link px-4">Ver perfil</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link px-4">Logout</a>
+                    <a href="{{ route('logout') }}" class="nav-link px-4">Logout</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link px-4">Logout</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link px-4">Logout</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link px-4">Logout</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link px-4">Logout</a>
-                </li>
-            </ul>
         </div>
         <div class="row d-flex justify-content-center align-items-center" style=" min-height: 25vh;">
             <h3 class="pt-3" style="color: #00C2CB;">

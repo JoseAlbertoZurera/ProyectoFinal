@@ -41,15 +41,15 @@
             <h2 class=" h2-instructors">CONOCE NUESTRO EQUIPO</h2>
             <hr
                 style="height: 5px;
-                                                                                                                        width: 50%;
-                                                                                                                        text-align: center;
-                                                                                                                        margin-left: 25%;
-                                                                                                                        margin-bottom: 40px;">
+                                                                                                                                            width: 50%;
+                                                                                                                                            text-align: center;
+                                                                                                                                            margin-left: 25%;
+                                                                                                                                            margin-bottom: 40px;">
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="card bg-light">
                         <div class="card-body text-center">
-                            <img src="https://randomuser.me/api/portraits/men/25.jpg" class="rounded-circle mb-3" alt="" />
+                            <img src="{{ asset('images/quienes/Captura.PNG') }}" class="rounded-circle mb-3" alt="" />
                             <h3 class="card-title mb-3">Francisco Pérez</h3>
                             <h4 class="card-subtitle text-muted mb-3">
                                 Front End Developer, España</h4>
@@ -68,7 +68,8 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card bg-light">
                         <div class="card-body text-center">
-                            <img src="{{ asset('images/quienes/JoseAlbertoZureraPNG.png') }}" class="rounded-circle mb-3" alt="" width="130px" height="130px" />
+                            <img src="{{ asset('images/quienes/JoseAlbertoZureraPNG.png') }}" class="rounded-circle mb-3"
+                                alt="" width="130px" height="130px" />
                             <h3 class="card-title mb-3">Jose Alberto Zurera</h3>
                             <h4 class="card-subtitle text-muted mb-3">
                                 Back End Developer, España</h4>
@@ -87,8 +88,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card bg-light">
                         <div class="card-body text-center">
-                            <img src="https://randomuser.me/api/portraits/women/37.jpg" class="rounded-circle mb-3"
-                                alt="" />
+                            <img src="{{ asset('images/quienes/adri.PNG') }}" class="rounded-circle mb-3" alt="" />
                             <h3 class="card-title mb-3">Adrian Romero</h3>
                             <h4 class="card-subtitle text-muted mb-3">
                                 Chief Financial Officer, España</h4>
