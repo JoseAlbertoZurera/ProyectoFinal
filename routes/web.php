@@ -34,6 +34,7 @@ Route::put('/dashboard/perfil/{user}/editar', [UserController::class, 'update'])
 Route::delete('/dashboard/perfil/{user}', [UserController::class, 'destroy'])->name('perfil.destroy')->middleware('verified');
 
 Route::get('/alojamientos', AlojamientoController::class)->name('alojamientos');
+Route::get('/alojamientos/{user}', [AlojamientoController::class, 'alojamientosUsuario'])->name('alojamientos.alojamientosUsuario')->middleware('verified');
 
 Route::get('/alojamiento/{id}', [AlojamientoController::class, 'show'])->name('alojamiento.show');
 
