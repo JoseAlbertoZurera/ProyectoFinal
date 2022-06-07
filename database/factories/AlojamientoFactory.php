@@ -28,7 +28,7 @@ class AlojamientoFactory extends Factory
 
         return [
             'titulo' => $tipo_alojamiento . ' ' . $this->faker->words(2, true),
-            'ciudad' => $this->faker->randomElement(['Córdoba', 'Málaga', 'Cádiz', 'Sevilla']),
+            'ciudad' => $this->faker->randomElement(['Córdoba', 'Palma de Mallorca', 'Granada', 'Sevilla', 'Madrid', 'Barcelona']),
             'codigo_postal' => $this->faker->postcode(),
             'direccion' => $this->faker->streetAddress(),
             'tipo_alojamiento' => $tipo_alojamiento,
