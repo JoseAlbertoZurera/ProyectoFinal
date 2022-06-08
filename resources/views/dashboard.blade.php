@@ -122,7 +122,7 @@
                                     @endforeach
                                 </tbody>
                             @else
-                                <h7>Actualmente no has realizado niguna reserva</h7>
+                                <h7>Niguna reserva realizada</h7>
                             @endif
                         </table>
                     </div>

@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
     @yield('styles')
 
@@ -38,8 +40,8 @@
     @include('layouts.header')
 
     <main>
-        <div class="container-fluid">
-            <div class="row flex-nowrap min-vh-100">
+        <div class="container">
+            <div class="row flex-nowrap" style=" min-height: 85vh;">
                 <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
                     <a href="/"
                         class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
@@ -72,7 +74,13 @@
                             @endif
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white"><i class="fs-4 bi-table"></i>&nbsp Reservas</a>
+                            @if (Route::currentRouteName() == 'alojamientos.reservasUsuario')
+                                <a href="{{ route('alojamientos.reservasUsuario', Auth::user()->nombre) }}"
+                                    class="nav-link active"><i class="fs-4 bi-grid"></i>&nbsp Mis reservas</a>
+                            @else
+                                <a href="{{ route('alojamientos.reservasUsuario', Auth::user()->nombre) }}"
+                                    class="nav-link text-white"><i class="fs-4 bi-grid"></i>&nbsp Mis reservas</a>
+                            @endif
                         </li>
                         <li>
                             <a href="#" class="nav-link text-white"><i class="fs-4 bi-person-circle"></i>&nbsp
@@ -101,7 +109,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col py-3">
                     @yield('contenido')
                 </div>
             </div>

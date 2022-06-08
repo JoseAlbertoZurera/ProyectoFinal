@@ -33,8 +33,11 @@ Route::get('/dashboard/perfil/{user}/editar', [UserController::class, 'edit'])->
 Route::put('/dashboard/perfil/{user}/editar', [UserController::class, 'update'])->name('perfil.update')->middleware('verified');
 Route::delete('/dashboard/perfil/{user}', [UserController::class, 'destroy'])->name('perfil.destroy')->middleware('verified');
 
+Route::get('/dashboard/alojamientos/{user}', [AlojamientoController::class, 'alojamientosUsuario'])->name('alojamientos.alojamientosUsuario')->middleware('verified');
+Route::get('/dashboard/reservas/{user}', [AlojamientoController::class, 'reservasUsuario'])->name('alojamientos.reservasUsuario')->middleware('verified');
+
 Route::get('/alojamientos', AlojamientoController::class)->name('alojamientos');
-Route::get('/alojamientos/{user}', [AlojamientoController::class, 'alojamientosUsuario'])->name('alojamientos.alojamientosUsuario')->middleware('verified');
+Route::get('/alojamientos/{ciudad}', [AlojamientoController::class, 'alojamientosCiudad'])->name('alojamientos.alojamientosCiudad');
 
 Route::get('/alojamiento/{id}', [AlojamientoController::class, 'show'])->name('alojamiento.show');
 
