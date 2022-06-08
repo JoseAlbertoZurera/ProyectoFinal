@@ -167,4 +167,15 @@ class AlojamientoController extends Controller
 
         return view('misAlojamientos', compact('alojamientos'));
     }
+
+    public function reservasUsuario() {
+        $alojamientos = ReservaRealizada::where('id_solicitante', Auth::user()->id)->get();
+
+        return view('misAlojamientos', compact('alojamientos'));
+    }
+
+    public function alojamientosCiudad($ciudad) {
+        $alojamientos = Alojamiento::where('ciudad', $ciudad)->where('disponibilidad', 1)->orderBy('created_at', 'desc')->paginate(8);
+        return view('alojamientos', compact('alojamientos'));
+    }
 }

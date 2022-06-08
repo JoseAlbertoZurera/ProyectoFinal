@@ -48,21 +48,25 @@
             <div class="row">
                 <h2 class="h2-tip">Ciudades mas visitadas</h2>
                 <div class="col-sm-4">
+
                     <div style="margin: 2rem auto; width: 20rem ml-3">
-                        <div class="card">
-                            <img src="{{ asset('images/home/cordoba.jpg') }}" class="card-img-top" alt="Phone" />
-                            <div class="card-body">
-                                <h5 class="card-title">Córdoba</h5>
-                                <p class="card-text">
-                                    Apartamentos y alquileres vacacionales
-                                </p>
+                        <a id="link" href="{{ route('alojamientos.alojamientosCiudad', 'Córdoba') }}">
+                            <div class="card">
+                                <img src="{{ asset('images/home/cordoba.jpg') }}" class="card-img-top" alt="Phone" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Córdoba</h5>
+                                    <p class="card-text">
+                                        Apartamentos y alquileres vacacionales
+                                    </p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
                 <div class="col-sm-4">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
+                        <a id="link" href="{{ route('alojamientos.alojamientosCiudad', 'Palma de Mallorca') }}">
                         <div class="card">
                             <img src="{{ asset('images/home/mallorca.jpg') }}" class="card-img-top" alt="Phone" />
                             <div class="card-body">
@@ -72,10 +76,13 @@
                                 </p>
                             </div>
                         </div>
+                    </a>
                     </div>
                 </div>
+
                 <div class="col-sm-4">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
+                        <a id="link" href="{{ route('alojamientos.alojamientosCiudad', 'Sevilla') }}">
                         <div class="card">
                             <img src="{{ asset('images/home/sevilla.jpg') }}" class="card-img-top" alt="Phone" />
                             <div class="card-body">
@@ -86,11 +93,14 @@
                             </div>
                         </div>
                     </div>
+                </a>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-sm-4">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
+                        <a id="link" href="{{ route('alojamientos.alojamientosCiudad', 'Granada') }}">
                         <div class="card">
                             <img src="{{ asset('images/home/granada.jpg') }}" class="card-img-top" alt="Phone" />
                             <div class="card-body">
@@ -100,11 +110,13 @@
                                 </p>
                             </div>
                         </div>
+                    </a>
                     </div>
                 </div>
 
                 <div class="col-sm-4">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
+                        <a id="link" href="{{ route('alojamientos.alojamientosCiudad', 'Madrid') }}">
                         <div class="card">
                             <img src="{{ asset('images/home/madrid.jpg') }}" class="card-img-top" alt="Phone" />
                             <div class="card-body">
@@ -114,10 +126,13 @@
                                 </p>
                             </div>
                         </div>
+                    </a>
                     </div>
                 </div>
+
                 <div class="col-sm-4">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
+                        <a id="link" href="{{ route('alojamientos.alojamientosCiudad', 'Barcelona') }}">
                         <div class="card">
                             <img src="{{ asset('images/home/barcelona.jpg') }}" class="card-img-top" alt="Phone" />
                             <div class="card-body">
@@ -129,6 +144,7 @@
                         </div>
                     </div>
                 </div>
+            </a>
             </div>
         </div>
 

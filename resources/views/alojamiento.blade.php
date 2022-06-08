@@ -2,8 +2,6 @@
 
 @section('styles')
     <link href="{{ asset('css/alojamiento.css') }}" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 @endsection
 
 @section('titulo', 'Leasing | Alojamiento')
@@ -54,10 +52,19 @@
                     <div class="col-md-6">
                         <h1>{{ $alojamiento->titulo }}</h1>
                     </div>
-                    <div class="col-md-6 d-flex justify-content-end">
-                        <button type="button" class="btn btn-primary btn-lg" id="reservar" data-bs-toggle="modal"
-                            data-bs-target="#modal">Reservar</button>
-                    </div>
+
+                    @if (is_null(Auth::user()))
+                        <div class="col-md-6 d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary btn-lg" id="reservar" data-bs-toggle="modal"
+                                data-bs-target="#modal">Reservar</button>
+                        </div>
+                    @elseif(is_null(Auth::user()) == false && $alojamiento->id_usuario != Auth::user()->id)
+                        <div class="col-md-6 d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary btn-lg" id="reservar" data-bs-toggle="modal"
+                                data-bs-target="#modal">Reservar</button>
+                        </div>
+                    @endif
+
                 </div>
                 <div class="col-12">
                     <i class="bi bi-geo-alt-fill"></i> {{ $alojamiento->ciudad }}
@@ -566,7 +573,7 @@
     <script>
         const alojamiento = @json($alojamiento);
         const reservas = @json($reservas);
-        
+
         var rangoFechasReservadas = [];
 
         for (var key in reservas) {
@@ -579,7 +586,8 @@
         $(document).ready(function() {
             $("#fecha").flatpickr({
                 onReady: function() {
-                    this.jumpToDate(alojamiento.fecha_inicio.substring(0, alojamiento.fecha_inicio.length - 3))
+                    this.jumpToDate(alojamiento.fecha_inicio.substring(0, alojamiento.fecha_inicio
+                        .length - 3))
                 },
                 altInput: true,
                 altFormat: "j F, Y",
