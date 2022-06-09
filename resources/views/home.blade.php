@@ -67,33 +67,33 @@
                 <div class="col-sm-4">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
                         <a id="link" href="{{ route('alojamientos.alojamientosCiudad', 'Palma de Mallorca') }}">
-                        <div class="card">
-                            <img src="{{ asset('images/home/mallorca.jpg') }}" class="card-img-top" alt="Phone" />
-                            <div class="card-body">
-                                <h5 class="card-title">Palma de Mallorca</h5>
-                                <p class="card-text">
-                                    Apartamentos y alquileres vacacionales
-                                </p>
+                            <div class="card">
+                                <img src="{{ asset('images/home/mallorca.jpg') }}" class="card-img-top" alt="Phone" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Palma de Mallorca</h5>
+                                    <p class="card-text">
+                                        Apartamentos y alquileres vacacionales
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
                     </div>
                 </div>
 
                 <div class="col-sm-4">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
                         <a id="link" href="{{ route('alojamientos.alojamientosCiudad', 'Sevilla') }}">
-                        <div class="card">
-                            <img src="{{ asset('images/home/sevilla.jpg') }}" class="card-img-top" alt="Phone" />
-                            <div class="card-body">
-                                <h5 class="card-title">Sevilla</h5>
-                                <p class="card-text">
-                                    Apartamentos y alquileres vacacionales
-                                </p>
+                            <div class="card">
+                                <img src="{{ asset('images/home/sevilla.jpg') }}" class="card-img-top" alt="Phone" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Sevilla</h5>
+                                    <p class="card-text">
+                                        Apartamentos y alquileres vacacionales
+                                    </p>
+                                </div>
                             </div>
-                        </div>
                     </div>
-                </a>
+                    </a>
                 </div>
             </div>
 
@@ -101,50 +101,50 @@
                 <div class="col-sm-4">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
                         <a id="link" href="{{ route('alojamientos.alojamientosCiudad', 'Granada') }}">
-                        <div class="card">
-                            <img src="{{ asset('images/home/granada.jpg') }}" class="card-img-top" alt="Phone" />
-                            <div class="card-body">
-                                <h5 class="card-title">Granada</h5>
-                                <p class="card-text">
-                                    Apartamentos y alquileres vacacionales
-                                </p>
+                            <div class="card">
+                                <img src="{{ asset('images/home/granada.jpg') }}" class="card-img-top" alt="Phone" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Granada</h5>
+                                    <p class="card-text">
+                                        Apartamentos y alquileres vacacionales
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
                     </div>
                 </div>
 
                 <div class="col-sm-4">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
                         <a id="link" href="{{ route('alojamientos.alojamientosCiudad', 'Madrid') }}">
-                        <div class="card">
-                            <img src="{{ asset('images/home/madrid.jpg') }}" class="card-img-top" alt="Phone" />
-                            <div class="card-body">
-                                <h5 class="card-title">Madrid</h5>
-                                <p class="card-text">
-                                    Apartamentos y alquileres vacacionales
-                                </p>
+                            <div class="card">
+                                <img src="{{ asset('images/home/madrid.jpg') }}" class="card-img-top" alt="Phone" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Madrid</h5>
+                                    <p class="card-text">
+                                        Apartamentos y alquileres vacacionales
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
                     </div>
                 </div>
 
                 <div class="col-sm-4">
                     <div style="margin: 2rem auto; width: 20rem ml-3">
                         <a id="link" href="{{ route('alojamientos.alojamientosCiudad', 'Barcelona') }}">
-                        <div class="card">
-                            <img src="{{ asset('images/home/barcelona.jpg') }}" class="card-img-top" alt="Phone" />
-                            <div class="card-body">
-                                <h5 class="card-title">Barcelona</h5>
-                                <p class="card-text">
-                                    Apartamentos y alquileres vacacionales
-                                </p>
+                            <div class="card">
+                                <img src="{{ asset('images/home/barcelona.jpg') }}" class="card-img-top" alt="Phone" />
+                                <div class="card-body">
+                                    <h5 class="card-title">Barcelona</h5>
+                                    <p class="card-text">
+                                        Apartamentos y alquileres vacacionales
+                                    </p>
+                                </div>
                             </div>
-                        </div>
                     </div>
                 </div>
-            </a>
+                </a>
             </div>
         </div>
 
