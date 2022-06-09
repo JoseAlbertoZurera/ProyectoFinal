@@ -38,6 +38,7 @@ Route::get('/dashboard/reservas/{user}', [AlojamientoController::class, 'reserva
 
 Route::get('/alojamientos', AlojamientoController::class)->name('alojamientos');
 Route::get('/alojamientos/{ciudad}', [AlojamientoController::class, 'alojamientosCiudad'])->name('alojamientos.alojamientosCiudad');
+Route::get('/buscar', [AlojamientoController::class, 'buscadorAlojamientos'])->name('alojamientos.buscadorAlojamientos');
 
 Route::get('/alojamiento/{id}', [AlojamientoController::class, 'show'])->name('alojamiento.show');
 

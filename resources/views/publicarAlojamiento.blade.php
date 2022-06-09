@@ -2,6 +2,7 @@
 
 @section('styles')
     <link href="{{ asset('css/publicarAlojamiento.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/publicarAlojamiento.js') }}" defer></script>
 
 @endsection
 
@@ -62,7 +63,7 @@
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-item">
                                             <label class="form-check-label" for="wifi"><input class="form-check-input"
-                                                type="checkbox" name="wifi" id="wifi" value="1" /> Wifi</label>
+                                                    type="checkbox" name="wifi" id="wifi" value="1" /> Wifi</label>
                                         </li>
                                         <li class="dropdown-item">
                                             <label for="limpieza" class="form-check-label">
@@ -136,16 +137,16 @@
                                 <label class="form-label" for="fecha_inicio"><i class="fa fa-calendar"
                                         aria-hidden="true"></i>
                                     Selecciona fecha inicio </label>
-                                <input class="form-control" type="date" id="fecha_inicio" name="fecha_inicio"
-                                    title="Introduce una fecha de inicio" required />
+                                <input class="form-control flatpickr-input" placeholder="Selecciona la fecha..." type="date"
+                                    id="fecha_inicio" name="fecha_inicio" required />
                             </div>
 
                             <div class="col-md-6 form-group was-validated">
                                 <label class="form-label" for="fecha_fin"><i class="fa fa-calendar"
                                         aria-hidden="true"></i>
                                     Selecciona fecha fin</label>
-                                <input class="form-control" type="date" id="fecha_fin" name="fecha_fin"
-                                    title="Introduce una fecha de fin" required />
+                                <input class="form-control flatpickr-input" placeholder="Selecciona la fecha..." type="date"
+                                    id="fecha_fin" name="fecha_fin" required />
                             </div>
                         </div>
 
@@ -193,16 +194,14 @@
                                         aria-hidden="true"></i>
                                     Descripción</label>
                                 <textarea maxlength="10000" rows="3" class="form-control" name="descripcion" id="descripcion"
-                                    title="Introduce una descripcion del alojamiento" placeholder="Mensaje *"
-                                    required></textarea>
+                                    title="Introduce una descripcion del alojamiento" placeholder="Mensaje *" required></textarea>
                             </div>
                             <div class="col-md-6 form-group was-validated">
                                 <label class="form-label" for="descripcion_ubicacion"><i class="fa fa-pencil"
                                         aria-hidden="true"></i>
                                     Descripción de la ubicación</label>
                                 <textarea maxlength="10000" rows="3" class="form-control" name="descripcion_ubicacion" id="descripcion_ubicacion"
-                                    title="Introduce una descripcion de la ubicación" placeholder=""
-                                    required></textarea>
+                                    title="Introduce una descripcion de la ubicación" placeholder="" required></textarea>
                             </div>
                         </div>
                         <div class="form-group form-check">
@@ -232,5 +231,5 @@
     </section>
 
     @include('layouts.footer')
-    
+
 @endsection

@@ -20,5 +20,29 @@
     return fecha;
   }
   
-  // LLamamos a la función "obtenerFechaActual()" para obtener la fecha actual y la añadimos como valor máximo al formulario
-  document.getElementById("fecha-nacimiento").max = obtenerFechaActual();
+
+  $(document).ready(function () {
+    $("#fecha_nacimiento").flatpickr({
+        maxDate: obtenerFechaActual(),
+        altInput: true,
+        altFormat: "j F, Y",
+        dateFormat: "Y-m-d",
+        locale: {
+            firstDayOfWeek: 1,
+            weekdays: {
+                shorthand: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+                longhand: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes',
+                    'Sábado'
+                ],
+            },
+            months: {
+                shorthand: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Оct',
+                    'Nov', 'Dic'
+                ],
+                longhand: ['Enero', 'Febreo', 'Мarzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto',
+                    'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
+                ],
+            },
+        },
+    });
+  });

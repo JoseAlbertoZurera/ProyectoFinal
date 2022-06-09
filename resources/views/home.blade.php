@@ -3,6 +3,7 @@
 @section('styles')
     <script src="{{ asset('js/home.js') }}" defer></script>
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/publicarAlojamiento.js') }}" defer></script>
 @endsection
 
 @section('titulo', 'Leasing | Página Principal')
@@ -18,8 +19,40 @@
                 Consulta los precios de más de 2 millones de alojamientos en toda España
             </p>
         </div>
+
+        <div class="container p-5">
+            <form class="p-4 buscador rounded-pill" method="GET" action="{{ route('alojamientos.buscadorAlojamientos') }}">
+                @csrf
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-md-3">
+                        <select class="form-select" aria-label="Default select example" id="ciudad" name="ciudad"
+                            title="Selecciona una ciudad" required>
+                            <option selected value="Córdoba">Córdoba</option>
+                            <option value="Granada">Granada</option>
+                            <option value="Hotel">Hotel</option>
+                            <option value="Hostal">Hostal</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input class="form-control flatpickr-input" placeholder="Fecha entrada" type="date" id="fecha_inicio"
+                            name="fecha_inicio" required />
+                    </div>
+
+                    <div class="col-md-3">
+                        <input class="form-control flatpickr-input" placeholder="Fecha salida" type="date" id="fecha_fin"
+                            name="fecha_fin" required />
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button type="submit" class="btn btn-lg btn-primary">
+                            <span class="span-btn">Buscar &nbsp; <i class="fa-solid fa-magnifying-glass"></i></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
         <!--CONTAINER PRINCIPAL-->
-        <div class="container mt-5">
+        <div class="container">
             <div class="row">
                 <h2 class="h2-tip">Alojamientos destacados</h2>
 
