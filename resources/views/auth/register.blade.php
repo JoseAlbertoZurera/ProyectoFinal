@@ -2,6 +2,7 @@
 
 @section('styles')
     <link href="{{ asset('css/register.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/register.js') }}" defer></script>
 @endsection
 @section('titulo', 'Leasing | Registrate')
 
@@ -46,10 +47,11 @@
 
                 <div class="row">
                     <div class="form-group was-validated col-6">
-                        <label class="form-label" for="name"><i class="fa fa-calendar" aria-hidden="true"></i> Fecha de
-                            nacimiento</label>
-                        <input class="form-control" type="date" id="fecha-nacimiento" name="fecha_nacimiento" max"" title="Tienes que ser mayor de 18 años" @error('fecha_nacimiento') is-invalid @enderror
-                            value="{{ old('fecha_nacimiento') }}" required />
+                        <label class="form-label" for="fecha_nacimiento"><i class="fa fa-calendar"
+                                aria-hidden="true"></i> Fecha de nacimiento</label>
+                        <input class="form-control flatpickr-input" placeholder="Selecciona la fecha..." type="date"
+                            id="fecha_nacimiento" name="fecha_nacimiento" value="{{ old('fecha_nacimiento') }}"
+                            title="Tienes que ser mayor de 18 años" required />
                         @error('fecha_nacimiento')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -125,9 +127,10 @@
 
                 <div class="form-check form-switch mt-3">
                     <input class="form-check-input" type="checkbox" id="check" required>
-                    <label class="form-check-label" for="flexSwitchCheckDefault">He leído y acepto los términos y condiciones y la política
+                    <label class="form-check-label" for="flexSwitchCheckDefault">He leído y acepto los términos y
+                        condiciones y la política
                         de privacidad</label>
-                  </div>
+                </div>
                 <hr />
                 <button class="btn btn-warning w-100 mt-3" type="submit">
                     <div class="row align-items-center">
@@ -162,5 +165,4 @@
             </form>
         </div>
     </div>
-    <script src="{{ asset('js/register.js') }}" defer></script>
 @endsection

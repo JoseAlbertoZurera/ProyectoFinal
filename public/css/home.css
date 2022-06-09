@@ -111,11 +111,13 @@ div.footer-buttons {
     position: fixed;
     bottom: 0;
     background: #98392e;
-    background: linear-gradient(to right,
-            #76cfcd 0%,
-            #76cfcd 50%,
-            #54909a 50%,
-            #54909a 100%);
+    background: linear-gradient(
+        to right,
+        #76cfcd 0%,
+        #76cfcd 50%,
+        #54909a 50%,
+        #54909a 100%
+    );
     width: 100%;
     text-align: center;
     padding: 20px;
@@ -137,4 +139,8 @@ div.footer-buttons a i {
 
 .pt-3 {
     padding-top: 2rem !important;
+}
+
+.buscador {
+    background-color:rgb(213, 230, 245);
 }

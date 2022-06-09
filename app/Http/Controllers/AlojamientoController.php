@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Alojamiento;
 use App\Models\ReservaRealizada;
 use App\Models\User;
+use Carbon\Carbon;
+use DateTime;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -83,7 +85,7 @@ class AlojamientoController extends Controller
             $url_imagen = Storage::url($imagen);
         }
 
-        
+
         Alojamiento::create([
             'titulo' => $request['titulo'],
             'ciudad' => $request['ciudad'],
@@ -162,20 +164,36 @@ class AlojamientoController extends Controller
         return redirect()->route("dashboard")->with(["alojamientoEliminado" => "Alojamiento eliminado correctamente",]);
     }
 
-    public function alojamientosUsuario() {
+    public function alojamientosUsuario()
+    {
         $alojamientos = Alojamiento::where('id_usuario', Auth::user()->id)->get();
 
         return view('misAlojamientos', compact('alojamientos'));
     }
 
-    public function reservasUsuario() {
+    public function reservasUsuario()
+    {
         $alojamientos = ReservaRealizada::where('id_solicitante', Auth::user()->id)->get();
 
         return view('misAlojamientos', compact('alojamientos'));
     }
 
-    public function alojamientosCiudad($ciudad) {
+    public function alojamientosCiudad($ciudad)
+    {
         $alojamientos = Alojamiento::where('ciudad', $ciudad)->where('disponibilidad', 1)->orderBy('created_at', 'desc')->paginate(8);
+        return view('alojamientos', compact('alojamientos'));
+    }
+
+    public function buscadorAlojamientos(Request $request)
+    {
+        $ciudad = $request['ciudad'];
+
+        $fecha_inicio = $request['fecha_inicio'];
+        $fecha_fin = Carbon::parse($request['fecha_fin']);
+        $endDate = $fecha_fin->addMonths(3);
+
+        $alojamientos = Alojamiento::whereBetween('fecha_inicio', [Carbon::now(), $fecha_inicio])->whereBetween('fecha_fin', [$request['fecha_fin'], $endDate])->where('ciudad', $ciudad)->orderBy('created_at', 'desc')->paginate(8);
+
         return view('alojamientos', compact('alojamientos'));
     }
 }
