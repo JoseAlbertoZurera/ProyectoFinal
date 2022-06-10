@@ -50,7 +50,7 @@
                                                     href="{{ route('alojamiento.show', [$alojamiento]) }}"
                                                     title="Ver alojamiento"><i class="fas fa-eye fa-lg"></i></a>
                                                 <a class="btn btn-success btn-sm mx-1"
-                                                    href="{{ route('editarAlojamiento') }}" title="Editar alojamiento"><i
+                                                    href="#" title="Editar alojamiento"><i
                                                         class="fas fa-edit fa-lg"></i></a>
                                                 <form class="eliminarAlojamiento" method="post"
                                                     action="{{ route('alojamientos.destroy', [$alojamiento]) }}">
@@ -109,14 +109,6 @@
                                                     title="Ver alojamiento"><i class="fas fa-eye fa-lg"></i></a>
                                                 <button type="submit" class="btn btn-success btn-sm mx-1"
                                                     title="Modificar reserva"><i class="fas fa-edit fa-lg"></i></button>
-                                                <form method="post" class="cancelarReserva"
-                                                    action="{{ route('reservas.cancelarReserva', [$reserva]) }}">
-                                                    @method('put')
-                                                    @csrf
-                                                    <button type="submit" class="btn btn-danger btn-sm mx-1"
-                                                        title="Cancelar reserva"><i
-                                                            class="fa-solid fa-xmark fa-xl"></i></button>
-                                                </form>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -187,26 +179,6 @@
             Swal.fire(
                 '¡Eliminado!',
                 'Su alojamiento ha sido eliminado.',
-                'success'
-            )
-        </script>
-    @endif
-
-    @if (session('reservaRealizada') != null)
-        <script>
-            Swal.fire(
-                '¡Reserva realizada!',
-                'Su reserva ha sido realizada correctamente.',
-                'success'
-            )
-        </script>
-    @endif
-
-    @if (session('reservaCancelada') != null)
-        <script>
-            Swal.fire(
-                '¡Reserva cancelada!',
-                'Su reserva ha sido cancelada correctamente.',
                 'success'
             )
         </script>

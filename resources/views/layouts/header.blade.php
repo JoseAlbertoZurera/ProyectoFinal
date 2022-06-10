@@ -1,7 +1,7 @@
 <!--NAVBAR-->
 <header id="header">
     <nav class="navbar navbar-expand-lg navbar-light bg-light p-3"">
-        <div class="   container-fluid mx-3">
+        <div class="      container-fluid mx-3">
         <a class="navbar-brand" href="{{ route('home') }}">
             <img src="{{ asset('images/logo.png') }}" width="75px" height="50px" class="d-inline-block align-top"
                 alt="" />
@@ -51,10 +51,16 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('dashboard') }}"><i
-                                    class="fs-5 bi-speedometer2"></i> {{ __('Mi cuenta') }}</a>
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                                     document.getElementById('logout-form').submit();"><i
+                            <a class="dropdown-item" href="{{ route('dashboard') }}">
+                                <i class="fs-5 bi-speedometer2"></i> {{ __('Mi cuenta') }}
+                            </a>
+
+                            <a class="dropdown-item" href="{{ route('perfil.index', Auth::user()->nombre) }}">
+                                <i class="fs-4 bi-person"></i> Perfil
+                            </a>
+
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i
                                     class="fs-5 bi-box-arrow-right"></i> {{ __('Cerrar sesión') }}
                             </a>
 

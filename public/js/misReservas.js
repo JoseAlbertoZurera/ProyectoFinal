@@ -1,15 +1,15 @@
 $(document).ready(function () {
-    $(".eliminarAlojamiento").submit(function (event) {
+    $(".cancelarReserva").submit(function (event) {
         event.preventDefault();
 
         Swal.fire({
             title: "Estas seguro",
-            text: "¡El alojamiento será eliminado!",
+            text: "¡La reserva será cancelada!",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "Si, eliminar!",
+            confirmButtonText: "Si, cancelar!",
         }).then((result) => {
             if (result.isConfirmed) {
                 this.submit();
