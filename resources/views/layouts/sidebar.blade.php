@@ -83,8 +83,15 @@
                             @endif
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white"><i class="fs-4 bi-person-circle"></i>&nbsp
-                                Alojamientos reservados</a>
+                            @if (Route::currentRouteName() == 'alojamientos.alojamientosReservados')
+                                <a href="{{ route('alojamientos.alojamientosReservados', Auth::user()->nombre) }}"
+                                    class="nav-link active"><i class="fs-4 bi-person-circle"></i>&nbsp
+                                    Alojamientos reservados</a>
+                            @else
+                                <a href="{{ route('alojamientos.alojamientosReservados', Auth::user()->nombre) }}"
+                                    class="nav-link text-white"><i class="fs-4 bi-person-circle"></i>&nbsp
+                                    Alojamientos reservados</a>
+                            @endif
                         </li>
                     </ul>
                     <hr>

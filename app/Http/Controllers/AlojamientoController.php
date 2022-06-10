@@ -171,11 +171,18 @@ class AlojamientoController extends Controller
         return view('misAlojamientos', compact('alojamientos'));
     }
 
+    public function alojamientosReservados()
+    {
+        $reservas = ReservaRealizada::where('id_usuario', Auth::user()->id)->orderBy('created_at', 'desc')->get();
+
+        return view('misReservas', compact('reservas'));
+    }
+
     public function reservasUsuario()
     {
-        $alojamientos = ReservaRealizada::where('id_solicitante', Auth::user()->id)->get();
+        $reservas = ReservaRealizada::where('id_solicitante', Auth::user()->id)->orderBy('created_at', 'desc')->get();
 
-        return view('misAlojamientos', compact('alojamientos'));
+        return view('misReservas', compact('reservas'));
     }
 
     public function alojamientosCiudad($ciudad)

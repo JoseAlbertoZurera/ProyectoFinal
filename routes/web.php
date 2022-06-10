@@ -34,11 +34,12 @@ Route::put('/dashboard/perfil/{user}/editar', [UserController::class, 'update'])
 Route::delete('/dashboard/perfil/{user}', [UserController::class, 'destroy'])->name('perfil.destroy')->middleware('verified');
 
 Route::get('/dashboard/alojamientos/{user}', [AlojamientoController::class, 'alojamientosUsuario'])->name('alojamientos.alojamientosUsuario')->middleware('verified');
+Route::get('/dashboard/alojamientos-reservados/{user}', [AlojamientoController::class, 'alojamientosReservados'])->name('alojamientos.alojamientosReservados')->middleware('verified');
 Route::get('/dashboard/reservas/{user}', [AlojamientoController::class, 'reservasUsuario'])->name('alojamientos.reservasUsuario')->middleware('verified');
 
 Route::get('/alojamientos', AlojamientoController::class)->name('alojamientos');
 Route::get('/alojamientos/{ciudad}', [AlojamientoController::class, 'alojamientosCiudad'])->name('alojamientos.alojamientosCiudad');
-Route::get('/buscar', [AlojamientoController::class, 'buscadorAlojamientos'])->name('alojamientos.buscadorAlojamientos');
+Route::post('/alojamientos/buscar', [AlojamientoController::class, 'buscadorAlojamientos'])->name('alojamientos.buscadorAlojamientos');
 
 Route::get('/alojamiento/{id}', [AlojamientoController::class, 'show'])->name('alojamiento.show');
 
@@ -57,8 +58,3 @@ Route::delete('/alojamientos-publicados/{alojamiento}', [AlojamientoController::
 
 Route::post('/reservas/{alojamiento}', [ReservaController::class, 'store'])->name('reservas.store')->middleware('verified');
 Route::put('/reservas/{reserva}', [ReservaController::class, 'cancelarReserva'])->name('reservas.cancelarReserva')->middleware('verified');
-
-
-Route::get('/editarAlojamiento', function () {
-    return view('editarAlojamiento');
-})->name('editarAlojamiento');

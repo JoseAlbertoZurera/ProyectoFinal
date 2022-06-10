@@ -21,7 +21,7 @@
         </div>
 
         <div class="container p-5">
-            <form class="p-4 buscador rounded-pill" method="GET" action="{{ route('alojamientos.buscadorAlojamientos') }}">
+            <form class="p-4 buscador rounded-pill" method="POST" action="{{ route('alojamientos.buscadorAlojamientos') }}">
                 @csrf
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class="col-md-3">

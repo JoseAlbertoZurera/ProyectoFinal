@@ -52,7 +52,7 @@ class ReservaController extends Controller
             'direccion' => $alojamiento->direccion,
             'precio_noche' => $alojamiento->precio_noche
         ]);
-        return redirect()->route("dashboard")->with(["reservaRealizada" => "Reserva realizada correctamente"]);
+        return redirect()->route("alojamientos.reservasUsuario", Auth::user()->nombre)->with(["reservaRealizada" => "Reserva realizada correctamente"]);
     }
 
     /**
@@ -105,6 +105,6 @@ class ReservaController extends Controller
         $reserva->estado = "Cancelado";
         $reserva->save();
 
-        return redirect()->route("dashboard")->with(["reservaCancelada" => "Reserva cancelada correctamente"]);
+        return redirect()->back()->with(["reservaCancelada" => "Reserva cancelada correctamente"]);
     }
 }

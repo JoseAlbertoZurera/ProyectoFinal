@@ -27,9 +27,9 @@ class DashboardController extends Controller
      */
     public function __invoke()
     {
-        $alojamientos = Alojamiento::where('id_usuario', Auth::user()->id)->get();
-        $reservas = ReservaRealizada::where('id_solicitante', Auth::user()->id)->get();
-        $alojamientosReservados = ReservaRealizada::where('id_usuario', Auth::user()->id)->get();
+        $alojamientos = Alojamiento::where('id_usuario', Auth::user()->id)->orderBy('created_at', 'desc')->take(5)->get();
+        $reservas = ReservaRealizada::where('id_solicitante', Auth::user()->id)->orderBy('created_at', 'desc')->take(5)->get();
+        $alojamientosReservados = ReservaRealizada::where('id_usuario', Auth::user()->id)->orderBy('created_at', 'desc')->take(5)->get();
 
         return view('dashboard', compact('alojamientos', 'reservas', 'alojamientosReservados'));
     }
