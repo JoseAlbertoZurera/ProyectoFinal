@@ -1,15 +1,15 @@
-@extends('layouts.plantilla')
+@extends('layouts.sidebar')
+
+@section('titulo', 'Leasing | Editar perfil')
 
 @section('styles')
     <link href="{{ asset('css/editarPerfil.css') }}" rel="stylesheet">
     <script src="{{ asset('js/editarPerfil.js') }}" defer></script>
 @endsection
 
-@section('titulo', 'Leasing | Editar perfil')
-
 @section('contenido')
     <section class="editar">
-        <div class="container w-50 mt-3">
+        <div class="container mt-3">
             <div class="row">
                 <h2 class="text-center col-12">Editar Perfil</h2>
             </div>
@@ -18,7 +18,8 @@
                 @method('PUT')
                 @csrf
                 <div class="d-flex flex-column align-items-center text-center">
-                    <img class="rounded-circle mb-4" width="240px" height="230px" src="{{ asset($user->ruta_imagen) }}" id="imagen">
+                    <img class="rounded-circle mb-4" width="240px" height="230px" src="{{ asset($user->ruta_imagen) }}"
+                        id="imagen">
                     <div class="form-group was-validated mb-3">
                         <label for="ruta_imagen" class="form-label"></label>
                         <input class="form-control" id="ruta_imagen" name="ruta_imagen" type="file" accept="image/*" />

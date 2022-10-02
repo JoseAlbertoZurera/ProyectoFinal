@@ -2,10 +2,6 @@
 
 @section('titulo', 'Leasing | Dashboard')
 
-@section('styles')
-    <script src="{{ asset('js/dashboard.js') }}" defer></script>
-@endsection
-
 @section('contenido')
 
     <div class="row d-flex justify-content-center align-items-center" style=" min-height: 25vh;">
@@ -14,7 +10,7 @@
 
                 <div class="card shadow">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                        <h5>{{ __('Alojamientos publicados') }}</h5>
+                        <h4>{{ __('Alojamientos publicados') }}</h4>
                         <a class="btn btn-outline-secondary btn-sm" href="{{ route('alojamientos.create') }}">Añadir
                             Alojamiento</a>
                     </div>
@@ -26,12 +22,11 @@
                                         <th>Nº Alojamiento</th>
                                         <th>Nombre</th>
                                         <th>Ciudad</th>
-                                        <th>Dirección</th>
                                         <th>Tipo</th>
                                         <th>Fecha inicio</th>
                                         <th>Fecha fin</th>
                                         <th>Precio / Noche</th>
-                                        <th>Acciones</th>
+                                        <th>Ver</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -40,7 +35,6 @@
                                             <th>{{ $alojamiento->id }}</th>
                                             <td>{{ $alojamiento->titulo }}</td>
                                             <td>{{ $alojamiento->ciudad }}</td>
-                                            <td>{{ $alojamiento->direccion }}</td>
                                             <td>{{ $alojamiento->tipo_alojamiento }}</td>
                                             <td>{{ $alojamiento->fecha_inicio }}</td>
                                             <td>{{ $alojamiento->fecha_fin }}</td>
@@ -49,17 +43,6 @@
                                                 <a class="btn btn-primary btn-sm mx-1"
                                                     href="{{ route('alojamiento.show', [$alojamiento]) }}"
                                                     title="Ver alojamiento"><i class="fas fa-eye fa-lg"></i></a>
-                                                <a class="btn btn-success btn-sm mx-1"
-                                                    href="#" title="Editar alojamiento"><i
-                                                        class="fas fa-edit fa-lg"></i></a>
-                                                <form class="eliminarAlojamiento" method="post"
-                                                    action="{{ route('alojamientos.destroy', [$alojamiento]) }}">
-                                                    @method('delete')
-                                                    @csrf
-                                                    <button type="submit" class="btn btn-danger btn-sm mx-1"
-                                                        title="Eliminar alojamiento"><i
-                                                            class="fa-solid fa-trash fa-lg"></i></button>
-                                                </form>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -71,9 +54,9 @@
                     </div>
                 </div>
 
-                <div class="card shadow mt-5">
+                <div class="card shadow mt-4">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                        <h5>{{ __('Reservas realizadas') }}</h5>
+                        <h4>{{ __('Reservas realizadas') }}</h4>
                     </div>
                     <div class="card-body text-center">
                         <table class="table table-striped table-hover table-sm">
@@ -83,12 +66,11 @@
                                         <th>Nº Reserva</th>
                                         <th>Nombre</th>
                                         <th>Ciudad</th>
-                                        <th>Dirección</th>
                                         <th>Fecha entrada</th>
                                         <th>Fecha salida</th>
                                         <th>Precio / Noche</th>
                                         <th>Estado</th>
-                                        <th>Acciones</th>
+                                        <th>Ver</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -98,7 +80,6 @@
                                             <th>{{ $reserva->id }}</th>
                                             <td>{{ $reserva->titulo }}</td>
                                             <td>{{ $reserva->ciudad }}</td>
-                                            <td>{{ $reserva->direccion }}</td>
                                             <td>{{ $reserva->fecha_entrada }}</td>
                                             <td>{{ $reserva->fecha_salida }}</td>
                                             <td>{{ $reserva->precio_noche }}€</td>
@@ -107,8 +88,6 @@
                                                 <a class="btn btn-primary btn-sm mx-1"
                                                     href="{{ route('alojamiento.show', [$reserva->id_alojamiento]) }}"
                                                     title="Ver alojamiento"><i class="fas fa-eye fa-lg"></i></a>
-                                                <button type="submit" class="btn btn-success btn-sm mx-1"
-                                                    title="Modificar reserva"><i class="fas fa-edit fa-lg"></i></button>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -120,9 +99,9 @@
                     </div>
                 </div>
 
-                <div class="card shadow mt-5">
+                <div class="card shadow mt-4">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                        <h5>{{ __('Alojamientos reservados') }}</h5>
+                        <h4>{{ __('Alojamientos reservados') }}</h4>
                     </div>
                     <div class="card-body text-center">
                         <table class="table table-striped table-hover table-sm">
@@ -137,7 +116,7 @@
                                         <th>Fecha salida</th>
                                         <th>Precio / Noche</th>
                                         <th>Estado</th>
-                                        <th>Acciones</th>
+                                        <th>Ver</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -169,19 +148,5 @@
             </div>
         </div>
     </div>
-
-@endsection
-
-@section('JavaScript')
-
-    @if (session('alojamientoEliminado') != null)
-        <script>
-            Swal.fire(
-                '¡Eliminado!',
-                'Su alojamiento ha sido eliminado.',
-                'success'
-            )
-        </script>
-    @endif
 
 @endsection

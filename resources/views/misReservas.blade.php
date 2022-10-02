@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-12 col-md-10 mb-4 ms-4">
                 <div class="card">
-                    <h4 class="card-header">{{ $reserva->titulo }}</h4>
+                    <h3 class="card-header">{{ $reserva->titulo }}</h3>
                     <div class="card-body">
 
                         <div class="row mb-4">
