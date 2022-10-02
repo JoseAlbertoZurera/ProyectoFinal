@@ -161,12 +161,12 @@ class AlojamientoController extends Controller
     public function destroy(Alojamiento $alojamiento)
     {
         $alojamiento->delete();
-        return redirect()->route("dashboard")->with(["alojamientoEliminado" => "Alojamiento eliminado correctamente",]);
+        return redirect()->back()->with(["alojamientoEliminado" => "Alojamiento eliminado correctamente",]);
     }
 
     public function alojamientosUsuario()
     {
-        $alojamientos = Alojamiento::where('id_usuario', Auth::user()->id)->get();
+        $alojamientos = Alojamiento::where('id_usuario', Auth::user()->id)->orderBy('created_at', 'desc')->get();
 
         return view('misAlojamientos', compact('alojamientos'));
     }

@@ -1,10 +1,10 @@
-@extends('layouts.plantilla')
+@extends('layouts.sidebar')
+
+@section('titulo', 'Leasing | Perfil')
 
 @section('styles')
     <link href="{{ asset('css/perfil.css') }}" rel="stylesheet">
 @endsection
-
-@section('titulo', 'Leasing | Perfil')
 
 @section('contenido')
     <div class="container d-flex justify-content-center align-items-center">
@@ -23,18 +23,18 @@
                 </div>
                 <div class="col-12">
                     <h2 class="mb-4">Acerca de ti</h2>
-                    <h5 class="card-title"><i class="fa fa-user" aria-hidden="true"></i>  Nombre completo</h5>
+                    <h5 class="card-title"><i class="fa fa-user" aria-hidden="true"></i> Nombre completo</h5>
                     <p class="card-text">{{ $user->nombre }} {{ $user->apellidos }}</p>
-                    <h5 class="card-title"><i class="fa fa-calendar" aria-hidden="true"></i>  Fecha de nacimiento</h5>
+                    <h5 class="card-title"><i class="fa fa-calendar" aria-hidden="true"></i> Fecha de nacimiento</h5>
                     <p class="card-text">{{ $user->fecha_nacimiento }}</p>
-                    <h5 class="card-title"><i class="fa fa-address-card" aria-hidden="true"></i>  Dni<i
+                    <h5 class="card-title"><i class="fa fa-address-card" aria-hidden="true"></i> Dni<i
                             class="fa fa-id-card-o" aria-hidden="true"></i></h5>
                     <p class="card-text">{{ $user->dni }}</p>
-                    <h5 class="card-title"><i class="fa fa-envelope" aria-hidden="true"></i>  Correo electrónico</h5>
+                    <h5 class="card-title"><i class="fa fa-envelope" aria-hidden="true"></i> Correo electrónico</h5>
                     <p class="card-text">{{ $user->email }}</p>
-                    <h5 class="card-title"><i class="fa fa-phone-square" aria-hidden="true"></i>  Teléfono</h5>
+                    <h5 class="card-title"><i class="fa fa-phone-square" aria-hidden="true"></i> Teléfono</h5>
                     <p class="card-text">{{ $user->telefono }}</p>
-                    <h5 class="card-title"><i class="fa fa-pencil" aria-hidden="true"></i>  Descripción</h5>
+                    <h5 class="card-title"><i class="fa fa-pencil" aria-hidden="true"></i> Descripción</h5>
                     <p class="card-text">{{ $user->descripcion }}</p>
                     <div class="row">
                         <div class="col-md-12">

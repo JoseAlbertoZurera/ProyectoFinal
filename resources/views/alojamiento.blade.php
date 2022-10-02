@@ -74,6 +74,7 @@
                     <i class="bi bi-star"></i>
                     <br />
                     <span>(6 reseñas)</span>
+                    <h1 class="mt-2">{{ $alojamiento->precio_noche }}€</h1>
                 </div>
 
                 <!-- Carousel -->
@@ -88,16 +89,7 @@
                     <!-- The slideshow/carousel -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{ asset('images/alojamiento/foto1.jpg') }}" alt="Los Angeles"
-                                class="d-block w-100" />
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('images/alojamiento/foto2.jpg') }}" alt="Los Angeles"
-                                class="d-block w-100" />
-
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('images/alojamiento/foto3.jpg') }}" alt="Los Angeles"
+                            <img src="{{ asset($alojamiento->ruta_imagen) }}" alt="Los Angeles"
                                 class="d-block w-100" />
                         </div>
                     </div>
@@ -356,25 +348,25 @@
                 </div>
                 <hr style="width:70%;text-align:left;margin-left:0">
                 <!--GEOLOCALIZACIÓN-->
-                <h2>¿Donde me voy a quedar?</h2>
+                <h2>Ubicación y entorno</h2>
                 <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1549.479422273818!2d1.3819578582803342!3d39.039057778204835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129939c1021334bd%3A0x6b7361c3c0674636!2s07816%20San%20Mateo%20de%20Albarca%2C%20Islas%20Baleares!5e0!3m2!1ses!2ses!4v1652178921278!5m2!1ses!2ses"
-                            width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <h5>Dirección</h5>
                         <p>{{ $alojamiento->direccion }}, {{ $alojamiento->codigo_postal }}
                             {{ $alojamiento->ciudad }}</p>
-                        <h5>Ubicación y entorno</h5>
+                        <h5>Sobre la ubicación</h5>
                         <p>{{ $alojamiento->descripcion_ubicacion }}</p>
                     </div>
                 </div>
+
+                <hr style="width:70%;text-align:left;margin-left:0">
+
+                <h2>Contactar con el alfitrión</h2>
+
                 <!--HOST INFO-->
-                <section id="host" class="mt-4">
+                <section id="host">
                     <div class="container">
+                        
                         <div class="row align-items-center">
                             <div class="col-md-6 d-flex justify-content-center">
                                 <img src="{{ asset($user->ruta_imagen) }}" class="img-fluid" alt="" width="300px"

@@ -21,16 +21,16 @@
         </div>
 
         <div class="container p-5">
-            <form class="p-4 buscador rounded-pill" method="POST" action="{{ route('alojamientos.buscadorAlojamientos') }}">
+            <form class="p-4 buscador rounded-pill" method="POST"
+                action="{{ route('alojamientos.buscadorAlojamientos') }}">
                 @csrf
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class="col-md-3">
                         <select class="form-select" aria-label="Default select example" id="ciudad" name="ciudad"
                             title="Selecciona una ciudad" required>
-                            <option selected value="Córdoba">Córdoba</option>
-                            <option value="Granada">Granada</option>
-                            <option value="Hotel">Hotel</option>
-                            <option value="Hostal">Hostal</option>
+                            @foreach ($ciudades as $ciudad)
+                                <option value="{{ $ciudad->ciudad }}">{{ $ciudad->ciudad }}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="col-md-3">

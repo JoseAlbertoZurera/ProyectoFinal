@@ -38,7 +38,7 @@ class AlojamientoFactory extends Factory
             'disponibilidad' => $this->faker->randomElement([0, 1]),
             'descripcion' => $this->faker->text(700),
             'descripcion_ubicacion' => $this->faker->text(650),
-            'ruta_imagen' => $this->faker->imageUrl('640', '640', 'Alojamiento'),
+            'ruta_imagen' => 'https://cdn.pixabay.com/photo/2017/01/14/12/48/hotel-1979406_960_720.jpg',
             'wifi' => $this->faker->randomElement([0, 1]),
             'playa' => $this->faker->randomElement([0, 1]),
             'limpieza' => $this->faker->randomElement([0, 1]),
